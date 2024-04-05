@@ -1,0 +1,45 @@
+---
+import StandarLayout from "@Layouts/StandarLayout.astro";
+
+import HomeBanner from "@Components/Home/HomeBanner.astro";
+import HomeLatestBlogPosts from "@Components/Home/HomeLatestBlogPosts.astro";
+import CountDownEvent from "@Components/Home/CountDownEvent.astro";
+import FeaturedVideos from "@Components/Home/FeaturedVideos.astro";
+import NextEvents from "@Components/Home/NextEvents.astro";
+import Presentation from "@Components/Home/Presentation.astro";
+import Sponsors from "@Components/Unused/Sponsors.astro";
+---
+
+<StandarLayout title="Home">
+
+  <HomeBanner />
+
+  <main id="main-content" class="grow lg:pt-0">
+
+    <!-- SPONSORS -->
+    <Sponsors />
+    <!-- SPONSORS -->
+
+    <!-- COUNT DOWN EVENT -->
+    <CountDownEvent />
+    <!-- COUNT DOWN EVENT -->
+
+    <!-- PRESENTATION -->
+    <Presentation />
+    <!-- PRESENTATION -->
+
+    <!-- FEATURED VIDEOS -->
+    <FeaturedVideos />
+    <!-- FEATURED STREAMS -->
+
+    <!-- LATEST BLOG POSTS -->
+    <HomeLatestBlogPosts />
+    <!-- LATEST BLOG POSTS -->
+
+    <!-- NEXT EVENTS -->
+    <NextEvents />
+    <!-- NEXT EVENTS -->
+
+  </main>
+
+</StandarLayout>

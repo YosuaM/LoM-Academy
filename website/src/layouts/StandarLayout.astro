@@ -1,0 +1,255 @@
+---
+import BaseHead from '@Components/BaseHead.astro';
+import Header from '@Components/Header.astro';
+import Footer from '@Components/Footer.astro';
+import MobileMenu from '@Components/MobileMenu.astro';
+---
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="h-full overflow-x-hidden dark">
+
+<BaseHead />
+
+<body class="relative z-10 antialiased font-base text-gray-500 text-sm font-medium lg:text-base h-full bg-white dark:bg-gray-900 overflow-x-hidden dark:text-gray">
+
+  <div id="site-wrapper" class="flex flex-col h-full js-site-wrapper">
+
+    <div class="header-wrapper text-white">
+
+      <!-- HEADER -->
+      <Header />
+
+      <!-- HEADER -->
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <MobileMenu />
+    <!-- Mobile Menu / End -->
+
+    <!-- PAGE CONTENT -->
+    <slot />
+    <!-- PAGE CONTENT -->
+
+    <!-- FOOTER -->
+		<Footer />
+    <!-- FOOTER -->
+  </div>
+
+  <!-- SOCIAL LINKS -->
+  <div class="fixed bottom-5 left-2 z-20 flex flex-col-reverse items-center lg:bottom-auto lg:top-60 lg:left-7">
+
+    <button class="js-vv-social-links-floating-toggle peer mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-transform hover:scale-110 lg:mt-9 lg:hidden">
+      <span class="sr-only">Toggle Social Links</span>
+      <svg class="aspect-square w-4" fill="currentColor">
+        <use xlink:href="/assets/img/sprites/sprite_yt1.svg#share"></use>
+      </svg>
+    </button>
+
+    <ul class="js-vv-social-links-floating vv-social-list-color hidden w-8 flex-col gap-y-4 peer-[.active]:flex lg:flex lg:gap-y-9">
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://twitch.tv/">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#twitch"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://twitter.com/danfisher_dev">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.facebook.com/danfisher.dev/">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="http://instagram.com/dan.fisher.dev/">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://discord.com">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#discord"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://patreon.com">
+          <svg class="aspect-square w-3.5" fill="currentColor">
+            <use xlink:href="/assets/img/social-icons.svg#patreon"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- SOCIAL LINKS -->
+
+
+  <!-- MODALS -->
+<!--
+  <dialog id="login-register" class="js-vv-modal mx-auto w-[470px] max-w-[90%] border-none bg-transparent p-0 backdrop:bg-gray-900/90">
+
+    <div class="pt-[22px]">
+      <div class="bg-white dark:bg-gray-700 shadow-3xl overflow-y-auto">
+        <div class="relative flex h-28 items-center bg-[url('../../../assets/img/str1/samples/modal-header-bg.jpg')] bg-cover bg-center bg-no-repeat px-6 md:px-10 lg:h-[140px]">
+          <div class="relative z-[4] text-white">
+            <h4 class="text-2xl font-bold lg:mb-0.5 lg:text-3xl xl:text-[32px] xl:leading-none">Login & Register</h4>
+            <div class="font-bold leading-none">I’m glad to see you here!</div>
+          </div>
+
+          <div class="absolute inset-0 z-[1] bg-black mix-blend-color"></div>
+          <div class="absolute inset-0 z-[2] bg-primary mix-blend-multiply"></div>
+          <div class="absolute inset-0 z-[3] bg-gray-900 mix-blend-lighten"></div>
+
+          <img class="absolute right-0 bottom-0 z-[5] -mt-[22px] max-w-[41%]" src="/assets/img/str1/samples/modal-header-hero.png" alt="">
+        </div>
+
+        <div>
+          <div class="tabs">
+
+            <nav class="tabs__header overflow-hidden">
+              <ul class="grid grid-cols-2 gap-x-[1px] dark:bg-gray-500/20">
+                <li class="tabs__header-item is-active group">
+                  <a href="#" class="flex justify-center border-b bg-gray-100 dark:bg-gray-800 group-[.is-active]:bg-white border-gray-500/20 py-4 text-center font-bold text-gray-500/40 transition-colors hover:text-accent group-[.is-active]:text-accent dark:group-[.is-active]:border-gray-700 group-[.is-active]:border-white dark:group-[.is-active]:bg-gray-700">Login</a>
+                </li>
+                <li class="tabs__header-item group flex-1">
+                  <a href="#" class="flex justify-center border-b bg-gray-100 dark:bg-gray-800 group-[.is-active]:bg-white border-gray-500/20 py-4 text-center font-bold text-gray-500/40 transition-colors hover:text-accent group-[.is-active]:text-accent dark:group-[.is-active]:border-gray-700 group-[.is-active]:border-white dark:border-gray-500/20 dark:group-[.is-active]:bg-gray-700">Register</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="tabs__content py-6 px-6 lg:px-10 lg:py-9">
+
+              <div class="tabs__content-item">
+
+                <form class="flex flex-col gap-y-6 lg:gap-y-8" action="#">
+                  <div>
+                    <label class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5" for="login-user-email">Your Email
+                    </label>
+                    <input class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full" type="email" name="login-user-email" id="login-user-email" value="" placeholder="">
+                    <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+
+                    </p>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5" for="login-user-password">Your Password
+                    </label>
+                    <input class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full" type="password" name="login-user-password" id="login-user-password" value="" placeholder="">
+                    <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+
+                    </p>
+                  </div>
+                  <div class="flex justify-between flex-wrap gap-y-4">
+                    <div>
+                      <label class="flex items-center gap-x-3 hover:cursor-pointer" for="remember-me">
+                        <input name="remember-me" id="remember-me" type="checkbox" class="border-gray-650 dark:border-gray-650 h-4 w-4 bg-white checked:border-accent checked:bg-white checked:text-accent checked:hover:border-accent checked:hover:bg-white dark:bg-gray-900 dark:checked:border-accent dark:checked:hover:border-accent dark:checked:hover:bg-gray-900">
+                        <span class="text-xs font-bold uppercase text-gray-900 dark:text-white">
+                          Remember Me
+                        </span>
+
+                      </label>
+                    </div>
+                    <a href="#" class="text-xs font-bold uppercase text-primary dark:text-white hover:text-accent dark:hover:text-accent transition-colors">Forgot Password?</a>
+                  </div>
+                  <div class="mt-2">
+                    <button type="submit" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90 w-full">
+                      Login to your account
+
+                    </button>
+                  </div>
+                </form>
+
+                <div class="pt-4.5">
+                  <div class="text-center uppercase font-bold text-primary mb-6 text-xs dark:text-white">or login with your social account</div>
+                  <div class="flex gap-4">
+                    <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-social-facebook hover:bg-social-facebook/90 flex-1">
+                      <svg class="h-[14px] w-[14px]" fill="currentColor">
+                        <use xlink:href="/assets/img/social-icons.svg#facebook"></use>
+                      </svg>
+                      Login
+
+                    </a>
+                    <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-social-twitter hover:bg-social-twitter/90 flex-1">
+                      <svg class="h-[14px] w-[14px]" fill="currentColor">
+                        <use xlink:href="/assets/img/social-icons.svg#twitter"></use>
+                      </svg>
+                      Login
+
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs__content-item">
+
+                <form class="flex flex-col gap-y-6 lg:gap-y-8" action="#">
+                  <div class="group is-success">
+                    <label class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5" for="register-user-email">Your Email
+                    </label>
+                    <input class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full" type="email" name="register-user-email" id="register-user-email" value="jspigel@yourmail.com" placeholder="">
+                    <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+
+                    </p>
+                  </div>
+                  <div class="group is-error">
+                    <label class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5" for="register-user-password">Your Password
+                    </label>
+                    <input class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full" type="password" name="register-user-password" id="register-user-password" value="qwertyqw" placeholder="">
+                    <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+                      Password need to have at least one number
+                    </p>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5" for="user-password-repeat">Repeat Password
+                    </label>
+                    <input class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full" type="password" name="user-password-repeat" id="user-password-repeat" value="" placeholder="">
+                    <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+
+                    </p>
+                  </div>
+                  <div class="mt-2">
+                    <button type="submit" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-primary hover:bg-primary/90 w-full">
+                      Create your account
+
+                    </button>
+                  </div>
+                  <div class="text-sm leading-loose text-gray text-center">
+                    <p>You’ll receive a confirmation email in your inbox with a link so you can activate your account. If you have any problems, <a class="text-accent hover:text-primary dark:hover:text-white transition-colors" href="_str1-contact.html">contact us</a>!</p>
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </dialog>
+-->
+  <!-- MODALS -->
+
+  <!-- Scripts
+  ================================================== -->
+  <!-- Vendors JS -->
+  <script is:inline src="/assets/vendors/common/glightbox/js/glightbox.min.js"></script>
+  <script is:inline src="/assets/vendors/common/swiper/js/swiper-bundle.min.js"></script>
+
+  <!-- Template JS -->
+  <script is:inline src="/assets/js/common.js"></script>
+  <script is:inline src="/assets/js/str1/init.js"></script>
+
+</body>
+
+</html>
