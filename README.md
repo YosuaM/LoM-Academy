@@ -1,1 +1,1 @@
-# OlimpoGatuno
+# LoM Academy
