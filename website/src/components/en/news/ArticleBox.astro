@@ -1,0 +1,39 @@
+---
+const { date, title, desc, img, alt, link } = Astro.props;
+---
+
+<article class="col-span-full sm:col-span-6 lg:col-span-4">
+  <figure class="group overflow-hidden bg-gray-900">
+    <a href={link}>
+      <img
+        class="aspect-[37/24] h-full w-full max-w-full object-cover duration-300 group-hover:scale-110 group-hover:opacity-75"
+        src={img}
+        alt={alt}
+      />
+    </a>
+  </figure>
+  <div class="pt-5 lg:pt-8">
+    <div class="mb-2 text-sm font-bold text-gray-900 dark:text-white">
+      {date}
+    </div>
+    <h2
+      class="mb-4 text-2xl font-bold leading-tight lg:mb-7 lg:text-3xl xl:text-[32px] xl:leading-9"
+    >
+      <a
+        href={link}
+        class="text-gray-900 transition-colors hover:text-accent dark:text-white dark:hover:text-accent"
+      >
+        {title}
+      </a>
+    </h2>
+    <div class="mb-5.5">
+      {desc}
+    </div>
+    <footer>
+      <a
+        class="text-xs font-bold uppercase text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white"
+        href={link}>Read More...</a
+      >
+    </footer>
+  </div>
+</article>

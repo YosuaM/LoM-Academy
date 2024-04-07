@@ -1328,6 +1328,9 @@ select {
 .vv-social-list-color a[href*="patreon.com"] {
     background-color: #f75e49;
   }
+.vv-social-list-color a[href*="youtube.com"] {
+    background-color: #c4302b;
+  }
 /* Loader Spikes Roll */
 .vv-preloader-spikes-roll {
     background-image: linear-gradient(#634fff 60px, transparent 0),
@@ -4323,6 +4326,10 @@ select {
 .bg-social-discord {
   --tw-bg-opacity: 1;
   background-color: rgb(114 137 218 / var(--tw-bg-opacity));
+}
+.bg-social-youtube {
+  --tw-bg-opacity: 1;
+  background-color: rgb(196 48 43 / var(--tw-bg-opacity));
 }
 .bg-transparent {
   background-color: transparent;
@@ -11636,4 +11643,14 @@ select {
   .group:hover .\[\@media\(hover\:hover\)\]\:group-hover\:opacity-100 {
     opacity: 1;
   }
+}
+
+.disabled {
+  pointer-events: none !important;
+  cursor: default !important;
+  color: #a0aec0 !important;
+}
+
+.fi {
+  background-position: unset !important;
 }

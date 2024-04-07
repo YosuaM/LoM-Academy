@@ -1,8 +1,8 @@
 ---
-import BaseHead from '@Components/BaseHead.astro';
-import Header from '@Components/Header.astro';
-import Footer from '@Components/Footer.astro';
-import MobileMenu from '@Components/MobileMenu.astro';
+import BaseHead from '@Components/en/BaseHead.astro';
+import Header from '@Components/en/Header.astro';
+import Footer from '@Components/en/Footer.astro';
+import MobileMenu from '@Components/en/MobileMenu.astro';
 ---
 
 
@@ -43,7 +43,7 @@ import MobileMenu from '@Components/MobileMenu.astro';
     <button class="js-vv-social-links-floating-toggle peer mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-transform hover:scale-110 lg:mt-9 lg:hidden">
       <span class="sr-only">Toggle Social Links</span>
       <svg class="aspect-square w-4" fill="currentColor">
-        <use xlink:href="/assets/img/sprites/sprite_yt1.svg#share"></use>
+        <use xlink:href="/assets/img/yt1/sprite.svg#share"></use>
       </svg>
     </button>
 
@@ -56,23 +56,9 @@ import MobileMenu from '@Components/MobileMenu.astro';
         </a>
       </li>
       <li>
-        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://twitter.com/danfisher_dev">
+        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://youtube.com/">
           <svg class="aspect-square w-3.5" fill="currentColor">
-            <use xlink:href="/assets/img/social-icons.svg#twitter"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.facebook.com/danfisher.dev/">
-          <svg class="aspect-square w-3.5" fill="currentColor">
-            <use xlink:href="/assets/img/social-icons.svg#facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="http://instagram.com/dan.fisher.dev/">
-          <svg class="aspect-square w-3.5" fill="currentColor">
-            <use xlink:href="/assets/img/social-icons.svg#instagram"></use>
+            <use xlink:href="/assets/img/social-icons.svg#youtube"></use>
           </svg>
         </a>
       </li>
@@ -83,16 +69,17 @@ import MobileMenu from '@Components/MobileMenu.astro';
           </svg>
         </a>
       </li>
-      <li>
-        <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://patreon.com">
-          <svg class="aspect-square w-3.5" fill="currentColor">
-            <use xlink:href="/assets/img/social-icons.svg#patreon"></use>
-          </svg>
-        </a>
-      </li>
     </ul>
   </div>
   <!-- SOCIAL LINKS -->
+
+  <!-- BACKGROUND -->
+  <div class="vv-body-bg absolute inset-0 max-h-[1144px] bg-[url('../../../assets/img/str1/samples/body-bg-1.jpg')] bg-no-repeat bg-top bg-cover -z-10 opacity-10 dark:opacity-100">
+    <div class="absolute inset-0 bg-black mix-blend-color z-[1]"></div>
+    <div class="absolute inset-0 dark:bg-gray-900 mix-blend-multiply z-[2]"></div>
+    <div class="absolute inset-0 dark:bg-gray-600 mix-blend-screen z-[3] opacity-40"></div>
+  </div>
+  <!-- BACKGROUND -->
 
 
   <!-- MODALS -->
