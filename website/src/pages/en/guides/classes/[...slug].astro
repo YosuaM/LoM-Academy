@@ -1,0 +1,19 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import GuideLayout from "@Layouts/GuideLayout.astro";
+
+const posts = await getCollection('guides');
+type Props = CollectionEntry<'guides'>;
+
+const { slug } = Astro.params;
+const post = posts.find((page) => page.slug === slug);
+
+if (!post) return Astro.redirect("/404");
+
+const { Content } = await post.render();
+---
+
+<GuideLayout {...post.data}>
+	<h1>{post.data.title}</h1>
+	<Content />
+</GuideLayout>
