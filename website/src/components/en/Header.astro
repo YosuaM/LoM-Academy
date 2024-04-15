@@ -126,13 +126,32 @@
             </li>
             <!-- Class Guides -->
             <!-- Progress Guides -->
-            <li class="px-5.5">
+            <li
+              class="px-5.5 relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
+            >
               <a
-                class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent disabled"
-                href="/en/guides/progress-guides"
+                class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                href="/en/guides/progress"
               >
                 Progress Guides
+
+                <svg role="img" class="h-1.5 w-1.5 fill-accent">
+                  <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
+                </svg>
               </a>
+
+              <ul
+                class="sub-menu invisible absolute z-20 flex w-40 flex-col bg-white dark:bg-gray-700 py-2.5 text-sm font-bold opacity-0 shadow-2xl transition-all left-full -top-2"
+              >
+                <li class="px-5.5">
+                  <a
+                    class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                    href="/en/guides/progress/mining"
+                  >
+                    Mining
+                  </a>
+                </li>
+              </ul>
             </li>
             <!-- Progress Guides -->
             <!-- Event Guides -->
