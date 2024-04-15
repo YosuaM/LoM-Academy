@@ -4362,6 +4362,9 @@ select {
 .bg-\[url\(\'news\/reversal-showdown-event\/home-banner\.webp\'\)\] {
   background-image: url('/assets/img/news/reversal-showdown-event/home-banner.webp');
 }
+.bg-\[url\(\'news\/gold-bar-theft-event\/home-banner\.webp\'\)\] {
+  background-image: url('/assets/img/news/gold-bar-theft-event/home-banner.webp');
+}
 .bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/img\/str1\/samples\/modal-header-bg\.jpg\'\)\] {
   background-image: url('/assets/img/str1/samples/modal-header-bg.jpg');
 }
