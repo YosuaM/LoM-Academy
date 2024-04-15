@@ -2,7 +2,7 @@
 import { CollectionEntry, getCollection } from 'astro:content';
 import GuideLayout from "@Layouts/GuideLayout.astro";
 
-const posts = await getCollection('guides_classes');
+const posts = await getCollection('guides_progression_en');
 type Props = CollectionEntry<'guides'>;
 
 const { slug } = Astro.params;

@@ -1,0 +1,191 @@
+---
+import StandarLayout from "@Layouts/StandarLayout.astro";
+---
+
+<StandarLayout title="Guides - Classes">
+
+  <!-- HEADER -->
+  <div class="page-heading py-6 md:py-12">
+    <div class="container">
+      <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">
+        <svg
+          role="img"
+          class="aspect-[6/9] w-3 fill-accent sm:w-4 md:w-5 lg:w-7 xl:w-9"
+        >
+          <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel"></use>
+        </svg>
+        <h1
+          class="relative mb-3 text-3xl font-bold leading-none tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-[84px]"
+        >
+          Lamp Calculator
+        </h1>
+      </div>
+
+      <ol
+        class="relative flex flex-wrap gap-x-6 text-sm leading-none text-gray-500 lg:gap-x-8 lg:text-lg [&>li>a]:text-gray-900 hover:[&>li>a]:text-accent dark:[&>li>a]:text-white dark:hover:[&>li>a]:text-accent [&>li]:relative"
+      >
+        <li class="font-bold">
+          <!-- SECTION -->
+          <a href="/en/tools" }> Tools </a>
+          <!-- SECTION -->
+          <!-- TITLE -->
+          <svg
+            role="img"
+            class="fill-gray absolute -right-4 top-1/2 aspect-[3/5] w-1.5 -translate-y-1/2 lg:-right-5"
+          >
+            <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
+            ></use>
+          </svg>
+        </li>
+        <li>Lamp Calculator</li>
+        <!-- TITLE -->
+      </ol>
+    </div>
+  </div>
+  <!-- HEADER -->
+
+  <main id="main-content" class="grow lg:pt-0">
+    <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-7.5 mb-9 lg:mb-14 xl:pr-12.5">
+          <div class="basis-1/2">
+            <label
+              class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5"
+              for="product-quantity"
+              >Level
+            </label>
+            <input
+              class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full"
+              type="number"
+              name="product-quantity"
+              id="product-quantity"
+              value="1"
+              placeholder=""
+              min="1"
+              max="25"
+            />
+            <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
+            </p>
+          </div>
+          <div class="basis-1/2">
+            <button
+              type="submit"
+              class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90 basis-full md:basis-1/2 lg:basis-1/3"
+            >
+              Update lamp level
+            </button>
+          </div>
+          <!-- Lamp values image -->
+          <img
+            src="/assets/img/tools/lamp-calculator/lamp_background.png"
+            alt="Lamp Calculator"
+            class="mb-9 lg:mb-14 xl:pr-12.5"
+          />
+          <!-- Lamp values image -->
+
+          <!-- Table with calcs -->
+          <table class="w-full table-auto">
+            <thead class="text-sm font-bold uppercase leading-tight text-gray-900 dark:text-white">
+              <tr>
+                <th class="pb-3 pr-4 border-b border-gray-500/20">Rarity</th>
+                <th class="pb-3 px-4 border-b border-gray-500/20">Rate</th>
+                <th class="pb-3 px-4 border-b border-gray-500/20">Average</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <!-- Normal -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Normal</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Normal -->
+              <!-- Unique -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Unique</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Unique -->
+              <!-- Well -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Well</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Well -->
+              <!-- Rare -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Rare</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Rare -->
+              <!-- Mythic -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Mythic</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Mythic -->
+              <!-- Epic -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Epic</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Epic -->
+              <!-- Legendary -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Legendary</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Legendary -->
+              <!-- Immortal -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Immortal</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Immortal -->
+              <!-- Supreme -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Supreme</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Supreme -->
+              <!-- Aurous -->
+              <tr>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">Aurous</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0%</td>
+                <td class="py-4 px-4 font-bold text-gray-900 dark:text-white border-b border-gray-500/20">0</td>
+              </tr>
+              <!-- Aurous -->
+            </tbody>
+          </table>
+          <!-- Table with calcs -->
+          
+        </div>
+
+
+        <!-- CALENDAR -->
+        <div class="mbsc-grid">
+          <div class="mbsc-row">
+              <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                  <div class="mbsc-form-group">
+                      <div class="mbsc-form-group-title">All labels</div>
+                      <div id="demo-labels-all"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+        <!-- CALENDAR -->
+        
+      </div>
+    </div>
+    
+  </main>
+</StandarLayout>
