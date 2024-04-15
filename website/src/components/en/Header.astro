@@ -144,7 +144,7 @@
                 href="/en/guides/event-guides"
               >
                 Event Guides
-<!--
+                <!--
                 <svg role="img" class="h-1.5 w-1.5 fill-accent">
                   <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
                 </svg>
@@ -223,6 +223,36 @@
           </a>
         </li>
         <!-- Ranking -->
+        <!-- Tools -->
+        <li
+          class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
+        >
+          <a
+            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100"
+            href="/en/tools"
+          >
+            Tools
+            <svg
+              role="img"
+              class="h-1.5 w-1.5 fill-gray-500 group-hover:fill-accent"
+            >
+              <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
+            </svg>
+          </a>
+          <ul
+            class="sub-menu invisible absolute z-20 flex w-40 flex-col bg-white dark:bg-gray-700 py-2.5 text-sm font-bold opacity-0 shadow-2xl transition-all"
+          >
+            <li class="px-5.5">
+              <a
+                class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                href="/en/tools/lamp-calculator"
+              >
+                Lamp Calculator
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tools -->
         <!-- About -->
         <li
           class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100 disabled"
@@ -318,7 +348,7 @@
           class="language relative [&>.sub-menu]:lg:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:lg:hover:opacity-100"
         >
           <div class="block py-4 px-2 xl:px-3">
-            <span class="fi fi-gb h-6 w-6"/>
+            <span class="fi fi-gb h-6 w-6"></span>
           </div>
 
           <ul
@@ -329,7 +359,7 @@
                 class="flex flex-row-reverse items-center justify-between py-1.5 text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent"
                 href="/en/"
               >
-                <span class="fi fi-gb" />
+                <span class="fi fi-gb"></span>
                 English
               </a>
             </li>
@@ -338,7 +368,7 @@
                 class="flex flex-row-reverse items-center justify-between py-1.5 text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent disabled"
                 href="/es/"
               >
-                <span class="fi fi-es" />
+                <span class="fi fi-es"></span>
                 Spanish
               </a>
             </li>
@@ -365,7 +395,6 @@
           </svg>
         </button>
         <!-- Mobile menu button -->
-        
       </div>
       <!-- Header Controls / End -->
     </nav>

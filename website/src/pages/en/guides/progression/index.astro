@@ -1,0 +1,118 @@
+---
+import StandarLayout from "@Layouts/StandarLayout.astro";
+---
+
+<StandarLayout title="Guides - Progression">
+  <!-- HEADER -->
+  <div class="page-heading py-6 md:py-12">
+    <div class="container">
+      <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">
+        <svg
+          role="img"
+          class="aspect-[6/9] w-3 fill-accent sm:w-4 md:w-5 lg:w-7 xl:w-9"
+        >
+          <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel"></use>
+        </svg>
+        <h1
+          class="relative mb-3 text-3xl font-bold leading-none tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-[84px]"
+        >
+          Progression
+        </h1>
+      </div>
+
+      <ol
+        class="relative flex flex-wrap gap-x-6 text-sm leading-none text-gray-500 lg:gap-x-8 lg:text-lg [&>li>a]:text-gray-900 hover:[&>li>a]:text-accent dark:[&>li>a]:text-white dark:hover:[&>li>a]:text-accent [&>li]:relative"
+      >
+        <li class="font-bold">
+          <!-- SECTION -->
+          <a href="/en/guides/" }> Guides </a>
+          <!-- SECTION -->
+          <!-- TITLE -->
+          <svg
+            role="img"
+            class="fill-gray absolute -right-4 top-1/2 aspect-[3/5] w-1.5 -translate-y-1/2 lg:-right-5"
+          >
+            <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
+            ></use>
+          </svg>
+        </li>
+        <li>Progression</li>
+        <!-- TITLE -->
+      </ol>
+    </div>
+  </div>
+  <!-- HEADER -->
+
+  <main id="main-content" class="grow lg:pt-0">
+    <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
+      <div class="container">
+        <!-- PROGRESSION -->
+        <div class="swiper js-vv-games-swiper">
+          <div class="swiper-wrapper">
+            <!-- MINING -->
+            <div class="swiper-slide">
+              <a
+                class="flex flex-col gap-y-5 group"
+                href="progression/mining"
+              >
+                <figure class="relative overflow-hidden">
+                  <img
+                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
+                    src="/assets/img/str1/samples/game-1-170x220.jpg"
+                    alt="a-Rex Legends"
+                  />
+                  <div
+                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
+                  >
+                    <div
+                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
+                    >
+                      <svg class="h-2.5 aspect-square" fill="currentColor">
+                        <use
+                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                </figure>
+                <div class="leading-tight">
+                  <h5
+                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
+                  >
+                    Mining
+                  </h5>
+                  <div class="text-gray-500">In progress...</div>
+                </div>
+              </a>
+            </div>
+            <!-- MINING -->
+          </div>
+        </div>
+        <!-- PROGRESSION -->
+        <!-- SWIPER BUTTONS -->
+        <div
+          class="flex justify-center gap-x-3.5 pt-8 sm:pt-10 md:pt-12 lg:pt-16"
+        >
+          <button
+            class="js-vv-games-swiper-btn-prev flex w-8 aspect-square items-center justify-center text-white hover:cursor-pointer hover:text-accent"
+          >
+            <svg class="h-2.5 w-1.5" fill="currentColor">
+              <use xlink:href="/assets/img/str1/sprite.svg#arrow-left-pixel-alt"
+              ></use>
+            </svg>
+          </button>
+          <button
+            class="js-vv-games-swiper-btn-next flex w-8 aspect-square items-center justify-center text-white hover:cursor-pointer hover:text-accent"
+          >
+            <svg class="h-2.5 w-1.5" fill="currentColor">
+              <use
+                xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
+              ></use>
+            </svg>
+          </button>
+        </div>
+        <!-- SWIPER BUTTONS -->
+      </div>
+    </div>
+  </main>
+</StandarLayout>
