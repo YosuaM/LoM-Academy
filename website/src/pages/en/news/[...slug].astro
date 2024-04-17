@@ -2,7 +2,7 @@
 import { CollectionEntry, getCollection } from 'astro:content';
 import NewLayout from "@Layouts/NewLayout.astro";
 
-const posts = await getCollection('news');
+const posts = await getCollection('news_en');
 type Props = CollectionEntry<'news'>;
 
 const { slug } = Astro.params;
