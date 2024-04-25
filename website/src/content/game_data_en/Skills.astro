@@ -1,0 +1,336 @@
+---
+
+export const skill_types = [
+    {
+        id: 0,
+        key: 'normal',
+        name: 'Normal',
+    },
+    {
+        id: 1,
+        key: 'unique',
+        name: 'Unique',
+    },
+    {
+        id: 2,
+        key: 'well',
+        name: 'Well',
+    },
+    {
+        id: 3,
+        key: 'rare',
+        name: 'Rare',
+    },
+    {
+        id: 4,
+        key: 'mythic',
+        name: 'Mythic',
+    },
+    {
+        id: 5,
+        key: 'epic',
+        name: 'Epic',
+    },
+    {
+        id: 6,
+        key: 'legendary',
+        name: 'Legendary',
+    },
+    {
+        id: 7,
+        key: 'immortal',
+        name: 'Immortal',
+    },
+];
+
+export const skills = [
+    {
+        id: 'spore_bomb',
+        name: 'Spore Bomb',
+        description: 'Trigger an explosion on the target 2 time(s), each time dealing DMG.',
+        type: 'normal',
+        cooldown: 7,
+        img: '/assets/img/game/skills/spore_bomb.webp'
+    },
+    {
+        id: 'shroom_cap',
+        name: 'Shroom Cap',
+        description: 'Summong a Mushroom Cap, dealing AoE DMG.',
+        type: 'normal',
+        cooldown: 9,
+        img: '/assets/img/game/skills/shroom_cap.webp'
+    },
+    {
+        id: 'spore_barage',
+        name: 'Spore Barage',
+        description: 'Throw 5 Spore(s), each dealing DMG.',
+        type: 'normal',
+        cooldown: 7,
+        img: '/assets/img/game/skills/spore_barage.webp'
+    },
+    {
+        id: 'boulder_impact',
+        name: 'Boulder Impact',
+        description: 'Summon a Giant Rock, dealing DMG to the target every second, lasting for 5 seconds.',
+        type: 'unique',
+        cooldown: 12,
+        img: '/assets/img/game/skills/boulder_impact.webp'
+    },
+    {
+        id: 'thorn_thicket',
+        name: 'Thorn Thicket',
+        description: 'Set up 1 trap(s), dealing DMG every second and slowing the target by 40%, lasting for 5 seconds.',
+        type: 'unique',
+        cooldown: 8,
+        img: '/assets/img/game/skills/thorn_thicket.webp'
+    },
+    {
+        id: 'lead_the_charge',
+        name: 'Lead the Charge',
+        description: 'Deal DMG to the nearest target and increase Basic Attack DMG by 30% for 5 seconds.',
+        type: 'unique',
+        cooldown: 14,
+        img: '/assets/img/game/skills/lead_the_charge.webp'
+    },
+    {
+        id: 'entangling_vines',
+        name: 'Entangling Vines',
+        description: 'Set up 1 trap(s), dealing DMG to enemies triggering the trap and imprisioning them for 1 seconds.',
+        type: 'well',
+        cooldown: 8,
+        img: '/assets/img/game/skills/entangling_vines.webp'
+    },
+    {
+        id: 'speed_surge',
+        name: 'Speed Surge',
+        description: 'Deal DMG to the nearest target and increase Attack Speed by 30% for 5 seconds.',
+        type: 'well',
+        cooldown: 14,
+        img: '/assets/img/game/skills/speed_surge.webp'
+    },
+    {
+        id: 'spidewr_weaver',
+        name: 'Spider Weaver',
+        description: 'Sumon a Spider Weaver, dealing AoE DMG every second, lasting for 5 seconds.',
+        type: 'well',
+        cooldown: 10,
+        img: '/assets/img/game/skills/spidewr_weaver.webp'
+    },
+    {
+        id: 'pineapple_plunge',
+        name: 'Pineapple Plunge',
+        description: 'Continuously summon 5 Pneapple(s), each dealing AoE DMG.',
+        type: 'rare',
+        cooldown: 11,
+        img: '/assets/img/game/skills/pineapple_plunge.webp'
+    },
+    {
+        id: 'pearl_release',
+        name: 'Pearl Release',
+        description: 'Summon a Clam, dealing AoE DMG and slowing targets within the range by 40% lasting for 5 seconds.',
+        type: 'rare',
+        cooldown: 11,
+        img: '/assets/img/game/skills/pearl_release.webp'
+    },
+    {
+        id: 'sprawling_vine',
+        name: 'Sprawling Vine',
+        description: 'Summon Vines, dealing AoE DMG and imprisioning targets within the range for 1 seconds.',
+        type: 'rare',
+        cooldown: 11,
+        img: '/assets/img/game/skills/sprawling_vine.webp'
+    },
+    {
+        id: 'batty_trace',
+        name: 'Batty Trace',
+        description: 'Summon a Bat, dealing AoE DMG every second, lasting for 5 seconds.',
+        type: 'mythic',
+        cooldown: 15,
+        img: '/assets/img/game/skills/batty_trace.webp'
+    },
+    {
+        id: 'nature_renewal',
+        name: "Nature's Renewal",
+        description: 'Deal DMG to the target and recover 30% of max HP within 5 seconds.',
+        type: 'mythic',
+        cooldown: 25,
+        img: '/assets/img/game/skills/nature_renewal.webp'
+    },
+    {
+        id: 'shroom_shield',
+        name: 'Shroom Shield',
+        description: 'Deal DMG to the target and gain a shield equal to 20% of max HP, lasting for 10 seconds.',
+        type: 'mythic',
+        cooldown: 19,
+        img: '/assets/img/game/skills/shroom_shield.webp'
+    },
+    {
+        id: 'durian_bomb',
+        name: 'Durian Bomb',
+        description: 'Continuously summon 3 Durian(s), each dealing AoE DMG and slowing targets by 40%, lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 18,
+        img: '/assets/img/game/skills/durian_bomb.webp'
+    },
+    {
+        id: 'easy_breezy',
+        name: 'Easy Breezy',
+        description: 'Throw a Cactus, dealing AoE DMG and reducing the ATK of targets within the range by 20%, lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 15,
+        img: '/assets/img/game/skills/easy_breezy.webp'
+    },
+    {
+        id: 'take_it_slow',
+        name: 'Take it Slow',
+        description: 'Throw a Cactus, dealing AoE DMMG and reducing the ATK SPD of targets within the range by 40%, lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 12,
+        img: '/assets/img/game/skills/take_it_slow.webp'
+    },
+    {
+        id: 'coin_bomb',
+        name: 'Coin Bomb',
+        description: 'Throw a Coin, dealing AoE DMG and icreasing Basic Attack DMG by 35%, lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 13,
+        img: '/assets/img/game/skills/coin_bomb.webp'
+    },
+    {
+        id: 'slime_bomb',
+        name: 'Slime Bomb',
+        description: 'Throw a Slime, dealing AoE DMG and increasing pals DMG by 30%, lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 13,
+        img: '/assets/img/game/skills/slime_bomb.webp'
+    },
+    {
+        id: 'meteor_fall',
+        name: 'Meteor Fall',
+        description: 'Summon a Meteor, dealing AoE DMG and increasing Skill DMG by 30% lasting for 5 seconds.',
+        type: 'epic',
+        cooldown: 13,
+        img: '/assets/img/game/skills/meteor_fall.webp'
+    },
+    {
+        id: 'disarm',
+        name: 'Disarm',
+        description: 'Jet Water Coluns, dealing AoE DMG and disaring targets within the range for 3 seconds.',
+        type: 'legendary',
+        cooldown: 16,
+        img: '/assets/img/game/skills/disarm.webp'
+    },
+    {
+        id: 'dazzled',
+        name: 'Dazzled',
+        description: 'Jet Poison Mist, dealing AoE DMG and stunning targets within the range for 1.5 seconds.',
+        type: 'legendary',
+        cooldown: 19,
+        img: '/assets/img/game/skills/dazzled.webp'
+    },
+    {
+        id: 'smoke_bomb',
+        name: 'Smoke Bomb',
+        description: 'Throw a Smoke Bomb, dealing AoE DMG and increasing the DMG received by targets within the range by 30% for 5 seconds.',
+        type: 'legendary',
+        cooldown: 13,
+        img: '/assets/img/game/skills/smoke_bomb.webp'
+    },
+    {
+        id: 'grim_reaper',
+        name: 'Grim Reaper',
+        description: 'Summon Ghosts, dealing DMG. Ghosts instantly defeat targets with less than 5% HP.',
+        type: 'legendary',
+        cooldown: 9,
+        img: '/assets/img/game/skills/grim_reaper.webp'
+    },
+    {
+        id: 'heroic_descent',
+        name: 'Heroic Descent',
+        description: 'Summon a Hero Spirit with 3 attack SPD. The Spirit deals DMG with each basic attack, last for 10 seconds, and remains untargatable by enemies.',
+        type: 'legendary',
+        cooldown: 19,
+        img: '/assets/img/game/skills/heroic_descent.webp'
+    },
+    {
+        id: 'wild_gust',
+        name: 'Wild Gust',
+        description: 'Summon a Gale, dealing AoE DMG and increasing ATK by 15% for 5 seconds.',
+        type: 'legendary',
+        cooldown: 16,
+        img: '/assets/img/game/skills/wild_gust.webp'
+    },
+    {
+        id: 'blitz_assault',
+        name: 'Blitz Assault',
+        description: 'Summon Golden Lightning, dealing DMG and providing 3 seconds of DMG immunity.',
+        type: 'immortal',
+        cooldown: 24,
+        img: '/assets/img/game/skills/blitz_assault.webp'
+    },
+    {
+        id: 'blade_pierce',
+        name: 'Blade Pierce',
+        description: 'Throw Sharp Blades, dealing DMG and causing the target to lose 1.5% of their max HP per second for 5 seconds.',
+        type: 'immortal',
+        cooldown: 19,
+        img: '/assets/img/game/skills/blade_pierce.webp'
+    },
+    {
+        id: 'clone_strike',
+        name: 'Clone Strike',
+        description: "Generate a Clone with 30% of the shroom's. The Clone lasts for 10 seconds and deals DMG with each basic attack.",
+        type: 'immortal',
+        cooldown: 29,
+        img: '/assets/img/game/skills/clone_strike.webp'
+    },
+    {
+        id: 'hundred_slashes',
+        name: 'Hundred Slashes',
+        description: 'Deal DMG and gain 20% Basic ATK DMG RES and 0.5% ATK Bonus based on current HP for 5 seconds.',
+        type: 'immortal',
+        cooldown: 19,
+        img: '/assets/img/game/skills/hundred_slashes.webp'
+    },
+    {
+        id: 'windborne_arrow',
+        name: 'Windborne Arrow',
+        description: 'Deal DMG and inflict Vulnerability for 5 seconds. During this period, any non-skill DMG dealt to the target also applies an extra 100% DMG.',
+        type: 'immortal',
+        cooldown: 19,
+        img: '/assets/img/game/skills/windborne_arrow.webp'
+    },
+    {
+        id: 'crimson_moonfall',
+        name: 'Crimson Moonfall',
+        description: 'Deal DMG. Each successive cast increases the DMG by 50%, stacking up to 3 times.',
+        type: 'immortal',
+        cooldown: 8,
+        img: '/assets/img/game/skills/crimson_moonfall.webp'
+    },
+    {
+        id: 'dragonic_resonance',
+        name: 'Dragonic Resonance',
+        description: "Inflict initial DMG, followed by a 0.5 second delay, then deal 2% of the target's max HP as DMG. Additionally, deal extra 1% DMG of the target's max HP for every 10% DMG.",
+        type: 'immortal',
+        cooldown: 15,
+        img: '/assets/img/game/skills/dragonic_resonance.webp'
+    },
+    {
+        id: 'wordly_snare',
+        name: 'Wordly Snare',
+        description: 'Deal DMG and increase Crit Rate by 10%. For every 1% Crit Rate, gain an additional 3% Crit DMG. This effect lasts for 5 seconds.',
+        type: 'immortal',
+        cooldown: 24,
+        img: '/assets/img/game/skills/wordly_snare.webp'
+    },
+    {
+        id: 'star_array',
+        name: 'Star Array',
+        description: 'Deal DMMG and increase Skill Crit Rate by 10%. For every 1% Skill Crit Rate, gain an additional 3% Skill Crit DMG. This effect lasts for 5 seconds.',
+        type: 'immortal',
+        cooldown: 19,
+        img: '/assets/img/game/skills/star_array.webp'
+    }
+];
+---

@@ -25,7 +25,7 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
       >
         <li class="font-bold">
           <!-- SECTION -->
-          <a href="/en/guides/" }> Guides </a>
+          <a href="/en/guides" }> Guides </a>
           <!-- SECTION -->
           <!-- TITLE -->
           <svg
@@ -46,254 +46,33 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
   <main id="main-content" class="grow lg:pt-0">
     <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
       <div class="container">
-        <!-- CLASSES -->
-        <div class="swiper js-vv-games-swiper">
-          <div class="swiper-wrapper">
-            <!-- ARCHER PLUME MONARCH -->
-            <div class="swiper-slide">
+        <div class="flex flex-col gap-y-10 lg:gap-y-20">
+          <!-- Archer Plue Monarch -->
+          <div
+            class="grid grid-cols-12 gap-x-5 gap-y-9 md:gap-x-6 lg:gap-x-7.5"
+          >
+            <div
+              class="col-span-full pt-2 md:col-span-4 md:justify-self-center"
+            >
+              <a href="/en/guides/classes/archer-plume-monarch">
+                <img class="" src="/assets/img/game/classes/archer_plume_monarch_256_200.webp" alt="Archer Plume Monarch">
+              </a>
+            </div>
+            <div class="col-span-full md:col-span-8">
               <a
-                class="flex flex-col gap-y-5 group"
-                href="classes/archer-plume-monarch"
+                class="text-sm font-bold uppercase text-accent hover:text-gray-900 dark:hover:text-white"
+                href="/en/guides/classes/archer-plume-monarch">Archer Plume Monarch</a
               >
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-1-170x220.jpg"
-                    alt="a-Rex Legends"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Archer Plume Monarch
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
+              <div class="mb-3">
+                Do you want to be the king of the PvE content?
+                <br>
+                Then Archer Plume Monarch is the way to go.
+                This class is the best for farming and climbing stages. It has a high damage output based on combo damage and critical hits.
+              </div>
             </div>
-            <!-- ARCHER PLUME MONARCH -->
-            <!-- ARCHER SACRED HUNTER -->
-            <div class="swiper-slide">
-              <a
-                class="flex flex-col gap-y-5 group"
-                href="classes/archer-sacred-hunter"
-              >
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-2-170x220.jpg"
-                    alt="Xenowatch"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Archer Sacred Hunter
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
-            </div>
-            <!-- ARCHER SACRED HUNTER -->
-            <!-- MAGE DARKLORD -->
-            <div class="swiper-slide">
-              <a
-                class="flex flex-col gap-y-5 group"
-                href="classes/mage-darklord"
-              >
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-3-170x220.jpg"
-                    alt="Witch Hunters"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Mage Darklord
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
-            </div>
-            <!-- MAGE DARKLORD -->
-            <!-- MAGE PROPHET -->
-            <div class="swiper-slide">
-              <a class="flex flex-col gap-y-5 group" href="mage-prophet">
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-4-170x220.jpg"
-                    alt="Super Robo Bross II"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Mage Prophet
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
-            </div>
-            <!-- MAGE PROPHET -->
-            <!-- WARRIOR MARTIAL SAGE -->
-            <div class="swiper-slide">
-              <a
-                class="flex flex-col gap-y-5 group"
-                href="classes/warrior-martial-sage"
-              >
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-5-170x220.jpg"
-                    alt="Mochi’s Island"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Warrior Martial Sage
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
-            </div>
-            <!-- WARRIOR MARTIAL SAGE -->
-            <!-- WARRIOR WARBRINGER -->
-            <div class="swiper-slide">
-              <a
-                class="flex flex-col gap-y-5 group"
-                href="classes/warrior-warbringer"
-              >
-                <figure class="relative overflow-hidden">
-                  <img
-                    class="w-full object-cover aspect-[17/22] transition-transform duration-300 group-hover:scale-110"
-                    src="/assets/img/str1/samples/game-6-170x220.jpg"
-                    alt="Rony da Hedgehog"
-                  />
-                  <div
-                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all bg-accent/80 duration-300"
-                  >
-                    <div
-                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-7.5 aspect-square bg-gray-900 grid place-items-center text-white scale-90 group-hover:scale-100 transition-all duration-300"
-                    >
-                      <svg class="h-2.5 aspect-square" fill="currentColor">
-                        <use
-                          xlink:href="/assets/img/str1/sprite.svg#plus-thinest"
-                        ></use>
-                      </svg>
-                    </div>
-                  </div>
-                </figure>
-                <div class="leading-tight">
-                  <h5
-                    class="font-bold text-gray-900 dark:text-white mb-1.5 group-hover:text-accent"
-                  >
-                    Warrior Warbringer
-                  </h5>
-                  <div class="text-gray-500">In progress...</div>
-                </div>
-              </a>
-            </div>
-            <!-- WARRIOR WARBRINGER -->
           </div>
+          <!-- Archer Plue Monarch -->
         </div>
-        <!-- CLASSES -->
-        <!-- SWIPER BUTTONS -->
-        <div
-          class="flex justify-center gap-x-3.5 pt-8 sm:pt-10 md:pt-12 lg:pt-16"
-        >
-          <button
-            class="js-vv-games-swiper-btn-prev flex w-8 aspect-square items-center justify-center text-white hover:cursor-pointer hover:text-accent"
-          >
-            <svg class="h-2.5 w-1.5" fill="currentColor">
-              <use xlink:href="/assets/img/str1/sprite.svg#arrow-left-pixel-alt"
-              ></use>
-            </svg>
-          </button>
-          <button
-            class="js-vv-games-swiper-btn-next flex w-8 aspect-square items-center justify-center text-white hover:cursor-pointer hover:text-accent"
-          >
-            <svg class="h-2.5 w-1.5" fill="currentColor">
-              <use
-                xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
-              ></use>
-            </svg>
-          </button>
-        </div>
-        <!-- SWIPER BUTTONS -->
       </div>
     </div>
   </main>

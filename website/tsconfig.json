@@ -6,6 +6,7 @@
     "paths": {
       "@Components/*": ["src/components/*"],
       "@Layouts/*": ["src/layouts/*"],
+      "@Content/*": ["src/content/*"],
       //"@services/*": ["src/services/fakeServices/*"],
       //"@utils/*": ["src/utils/*"],
     }
