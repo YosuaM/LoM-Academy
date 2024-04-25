@@ -1,114 +1,118 @@
+---
+import Item from "./Item.astro";
+import { skills } from "@Content/game_data_en/Skills.astro";
+
+const { earlyGame, midGame, lateGame, type } = Astro.props;
+---
+
+<!-- Header -->
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabs-example" role="tablist">
-        <li class="me-2" role="presentation">
-            <button
-                class="inline-block rounded-t-lg border-b-2 border-transparent p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-                id="profile-tab-example"
-                type="button"
-                role="tab"
-                aria-controls="profile-example"
-                aria-selected="false"
-            >
-                Profile
-            </button>
-        </li>
-        <li class="me-2" role="presentation">
-            <button
-                class="inline-block rounded-t-lg border-b-2 border-transparent p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-                id="dashboard-tab-example"
-                type="button"
-                role="tab"
-                aria-controls="dashboard-example"
-                aria-selected="false"
-            >
-                Dashboard
-            </button>
-        </li>
-        <li class="me-2" role="presentation">
-            <button
-                class="inline-block rounded-t-lg border-b-2 border-transparent p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-                id="settings-tab-example"
-                type="button"
-                role="tab"
-                aria-controls="settings-example"
-                aria-selected="false"
-            >
-                Settings
-            </button>
-        </li>
-        <li role="presentation">
-            <button
-                class="inline-block rounded-t-lg border-b-2 border-transparent p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-                id="contacts-tab-example"
-                type="button"
-                role="tab"
-                aria-controls="contacts-example"
-                aria-selected="false"
-            >
-                Contacts
-            </button>
-        </li>
-    </ul>
+  <ul
+    class="flex flex-wrap -mb-px text-sm font-medium text-center"
+    id="default-tab"
+    data-tabs-toggle="#default-tab-content"
+    role="tablist"
+  >
+    <!-- Early Game -->
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 rounded-t-lg"
+        id={type + "-early-gamme-tab"}
+        data-tabs-target={"#" + type + "-early-gamme"}
+        type="button"
+        role="tab"
+        aria-controls={type + "-early-gamme"}
+        aria-selected="false">Early Game</button
+      >
+    </li>
+    <!-- Early Game -->
+    <!-- Mid Game -->
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+        id={type + "-mid-gamme-tab"}
+        data-tabs-target={"#" + type + "-mid-gamme"}
+        type="button"
+        role="tab"
+        aria-controls={type + "-mid-gamme"}
+        aria-selected="false">Mid Game</button
+      >
+    </li>
+    <!-- Mid Game -->
+    <!-- Late Game -->
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+        id={type + "-late-gamme-tab"}
+        data-tabs-target={"#" + type + "-late-gamme"}
+        type="button"
+        role="tab"
+        aria-controls={type + "-late-gamme"}
+        aria-selected="false">Late Game</button
+      >
+    </li>
+    <!-- Late Game -->
+  </ul>
 </div>
-<div id="tabContentExample">
-    <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="profile-example"
-        role="tabpanel"
-        aria-labelledby="profile-tab-example"
-    >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the
-            <strong class="font-medium text-gray-800 dark:text-white"
-                >Profile tab's associated content</strong
-            >. Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-        </p>
-    </div>
-    <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="dashboard-example"
-        role="tabpanel"
-        aria-labelledby="dashboard-tab-example"
-    >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the
-            <strong class="font-medium text-gray-800 dark:text-white"
-                >Dashboard tab's associated content</strong
-            >. Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-        </p>
-    </div>
-    <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="settings-example"
-        role="tabpanel"
-        aria-labelledby="settings-tab-example"
-    >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the
-            <strong class="font-medium text-gray-800 dark:text-white"
-                >Settings tab's associated content</strong
-            >. Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-        </p>
-    </div>
-    <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="contacts-example"
-        role="tabpanel"
-        aria-labelledby="contacts-tab-example"
-    >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the
-            <strong class="font-medium text-gray-800 dark:text-white"
-                >Contacts tab's associated content</strong
-            >. Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-        </p>
-    </div>
+<!-- Header -->
+<!-- Content -->
+<div id="default-tab-content">
+  <!-- Early Game -->
+  <div
+    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+    id={type + "-early-gamme"}
+    role="tabpanel"
+    aria-labelledby="early-game-tab"
+  >
+    {
+      earlyGame.map((item, index) => (
+        <Item
+          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
+          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
+          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
+          id={type + "-early-gamme-item-" + index}
+        />
+      ))
+    }
+  </div>
+  <!-- Early Game -->
+  <!-- Mid Game -->
+  <div
+    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+    id={type + "-mid-gamme"}
+    role="tabpanel"
+    aria-labelledby="mid-game-tab"
+  >
+    {
+      midGame.map((item, index) => (
+        <Item
+          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
+          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
+          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
+          id={type + "-mid-gamme-item-" + index}
+        />
+      ))
+    }
+  </div>
+  <!-- Mid Game -->
+  <!-- Late Game -->
+  <div
+    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+    id={type + "-late-gamme"}
+    role="tabpanel"
+    aria-labelledby="late-game-tab"
+  >
+    {
+      lateGame.map((item, index) => (
+        <Item
+          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
+          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
+          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
+          id={type + "-late-gamme-item-" + index}
+        />
+      ))
+    }
+  </div>
+  <!-- Late Game -->
 </div>
+<!-- Content -->

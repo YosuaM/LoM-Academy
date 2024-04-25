@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./source/**/*.{hbs,css,js}'],
+	content: [
+		'./source/**/*.{hbs,css,js}',
+		//'./node_modules/flowbite/**/*.js'
+	],
 	darkMode: 'class',
 	theme: {
 	  screens: {
@@ -196,6 +199,7 @@ module.exports = {
 	plugins: [
 	  require('@tailwindcss/typography'),
 	  require('@tailwindcss/forms'),
+	  require('flowbite/plugin'),
 	]
   }
   
