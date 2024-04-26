@@ -3,6 +3,8 @@ import BaseHead from '@Components/en/BaseHead.astro';
 import Header from '@Components/en/Header.astro';
 import Footer from '@Components/en/Footer.astro';
 import MobileMenu from '@Components/en/MobileMenu.astro';
+
+const { page } = Astro.props;
 ---
 
 
@@ -18,7 +20,7 @@ import MobileMenu from '@Components/en/MobileMenu.astro';
     <div class="header-wrapper text-white">
 
       <!-- HEADER -->
-      <Header />
+      <Header page={page} />
 
       <!-- HEADER -->
 
@@ -92,6 +94,8 @@ import MobileMenu from '@Components/en/MobileMenu.astro';
 
   <!-- Flowbite -->
   <script is:inline src="/assets/js/flowbite/1.8.0/flowbite.min.js"></script>
+
+  <script is:inline src="/assets/js/ranking/ranking.js"></script>
 
 </body>
 

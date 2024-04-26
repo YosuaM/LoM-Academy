@@ -1,10 +1,10 @@
 ---
 import StandarLayout from "@Layouts/StandarLayout.astro";
 
-const { section, sectionLink, subsection, subsectionLink, title } = Astro.props;
+const { section, sectionLink, subsection, subsectionLink, title, page } = Astro.props;
 ---
 
-<StandarLayout title={title}>
+<StandarLayout title={title} page={page} >
   <div class="page-heading py-6 md:py-12">
     <div class="container">
       <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">

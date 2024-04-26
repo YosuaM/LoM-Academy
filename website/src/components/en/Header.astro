@@ -1,3 +1,10 @@
+---
+const headerActive = 'group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-left after:scale-x-100';
+const headerNotActive = 'class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100"';
+
+const { page } = Astro.props;
+---
+
 <header id="site-header" class="text-white">
   <div class="max-w-[1360px] mx-auto px-5">
     <nav
@@ -20,7 +27,7 @@
         <!-- Home -->
         <li class="">
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-left after:scale-x-100"
+            class={page === 1 ? headerActive : headerNotActive}
             href="/en/"
           >
             Home
@@ -30,7 +37,7 @@
         <!-- News -->
         <li class="">
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100"
+            class={page === 2 ? headerActive : headerNotActive}
             href="/en/news"
           >
             News
@@ -42,7 +49,7 @@
           class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
         >
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100"
+            class={page === 3 ? headerActive : headerNotActive}
             href="/en/guides"
           >
             Guides
@@ -201,7 +208,7 @@
           class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100 disabled"
         >
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100 disabled"
+            class={(page === 4 ? headerActive : headerNotActive) + " disabled"}
             href="/en/events"
           >
             Events
@@ -237,7 +244,7 @@
         <!-- Ranking -->
         <li class="">
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100 disabled"
+            class={page === 5 ? headerActive : headerNotActive}
             href="/en/ranking"
           >
             Ranking
@@ -249,7 +256,7 @@
           class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100 disabled"
         >
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100 disabled"
+            class={(page === 6 ? headerActive : headerNotActive) + " disabled"}
             href="/en/tools"
           >
             Tools
@@ -277,7 +284,7 @@
         <!-- About -->
         <li class="">
           <a
-            class="group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-right hover:after:origin-left after:scale-x-0 hover:after:scale-x-100"
+            class={page === 7 ? headerActive : headerNotActive}
             href="/en/about"
           >
             About
