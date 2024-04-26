@@ -13,6 +13,6 @@ if (!post) return Astro.redirect("/404");
 const { Content } = await post.render();
 ---
 
-<GuideLayout {...post.data}>
+<GuideLayout {...post.data} page={3} >
 	<Content />
 </GuideLayout>
