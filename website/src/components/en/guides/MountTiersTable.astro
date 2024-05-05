@@ -1,0 +1,63 @@
+---
+import { mountLevels } from "@Content/game_data_en/Mounts.astro";
+---
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <!-- Title -->
+  <h3
+    class="text-gray-500 dark:text-gray-400 text-l sm:text-xl md:text-2xl lg:text-[24px] font-bold mb-2 md:mb-3 lg:mb-6 xl:mb-8"
+  >
+    Mount Tiers
+  </h3>
+  <!-- Title -->
+
+  <!-- Mount Levels Table -->
+  <table
+    class="w-full text-sm text-left rtl:text-right"
+    id="mount-tiers-table"
+  >
+    <!-- Header -->
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3 text-center"> Tier </th>
+        <th scope="col" class="px-6 py-3 text-center"> Count Clock Winder </th>
+        <th scope="col" class="px-6 py-3 text-center"> Total Clock Winder </th>
+        <th scope="col" class="px-6 py-3 text-center"> Bonuses </th>
+        <th scope="col" class="px-6 py-3 "> Evasion </th>
+        <th scope="col" class="px-6 py-3">
+          <span class="sr-only">Details</span>
+        </th>
+      </tr>
+    </thead>
+    <!-- Header -->
+    <!-- Body -->
+    <tbody>
+      {
+        mountLevels.map((level, index) => {
+          return (
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <td class="text-center px-6 py-2">{level.tier}</td>
+              <td class="text-center px-6 py-2">{level.count}</td>
+              <td class="text-center px-6 py-2">{level.total}</td>
+              <td class="text-center px-6 py-2">{level.bonuses}%</td>
+              <td class="text-center px-6 py-2">{level.evasion}%</td>
+              <td class="text-right px-6 py-2">
+                <a
+                  href="#"
+                  class="font-medium hover:underline text-accent"
+                  data-tier={level.tier}
+                >
+                  Details
+                </a>
+              </td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+    <!-- Body -->
+  </table>
+  <!-- Mount Levels Table -->
+</div>
