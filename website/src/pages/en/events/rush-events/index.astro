@@ -1,0 +1,155 @@
+---
+import StandarLayout from "@Layouts/StandarLayout.astro";
+
+const eventList = [
+  {
+    name: 'Prayer Rush Event',
+    description: 'Spend 25,000 Fruit Offerings to get 10,000 relic fragments. This event can be completed up to 4 times.',
+    week: 'First week of the rush calendar',
+    duration: '7 days',
+    image: '/assets/img/events/rush/prayer_rush_360_150.webp',
+    link: '/events/rush-events/prayer-rush'
+  },
+  {
+    name: 'Family Prayer Rush Event',
+    description: 'DESCRIPTION',
+    week: 'First week of the rush calendar',
+    duration: '7 days',
+    image: '/assets/img/events/rush/empty_rush_360_150.webp',
+    link: '/events/rush-events/family-prayer-rush'
+  },
+  {
+    name: 'Tech Rush Event',
+    description: 'Spend 120,000 Ores to get 2,000 Divine Hammmer. This event can be completed up to 4 times.',
+    week: 'Second week of the rush calendar',
+    duration: '7 days',
+    image: '/assets/img/events/rush/tech_rush_360_150.webp',
+    link: '/events/rush-events/tech-rush'
+  },
+  {
+    name: 'Mount Rush Event',
+    description: 'Spend 800 Clockworks to get 2,000 Divine Hammmer. This event can be completed up to 4 times.',
+    week: 'Second week of the rush calendar',
+    duration: '2 days',
+    image: '/assets/img/events/rush/empty_rush_360_150.webp',
+    link: '/events/rush-events/mount-rush'
+  },
+  {
+    name: 'Soul Rush Event',
+    description: 'Spend 800 Clockworks to get 5,000 Martial Soul Essence. This event can be completed up to 4 times.',
+    week: 'Third week of the rush calendar',
+    duration: '7 days',
+    image: '/assets/img/events/rush/soul_rush_360_150.webp',
+    link: '/events/rush-events/soul-rush'
+  },
+  {
+    name: 'Pal Rush Event',
+    description: 'Spend 2,000 Skill Lottery Tickets to get 10,000 Relic Fragments. This event can be completed up to 4 times.',
+    week: 'Third week of the rush calendar',
+    duration: '2 days',
+    image: '/assets/img/events/rush/empty_rush_360_150.webp',
+    link: '/events/rush-events/pal-rush'
+  },
+  {
+    name: 'Relic Rush Event',
+    description: 'Spend 225,000 Relic Fragments to get 2,000 Divine Hammers. This event can be completed up to 4 times.',
+    week: 'Fourth week of the rush calendar',
+    duration: '7 days',
+    image: '/assets/img/events/rush/relic_rush_360_150.webp',
+    link: '/events/rush-events/relic-rush'
+  },
+  {
+    name: 'Skill Rush Event',
+    description: 'Spend 2,000 Skill Lottery Tickets to get 10,000 Relic Fragments. This event can be completed up to 4 times.',
+    week: 'Fourth week of the rush calendar',
+    duration: '2 days',
+    image: '/assets/img/events/rush/skill_rush_360_150.webp',
+    link: '/events/rush-events/skill-rush'
+  }
+];
+---
+
+<StandarLayout title="Rush Events" page={4}>
+  <!-- HEADER -->
+  <div class="page-heading py-6 md:py-12">
+    <div class="container">
+      <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">
+        <svg
+          role="img"
+          class="aspect-[6/9] w-3 fill-accent sm:w-4 md:w-5 lg:w-7 xl:w-9"
+        >
+          <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel"></use>
+        </svg>
+        <h1
+          class="relative mb-3 text-3xl font-bold leading-none tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-[84px]"
+        >
+          Rush Events
+        </h1>
+      </div>
+
+      <ol
+        class="relative flex flex-wrap gap-x-6 text-sm leading-none text-gray-500 lg:gap-x-8 lg:text-lg [&>li>a]:text-gray-900 hover:[&>li>a]:text-accent dark:[&>li>a]:text-white dark:hover:[&>li>a]:text-accent [&>li]:relative"
+      >
+        <li class="font-bold">
+          <a href="/en/events">Events</a>
+          <svg
+            role="img"
+            class="fill-gray absolute -right-4 top-1/2 aspect-[3/5] w-1.5 -translate-y-1/2 lg:-right-5"
+          >
+            <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
+            ></use>
+          </svg>
+        </li>
+        <li>Rush Events</li>
+      </ol>
+    </div>
+  </div>
+  <!-- HEADER -->
+
+  <!-- CONTENT -->
+  <main id="main-content" class="grow lg:pt-0">
+    <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
+      <div class="container">
+        <div class="flex flex-col gap-y-10 lg:gap-y-20">
+
+          <!-- Event items -->
+          {
+            eventList.map(event => (
+              <div
+                class="grid grid-cols-12 gap-x-5 gap-y-9 md:gap-x-6 lg:gap-x-7.5"
+              >
+                <div
+                  class="col-span-full pt-2 md:col-span-4 md:justify-self-center"
+                >
+                  <a href={event.link}>
+                    <img
+                      class=""
+                      src={event.image}
+                      alt="Rush events"
+                    />
+                  </a>
+                </div>
+                <div class="col-span-full md:col-span-8">
+                  <a
+                    class="text-sm font-bold uppercase text-accent hover:text-gray-900 dark:hover:text-white"
+                    href={event.link}>{event.name}</a
+                  >
+                  <div class="mb-3">
+                    {event.description}
+                    <br />
+                    📆 {event.week}
+                    <br />
+                    ⌛ {event.duration}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+          <!-- Event items -->
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- CONTENT -->
+</StandarLayout>
