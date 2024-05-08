@@ -2,7 +2,7 @@
 import StandarLayout from "@Layouts/StandarLayout.astro";
 ---
 
-<StandarLayout title="Guides" page={3}>
+<StandarLayout title="Guides - Progress" page={3}>
   <!-- HEADER -->
   <div class="page-heading py-6 md:py-12">
     <div class="container">
@@ -76,6 +76,35 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
             </div>
           </div>
           <!-- CLASS GUIDES -->
+          <!-- EQUIPMENT GUIDES -->
+          <div
+          class="grid grid-cols-12 gap-x-5 gap-y-9 md:gap-x-6 lg:gap-x-7.5"
+        >
+          <div
+            class="col-span-full pt-2 md:col-span-4 md:justify-self-center"
+          >
+            <a href="guides/equipment">
+              <img
+                class=""
+                src="/assets/img/guides/equipment_200.webp"
+                alt="Equipment guides"
+              />
+            </a>
+          </div>
+          <div class="col-span-full md:col-span-8">
+            <div class="mb-3">
+              The equipment is the most important part of our mushroom. It is
+              necessary to know how to choose the best equipment for our class
+              and how to improve it. Here you can find all the necessary guides
+              to become the best mushroom.
+            </div>
+            <a
+              class="text-sm font-bold uppercase text-accent hover:text-gray-900 dark:hover:text-white"
+              href="guides/equipment">Equipment guides</a
+            >
+          </div>
+        </div>
+        <!-- EQUIPMENT GUIDES -->
           <!-- PROGRESS GUIDES -->
           <div
             class="grid grid-cols-12 gap-x-5 gap-y-9 md:gap-x-6 lg:gap-x-7.5"

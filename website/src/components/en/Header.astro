@@ -133,6 +133,47 @@ const { page } = Astro.props;
               </ul>
             </li>
             <!-- Class Guides -->
+            <!-- Equipment Guides -->
+            <li
+              class="px-5.5 relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
+            >
+              <a
+                class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                href="/en/guides/equipment"
+              >
+                Equipment
+
+                <svg role="img" class="h-1.5 w-1.5 fill-accent">
+                  <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
+                </svg>
+              </a>
+
+              <ul
+                class="sub-menu invisible absolute z-20 flex w-40 flex-col bg-white dark:bg-gray-700 py-2.5 text-sm font-bold opacity-0 shadow-2xl transition-all left-full -top-2"
+              >
+                <!-- Mounts Guide -->
+                <li class="px-5.5">
+                  <a
+                    class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                    href="/en/guides/equipment/mounts"
+                  >
+                    Mounts
+                  </a>
+                </li>
+                <!-- Mounts Guide -->
+                <!-- Artifacts Guide -->
+                <li class="px-5.5">
+                  <a
+                    class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                    href="/en/guides/equipment/artifacts"
+                  >
+                    Artifacts
+                  </a>
+                </li>
+                <!-- Artifacts Guide -->
+              </ul>
+            </li>
+            <!-- Equipment Guides -->
             <!-- Progress Guides -->
             <li
               class="px-5.5 relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
@@ -161,50 +202,40 @@ const { page } = Astro.props;
                   </a>
                 </li>
                 <!-- Mining Guide -->
-                <!-- Mounts Guide -->
-                <li class="px-5.5">
-                  <a
-                    class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
-                    href="/en/guides/progress/mounts"
-                  >
-                    Mounts
-                  </a>
-                </li>
-                <!-- Mounts Guide -->
               </ul>
             </li>
             <!-- Progress Guides -->
             <!-- Game Modes Guides -->
             <li
-            class="px-5.5 relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
-          >
-            <a
-              class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
-              href="/en/guides/game-modes"
+              class="px-5.5 relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
             >
-              Game Modes
+              <a
+                class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                href="/en/guides/game-modes"
+              >
+                Game Modes
 
-              <svg role="img" class="h-1.5 w-1.5 fill-accent">
-                <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
-              </svg>
-            </a>
+                <svg role="img" class="h-1.5 w-1.5 fill-accent">
+                  <use xlink:href="/assets/img/str1/sprite.svg#plus"></use>
+                </svg>
+              </a>
 
-            <ul
-              class="sub-menu invisible absolute z-20 flex w-40 flex-col bg-white dark:bg-gray-700 py-2.5 text-sm font-bold opacity-0 shadow-2xl transition-all left-full -top-2"
-            >
-              <!-- Cross-Server Showdown Guide -->
-              <li class="px-5.5">
-                <a
-                  class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
-                  href="/en/guides/game-modes/cross-server-showdown"
-                >
-                  Cross-Server Showdown
-                </a>
-              </li>
-              <!-- Cross-Server Showdown Guide -->
-            </ul>
-          </li>
-          <!-- Game Modes Guides -->
+              <ul
+                class="sub-menu invisible absolute z-20 flex w-40 flex-col bg-white dark:bg-gray-700 py-2.5 text-sm font-bold opacity-0 shadow-2xl transition-all left-full -top-2"
+              >
+                <!-- Cross-Server Showdown Guide -->
+                <li class="px-5.5">
+                  <a
+                    class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
+                    href="/en/guides/game-modes/cross-server-showdown"
+                  >
+                    Cross-Server Showdown
+                  </a>
+                </li>
+                <!-- Cross-Server Showdown Guide -->
+              </ul>
+            </li>
+            <!-- Game Modes Guides -->
           </ul>
         </li>
         <!-- Blog -->
