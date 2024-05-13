@@ -297,10 +297,10 @@ const { page } = Astro.props;
         <!-- Ranking -->
         <!-- Tools -->
         <li
-          class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100 disabled"
+          class="relative [&>.sub-menu]:hover:visible [&>.sub-menu]:hover:animate-popper-pop-in [&>.sub-menu]:hover:opacity-100"
         >
           <a
-            class={(page === 6 ? headerActive : headerNotActive) + " disabled"}
+            class={(page === 6 ? headerActive : headerNotActive)}
             href="/en/tools"
           >
             Tools
@@ -317,9 +317,9 @@ const { page } = Astro.props;
             <li class="px-5.5">
               <a
                 class="flex items-center justify-between py-1.5 transition-colors text-gray-900 hover:text-accent dark:text-white dark:hover:text-accent"
-                href="/en/tools/lamp-calculator"
+                href="/en/tools/mount-upgrading-calculator"
               >
-                Lamp Calculator
+                Mount Upgrading Calculator
               </a>
             </li>
           </ul>

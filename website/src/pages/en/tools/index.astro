@@ -44,68 +44,31 @@ import ArticleBox from "@Components/en/news/ArticleBox.astro";
   <main id="main-content" class="grow lg:pt-0">
     <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
       <div class="container">
-        <!-- CONTAINER -->
-        <div class="grid grid-cols-12 gap-y-8 sm:gap-7.5">
-          <ArticleBox
-            date="April 07th, 2024"
-            title="LoM Academy oficial launch!"
-            desc="We are proud to announce the official launch of the League of Legends Academy! Join us and become a pro mushroom!"
-            img="/assets/img/news/lom-academy-launch/card.webp"
-            alt="LoM Academy oficial launch!"
-            link="/en/news/lom-academy-launch"
-          />
-          <ArticleBox
-            date="April 08th, 2024"
-            title="Reversal Showdown Event"
-            desc="New event in Legend of Mushroom available. Find everything you need to know about the Reversal Showdown Event!"
-            img="/assets/img/news/reversal-showdown-event/card.webp"
-            alt="Reversal Showdown Event"
-            link="/en/news/reversal-showdown-event"
-          />
-        </div>
-        <!-- CONTAINER -->
-
-        <!-- PAGINATION -->
-        <nav class="pt-10 md:pt-14 lg:pt-24">
-          <ul
-            class="flex flex-wrap items-center justify-center gap-x-1.5 md:gap-x-2 lg:gap-x-4"
+        <div class="flex flex-col gap-y-10 lg:gap-y-20">
+          <!-- Archer Plue Monarch -->
+          <div
+            class="grid grid-cols-12 gap-x-5 gap-y-9 md:gap-x-6 lg:gap-x-7.5"
           >
-            <li class="flex items-center">
-              <a
-                class="inline-flex justify-center items-center border border-gray-200 dark:border-gray-600 w-8 lg:w-12.5 aspect-square text-gray-900 dark:text-white hover:bg-accent hover:border-accent dark:hover:border-accent transition-colors hover:text-gray-900 dark:hover:text-gray-900 pointer-events-none"
-                href="#"
-              >
-                <svg
-                  class="w-1.5 h-2.5 rotate-180 opacity-40"
-                  fill="currentColor"
-                >
-                  <use
-                    xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
-                  ></use>
-                </svg>
+            <div
+              class="col-span-full pt-2 md:col-span-4 md:justify-self-center"
+            >
+              <a href="/en/tools/mount-upgrading-calculator">
+                <img class="" src="/assets/img/tools/mount-upgrading-calculator/tool_icon.webp" alt="Archer Plume Monarch">
               </a>
-            </li>
-            <li>
+            </div>
+            <div class="col-span-full md:col-span-8">
               <a
-                class="inline-flex justify-center items-center w-8 lg:w-12.5 aspect-square border font-bold transition-colors text-gray-900 bg-accent border-accent dark:border-accent"
-                href="#">1</a
+                class="text-sm font-bold uppercase text-accent hover:text-gray-900 dark:hover:text-white"
+                href="/en/tools/mount-upgrading-calculator">Mount Upgrading Calculator</a
               >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="inline-flex justify-center items-center border border-gray-200 dark:border-gray-600 w-8 lg:w-12.5 aspect-square text-gray-900 dark:text-white hover:bg-accent hover:border-accent dark:hover:border-accent transition-colors hover:text-gray-900 dark:hover:text-gray-900"
-                href="#"
-              >
-                <svg class="w-1.5 h-2.5" fill="currentColor">
-                  <use
-                    xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- PAGINATION -->
+              <div class="mb-3">
+                With our calculator, you'll be able to know how many Clock Winders you need to level up your mount.
+                You can also calculate how many Diamonds it would cost to buy those Clock Winders.
+              </div>
+            </div>
+          </div>
+          <!-- Archer Plue Monarch -->
+        </div>
       </div>
     </div>
   </main>
