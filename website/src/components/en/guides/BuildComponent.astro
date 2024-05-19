@@ -17,11 +17,11 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
     <li class="me-2" role="presentation">
       <button
         class="inline-block p-4 border-b-2 rounded-t-lg"
-        id={type + "-early-gamme-tab"}
-        data-tabs-target={"#" + type + "-early-gamme"}
+        id={type + "-early-game-tab"}
+        data-tabs-target={"#" + type + "-early-game"}
         type="button"
         role="tab"
-        aria-controls={type + "-early-gamme"}
+        aria-controls={type + "-early-game"}
         aria-selected="false">Early Game</button
       >
     </li>
@@ -30,11 +30,11 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
     <li class="me-2" role="presentation">
       <button
         class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-        id={type + "-mid-gamme-tab"}
-        data-tabs-target={"#" + type + "-mid-gamme"}
+        id={type + "-mid-game-tab"}
+        data-tabs-target={"#" + type + "-mid-game"}
         type="button"
         role="tab"
-        aria-controls={type + "-mid-gamme"}
+        aria-controls={type + "-mid-game"}
         aria-selected="false">Mid Game</button
       >
     </li>
@@ -43,11 +43,11 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
     <li class="me-2" role="presentation">
       <button
         class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-        id={type + "-late-gamme-tab"}
-        data-tabs-target={"#" + type + "-late-gamme"}
+        id={type + "-late-game-tab"}
+        data-tabs-target={"#" + type + "-late-game"}
         type="button"
         role="tab"
-        aria-controls={type + "-late-gamme"}
+        aria-controls={type + "-late-game"}
         aria-selected="false">Late Game</button
       >
     </li>
@@ -60,7 +60,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
   <!-- Early Game -->
   <div
     class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-early-gamme"}
+    id={type + "-early-game"}
     role="tabpanel"
     aria-labelledby="early-game-tab"
   >
@@ -70,7 +70,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
           name={skills.find((s) => s.id == item.id)?.name ?? item.name}
           tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
           img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-early-gamme-item-" + index}
+          id={type + "-early-game-item-" + index}
         />
       ))
     }
@@ -79,7 +79,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
   <!-- Mid Game -->
   <div
     class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-mid-gamme"}
+    id={type + "-mid-game"}
     role="tabpanel"
     aria-labelledby="mid-game-tab"
   >
@@ -89,7 +89,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
           name={skills.find((s) => s.id == item.id)?.name ?? item.name}
           tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
           img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-mid-gamme-item-" + index}
+          id={type + "-mid-game-item-" + index}
         />
       ))
     }
@@ -98,7 +98,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
   <!-- Late Game -->
   <div
     class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-late-gamme"}
+    id={type + "-late-game"}
     role="tabpanel"
     aria-labelledby="late-game-tab"
   >
@@ -108,7 +108,7 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
           name={skills.find((s) => s.id == item.id)?.name ?? item.name}
           tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
           img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-late-gamme-item-" + index}
+          id={type + "-late-game-item-" + index}
         />
       ))
     }

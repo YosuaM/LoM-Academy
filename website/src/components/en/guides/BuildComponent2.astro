@@ -1,0 +1,60 @@
+---
+import Item from "./Item.astro";
+import { skills } from "@Content/game_data_en/Skills.astro";
+
+const { tabs, type } = Astro.props;
+---
+
+<!-- Header -->
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul
+    class="flex flex-wrap -mb-px text-sm font-medium text-center"
+    id="default-tab"
+    data-tabs-toggle="#default-tab-content"
+    role="tablist"
+  >
+  {
+    tabs.map((tab, index) => (
+      <li class="me-2" role="presentation">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg"
+          id={tab.code + "-tab"}
+          data-tabs-target={"#" + type + "-" + tab.code}
+          type="button"
+          role="tab"
+          aria-controls={type + "-" + tab.code}
+          aria-selected={index == 0 ? "true": "false"}
+        >
+          {tab.name}
+        </button>
+      </li>
+    ))
+  }
+  </ul>
+</div>
+<!-- Header -->
+<!-- Content -->
+<div id="default-tab-content">
+  {
+    tabs.map((tab, index) => (
+      <div
+        class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+        id={type + "-" + tab.code}
+        role="tabpanel"
+        aria-labelledby={tab.code + "-tab"}
+      >
+        {
+          tab.items.map((item, index) => (
+            <Item
+              name={skills.find((s) => s.id == item.id)?.name ?? item.name}
+              tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
+              img={skills.find((s) => s.id == item.id)?.img ?? item.img}
+              id={type + "-" + tab.code + "-item-" + index}
+            />
+          ))
+        }
+      </div>
+    ))
+  }
+</div>
+<!-- Content -->
