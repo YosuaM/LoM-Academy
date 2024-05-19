@@ -9,12 +9,14 @@ subsectionLink: "/en/guides/classes/"
 ---
 
 import BuildComponent from "@Components/en/guides/BuildComponent.astro";
+import BuildComponent2 from "@Components/en/guides/BuildComponent2.astro";
 
 # Overview
 
 The archer specialized in the branch of Plume Monarch focuses on physical damage, specifically damage through combos.
 Their strength lies in PvE content, especially from evolving to Arrowgod (level 100).
 
+<br />
 <br />
 <br />
 
@@ -30,22 +32,21 @@ Their strength lies in PvE content, especially from evolving to Arrowgod (level 
 
 <br />
 <br />
+<br />
 
 # Stat Priority
 
-Since the damage of this specialization is based on combo damage, our main focus will be to increase our probability of executing a combo hit and, if possible, also increase critical hit chance.
-Therefore, our ideal combination of bonuses in equipment would be Combo and Critical.
+Since the damage of this specialization is based on combo damage, our main focus will be to increase our combo rate and, if possible, also increase crit rate.
+Therefore, our ideal combination of bonuses in equipment would be Combo and Crit. Focus on these two stats in order to get around 80-100% combo rate and max crit rate possible.
 Evasion will be a good option in case we cannot obtain one of these bonuses. The priority of bonuses we will seek is as follows:
 
 ```
-1. Combo + Critic
-2. Combo + Evasion
-3. Critic + Evasion
-4. Combo + Anything
-5. Critic + Anything
-6. What ever
+1. Combo + Crit
+2. Combo/Crit + Evasion
+3. Combo/Crit + Anything else
 ```
 
+<br />
 <br />
 <br />
 
@@ -54,8 +55,72 @@ Evasion will be a good option in case we cannot obtain one of these bonuses. The
 Skills play a significant role in configuring our character. We can create a set of base skills on which we can make small adjustments and tailor them to our needs at any given moment, but it will be up to us to understand how these skills work and experiment when we get stuck.
 As we unlock higher-ranked skills, we will need to replace the ones we had before, so examples of skills will be given for an early phase of the game and others for when we are more advanced.
 
+<br />
+
+### PvE - Push to reach bosses
+This combinations are made to push stages to reach the bosses paying in auto mode. The idea is to have a good balance between damage and survival while we are slowing the enemies as much as possible.
 <BuildComponent
   type="plume-monarch-skills-pve"
+  earlyGame={[
+    {
+      id: "thorn_thicket"
+    },
+    {
+      id: "speed_surge"
+    },
+    {
+      id: "nature_renewal"
+    },
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "coin_bomb"
+    },
+  ]}
+  midGame={[
+    {
+      id: "thorn_thicket"
+    },
+    {
+      id: "nature_renewal"
+    },
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "smoke_bomb"
+    },
+    {
+      id: "disarm"
+    },
+  ]}
+  lateGame={[
+    {
+      id: "thorn_thicket"
+    },
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "smoke_bomb"
+    },
+    {
+      id: "disarm"
+    },
+    {
+      id: "clone_strike"
+    },
+  ]}
+/>
+
+<br />
+
+### PvE - Bosses
+This combination is made to defeat bosses. The idea is to have a good balance between damage and survival while for early and mid game and then burst damage for late game.
+Replace Wordly Snare for Blitz Assault if you are having trouble with the boss. Remember to set up a delay for the skills to be used in the correct order.
+<BuildComponent
+  type="plume-monarch-skills-boss"
   earlyGame={[
     {
       id: "speed_surge"
@@ -75,30 +140,30 @@ As we unlock higher-ranked skills, we will need to replace the ones we had befor
   ]}
   midGame={[
     {
+      id: "speed_surge"
+    },
+    {
       id: "nature_renewal"
     },
     {
       id: "shroom_shield"
     },
     {
-      id: "disarm"
-    },
-    {
       id: "smoke_bomb"
     },
     {
-      id: "wild_gust"
+      id: "disarm"
     },
   ]}
   lateGame={[
     {
-      id: "disarm"
+      id: "speed_surge"
     },
     {
       id: "smoke_bomb"
     },
     {
-      id: "wild_gust"
+      id: "disarm"
     },
     {
       id: "clone_strike"
@@ -110,6 +175,65 @@ As we unlock higher-ranked skills, we will need to replace the ones we had befor
 />
 
 <br />
+
+### PvP
+<BuildComponent
+  type="plume-monarch-skills-pvp"
+  earlyGame={[
+    {
+      id: "speed_surge"
+    },
+    {
+      id: "nature_renewal"
+    },
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "easy_breezy"
+    },
+    {
+      id: "take_it_slow"
+    },
+  ]}
+  midGame={[
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "easy_breezy"
+    },
+    {
+      id: "smoke_bomb"
+    },
+    {
+      id: "disarm"
+    },
+    {
+      id: "wild_gust"
+    },
+  ]}
+  lateGame={[
+    {
+      id: "shroom_shield"
+    },
+    {
+      id: "smoke_bomb"
+    },
+    {
+      id: "disarm"
+    },
+    {
+      id: "clone_strike"
+    },
+    {
+      id: "blitz_assault"
+    },
+  ]}
+/>
+
+<br />
+<br />
 <br />
 
 # Pals
@@ -117,110 +241,652 @@ As we unlock higher-ranked skills, we will need to replace the ones we had befor
 For pals, like with skills, we will look for a combination that enhances our strong point, which is attacking very quickly to perform many combos, but we cannot neglect a crucial aspect which is survival.
 Therefore, we should replace pals that enhance our offensive capabilities with others that assist us with survival as we use them. There is no perfect combination for all situations; small changes are necessary to adapt to the situation.
 
-<BuildComponent
+<br />
+
+### PvE - Push to reach bosses
+<BuildComponent2
   type="plume-monarch-pals-pve"
-  earlyGame={[
+  tabs={[
     {
-      name: "Cactus",
-      tooltip:
-        "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
-      img: "/assets/img/game/pals/cactus_family.webp",
+      code: "early-game-f2p",
+      name: "Early Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snail",
+          tooltip:
+            "Reduces enemy movement speed by 15%/20%/30%/35%.",
+          img: "/assets/img/game/pals/snail_family.webp",
+        },
+        {
+          name: "Cactus",
+          tooltip:
+            "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
+          img: "/assets/img/game/pals/cactus_family.webp",
+        },
+      ]
     },
     {
-      name: "Bird",
-      tooltip:
-        "Attack Speed +5%/8%/10%/12%/15%.",
-      img: "/assets/img/game/pals/bird_family.webp",
+      code: "early-game-p2w",
+      name: "Early Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snail",
+          tooltip:
+            "Reduces enemy movement speed by 15%/20%/30%/35%.",
+          img: "/assets/img/game/pals/snail_family.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
     },
     {
-      name: "Banana",
-      tooltip:
-        "Combo +5%/10%. Legendary: Combo DMG +100%",
-      img: "/assets/img/game/pals/banana_family.webp",
+      code: "mid-game-f2p",
+      name: "Mid Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snail",
+          tooltip:
+            "Reduces enemy movement speed by 15%/20%/30%/35%.",
+          img: "/assets/img/game/pals/snail_family.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+      ]
     },
     {
-      name: "Chicken",
-      tooltip:
-        "Basic Attack DMG +10%/15%/20%/25%/30%",
-      img: "/assets/img/game/pals/chicken_family.webp",
+      code: "mid-game-p2w",
+      name: "Mid Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snail",
+          tooltip:
+            "Reduces enemy movement speed by 15%/20%/30%/35%.",
+          img: "/assets/img/game/pals/snail_family.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
     },
     {
-      name: "Snail",
-      tooltip:
-        "Reduces enemy movement speed by 15%/20%/30%/35%.",
-      img: "/assets/img/game/pals/snail_family.webp",
-    },
-  ]}
-  midGame={[
-    {
-      name: "Rabbit",
-      tooltip:
-        "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
-      img: "/assets/img/game/pals/rabbit.webp",
-    },
-    {
-      name: "Bird",
-      tooltip:
-        "Attack Speed +5%/8%/10%/12%/15%.",
-      img: "/assets/img/game/pals/bird_family.webp",
-    },
-    {
-      name: "Banana",
-      tooltip:
-        "Combo +5%/10%. Legendary: Combo DMG +100%",
-      img: "/assets/img/game/pals/banana_family.webp",
-    },
-    {
-      name: "Chicken",
-      tooltip:
-        "Summon a Bat, dealing AoE DMG every second, lasting for 5 second.",
-      img: "/assets/img/game/pals/chicken_family.webp",
-    },
-    {
-      name: "Snail",
-      tooltip:
-        "Reduces enemy movement speed by 15%/20%/30%/35%.",
-      img: "/assets/img/game/pals/snail_family.webp",
-    },
-  ]}
-  lateGame={[
-    {
-      name: "Rabbit",
-      tooltip:
-        "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
-      img: "/assets/img/game/pals/rabbit.webp",
-    },
-    {
-      name: "Bird",
-      tooltip:
-        "Attack Speed +5%/8%/10%/12%/15%.",
-      img: "/assets/img/game/pals/bird_family.webp",
-    },
-    {
-      name: "Banana",
-      tooltip:
-        "Combo +5%/10%. Legendary: Combo DMG +100%",
-      img: "/assets/img/game/pals/banana_family.webp",
-    },
-    {
-      name: "Octopus",
-      tooltip:
-        "Increase combo DMG by 60% and with every 3 combos, deal an extra 200% DMG.",
-      img: "/assets/img/game/pals/pirate_octopus.webp",
-    },
-    {
-      name: "Snail",
-      tooltip:
-        "Reduces enemy movement speed by 15%/20%/30%/35%.",
-      img: "/assets/img/game/pals/snail_family.webp",
+      code: "late-game",
+      name: "Late Game",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snail",
+          tooltip:
+            "Reduces enemy movement speed by 15%/20%/30%/35%.",
+          img: "/assets/img/game/pals/snail_family.webp",
+        },
+        {
+          name: "Hipster Tortoise",
+          tooltip:
+            "When HP is below 50%, gain a shield equal to 30% of max HP. (Cooldown: 60 seconds.)",
+          img: "/assets/img/game/pals/hipster_tortoise.webp",
+        },
+      ]
     },
   ]}
 />
 
 <br />
+
+### PvE - Bosses
+If we don't have the Eggplan Toothpick or Rabbit, we can replace them with the Octopus, Tortoise or Chicken. In case we need more survival, we can replace the Toothpick Eggplant with the Hipster Tortoise.
+<BuildComponent2
+  type="plume-monarch-pals-boss"
+  tabs={[
+    {
+      code: "early-game-f2p",
+      name: "Early Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Cactus",
+          tooltip:
+            "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
+          img: "/assets/img/game/pals/cactus_family.webp",
+        },
+        {
+          name: "Chicken",
+          tooltip:
+            "Basic Attack DMG +10%/15%/20%/25%/30%.",
+          img: "/assets/img/game/pals/chicken_family.webp",
+        },
+      ]
+    },
+    {
+      code: "early-game-p2w",
+      name: "Early Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Cactus",
+          tooltip:
+            "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
+          img: "/assets/img/game/pals/cactus_family.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    },
+    {
+      code: "mid-game-f2p",
+      name: "Mid Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Snow Goblin",
+          tooltip:
+            "Reduce enemy attack speed by 5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/snow_sprite_family.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+      ]
+    },
+    {
+      code: "mid-game-p2w",
+      name: "Mid Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    },
+    {
+      code: "late-game-f2p",
+      name: "Late Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Octopus",
+          tooltip:
+            "Increase combo DMG by 60% and with every 3 combos, deal an extra 200% DMG.",
+          img: "/assets/img/game/pals/pirate_octopus.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+      ]
+    },
+    {
+      code: "late-game-p2w",
+      name: "Late Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Octopus",
+          tooltip:
+            "Increase combo DMG by 60% and with every 3 combos, deal an extra 200% DMG.",
+          img: "/assets/img/game/pals/pirate_octopus.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    }
+  ]}
+/>
+
 <br />
 
-# Relic
+### PvP
+If we don't have the Eggplan Toothpick or Rabbit, we can replace them with the Octopus or Chicken.
+<BuildComponent2
+  type="plume-monarch-pals-pvp"
+  tabs={[
+    {
+      code: "early-game-f2p",
+      name: "Early Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Cactus",
+          tooltip:
+            "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
+          img: "/assets/img/game/pals/cactus_family.webp",
+        },
+        {
+          name: "Chicken",
+          tooltip:
+            "Basic Attack DMG +10%/15%/20%/25%/30%.",
+          img: "/assets/img/game/pals/chicken_family.webp",
+        },
+      ]
+    },
+    {
+      code: "early-game-p2w",
+      name: "Early Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Cactus",
+          tooltip:
+            "Every 3 basic attacks deal an extra 15%/20%/30%/35%/40% DMG.",
+          img: "/assets/img/game/pals/cactus_family.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    },
+    {
+      code: "mid-game-f2p",
+      name: "Mid Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+      ]
+    },
+    {
+      code: "mid-game-p2w",
+      name: "Mid Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Hydrosprite",
+          tooltip:
+            "Active Skill Energy Regen +5%/10%/15%/20%/25%.",
+          img: "/assets/img/game/pals/hydrosprite_family.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    },
+    {
+      code: "late-game-f2p",
+      name: "Late Game F2P",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Hipster Tortoise",
+          tooltip:
+            "When HP is below 50%, gain a shield equal to 30% of max HP. (Cooldown: 60 seconds.)",
+          img: "/assets/img/game/pals/hipster_tortoise.webp",
+        },
+        {
+          name: "Rabbit",
+          tooltip:
+            "Increase Crit rate by 5%. Benny's attacks have a 30% chacne to launch targets for 0.5 seconds.",
+          img: "/assets/img/game/pals/rabbit.webp",
+        },
+      ]
+    },
+    {
+      code: "late-game-p2w",
+      name: "Late Game P2W",
+      items: [
+        {
+          name: "Banana",
+          tooltip:
+            "Combo +5%/10%. Legendary: Combo DMG +100%",
+          img: "/assets/img/game/pals/banana_family.webp",
+        },
+        {
+          name: "Bird",
+          tooltip:
+            "Attack Speed +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/bird_family.webp",
+        },
+        {
+          name: "Deer",
+          tooltip:
+            "DMG RES +5%/8%/10%/12%/15%.",
+          img: "/assets/img/game/pals/deer_family.webp",
+        },
+        {
+          name: "Hipster Tortoise",
+          tooltip:
+            "When HP is below 50%, gain a shield equal to 30% of max HP. (Cooldown: 60 seconds.)",
+          img: "/assets/img/game/pals/hipster_tortoise.webp",
+        },
+        {
+          name: "Toothpick Eggplant",
+          tooltip:
+            "Crit Rate +10%.",
+          img: "/assets/img/game/pals/toothpick_eggplant.webp",
+        },
+      ]
+    }
+  ]}
+/>
+
+<br />
+<br />
+<br />
+
+# Relics
 
 Relics are highly situational, and the choice we make regarding them will generally depend on the skills or pals we have.
 
@@ -228,40 +894,43 @@ Relics are highly situational, and the choice we make regarding them will genera
 
 #### Mask
 ```
-PvE/PvP: Arrow King Mask (Combo +10%)
+PvE/PvP [combo without mask < 80%]: Arrow King Mask (Combo +10%)
+PvE/PvP [combo without mask > 80%]: Bondeed Mask (Crit Rate +10%)
 ```
 
 <br />
 
 #### Fossil
 ```
-PvE/PvP: Thundercaller Kite (After using active skills, summon lightning dealing DMG)
+PvE: Thundercaller Kite (After using active skills, summon lightning dealing DMG)
+PvP: Dragonweave Circlet (Basic attacks of Dragon, Turtle or Lizard Pals have a 20% chance to deal DMG equal to 0.5% of their own max HP.)
 ```
 
 <br />
 
 #### Treasure
 ```
-PvE/PvP: Blessed Dew (Increase Cactus Pal's Combo Rate)
-PvE/PvP: Magic Box (Increase Cat and Deer Pal's DMG)
-PvE/PvP: Metamorphic Crystal (Increase the attack speed of Dog, Fox and Octupus Pals)
+PvE/PvP [using Cactus Pal]: Blessed Dew (Increase Cactus Pal's Combo Rate)
+PvE/PvP [using Deer Pal]: Magic Box (Increase Cat and Deer Pal's DMG)
+PvE/PvP [using Octopus Pal]: Metamorphic Crystal (Increase the attack speed of Dog, Fox and Octupus Pals)
 ```
 
 <br />
 
 #### Book
 ```
-PvP: Flame Book (At the start of the battle, increase ATK by 1% per second, up to 10%)
-PvE: Beasthide Book (Increase DMG dealt to Bosses by 20%)
-PvE: Immunity Book (In Boss levels, become immmune to DMG for 3 seconds when HP drops bellow 70% for the first time)
+PvP early-mid: Flame Book (At the start of the battle, increase ATK by 1% per second, up to 10%)
+PvP late: Stonewrit Tome (Increase Basic ATK DMG RES, Pal DMG RES, Counter DMG RES, Cobo DMG RES and Skill DMG RES by 5%.)
+PvE offensive: Beasthide Book (Increase DMG dealt to Bosses by 20%)
+PvE deffensive: Immunity Book (In Boss levels, become immmune to DMG for 3 seconds when HP drops bellow 70% for the first time)
 ```
 
 <br />
 
 #### Statue
 ```
+PvE/PvP [using Smoke Bomb or Disarm]: Tie Statue (Extend the effect duration of Disarm, Dazzler and Smoke Bomb by 50%)
 PvE/PvP: Cage Statue (Boost the effects of Durian Bomb, Easy Breezy and Take It Slow by 30%)
-PvE/PvP: Tie Statue (Extend the effect duration of Disarm, Dazzler and Smoke Bomb by 50%)
 ```
 
 <br />
@@ -269,9 +938,10 @@ PvE/PvP: Tie Statue (Extend the effect duration of Disarm, Dazzler and Smoke Bom
 #### Necklace
 ```
 PvE/PvP: Storm Necklace (Increase the DMG of sumoned units by 30% during Heroic Descent and Close Strike)
-PvE/PvP: Spirit Necklace (Basic attacks deal and extra 15% DMG during BLitz Assault)
+PvE/PvP: Spirit Necklace (Basic attacks deal and extra 15% DMG during Blitz Assault)
 ```
 
+<br />
 <br />
 <br />
 
@@ -281,10 +951,12 @@ Here we will always look for offensive statistics, accumulating several combo on
 Some possible combinations we could make are as follows:
 
 ```
-Option 1: Global combo damage x4 + Critical x1
-Option 2: Global combo damage x3 + Critical x2
+Option 1: Global combo damage x5
+Option 2: Global combo damage x4 + Critical x1
 ```
 
+<br />
+<br />
 <br />
 <br />
 
