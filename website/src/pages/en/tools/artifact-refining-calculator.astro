@@ -1,18 +1,13 @@
 ---
 import StandarLayout from "@Layouts/StandarLayout.astro";
-import { mountLevels } from "@Content/game_data_en/Mounts.astro";
+import { artifactLevels } from "@Content/game_data_en/Artifacts.astro";
 
-let levels = mountLevels.flatMap((mountLevel) => {
-  return mountLevel.stars.map((star, index) => {
-    return {
-      tier: mountLevel.tier,
-      star: index + 1,
-    };
-  });
+const levels = artifactLevels.flatMap((artifactLevel) => {
+  return artifactLevel.level;
 });
 ---
 
-<StandarLayout title="Mount Upgrading Calculator" page={6}>
+<StandarLayout title="Artifact Refining Calculator" page={6}>
   <!-- HEADER -->
   <div class="page-heading py-6 md:py-12">
     <div class="container">
@@ -26,7 +21,7 @@ let levels = mountLevels.flatMap((mountLevel) => {
         <h1
           class="relative mb-3 text-3xl font-bold leading-none tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-[84px]"
         >
-          Mount Upgrading Calculator
+        Artifact Refining Calculator
         </h1>
       </div>
 
@@ -46,7 +41,7 @@ let levels = mountLevels.flatMap((mountLevel) => {
             ></use>
           </svg>
         </li>
-        <li>Mount Upgrading Calculator</li>
+        <li>Artifact Refining Calculator</li>
         <!-- TITLE -->
       </ol>
     </div>
@@ -61,20 +56,20 @@ let levels = mountLevels.flatMap((mountLevel) => {
           <div>
             <label
               class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5"
-              for="mount-current-level"
+              for="artifact-current-level"
               >Current level
               <span class="text-accent">*</span>
             </label>
             <select
               class="w-full border-base bg-white/40 px-4 h-12.5 font-medium text-gray-900 transition-all duration-150 bg-caret bg-[length:10px_6px] bg-[position:right_18px_center] focus:border-accent focus:outline-0 focus:ring-0 focus:text-gray-900 hover:cursor-pointer dark:border-gray-650 dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:text-white dark:bg-caret-white dark:focus:bg-gray-900"
-              name="mount-current-level"
-              id="mount-current-level"
+              name="artifact-current-level"
+              id="artifact-current-level"
             >
               {
                 levels.map((level, index) => (
                   <option
                     value={index}
-                  >{`Tier ${level.tier} - ${level.star} Star`}</option>
+                  >{`Level ${level}`}</option>
                 ))
               }
             </select>
@@ -85,38 +80,38 @@ let levels = mountLevels.flatMap((mountLevel) => {
           <div>
             <label
               class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5"
-              for="mount-target-level"
+              for="artifact-target-level"
               >Target level
               <span class="text-accent">*</span>
             </label>
             <select
               class="w-full border-base bg-white/40 px-4 h-12.5 font-medium text-gray-900 transition-all duration-150 bg-caret bg-[length:10px_6px] bg-[position:right_18px_center] focus:border-accent focus:outline-0 focus:ring-0 focus:text-gray-900 hover:cursor-pointer dark:border-gray-650 dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:text-white dark:bg-caret-white dark:focus:bg-gray-900"
-              name="mount-target-level"
-              id="mount-target-level"
+              name="artifact-target-level"
+              id="artifact-target-level"
             >
               {
                 levels.map((level, index) => (
                   <option
                     value={index}
-                  >{`Tier ${level.tier} - ${level.star} Star`}</option>
+                    >{`Level ${level}`}</option>
                 ))
               }
             </select>
           </div>
           <!-- TARGET LEVEL -->
 
-          <!-- CLOCK WINDER INPUT -->
+          <!-- DIVINE HAMMERS INPUT -->
           <div class="">
             <label
               class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5"
-              for="mount-clock-winders-owned"
-              >Clock Winders owned
+              for="artifact-diviner-hammers-owned"
+              >Divine Hammers owned
             </label>
             <input
               class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full"
               type="number"
-              name="mount-clock-winders-owned"
-              id="mount-clock-winders-owned"
+              name="artifact-diviner-hammers-owned"
+              id="artifact-diviner-hammers-owned"
               min="0"
               max="999999999999"
               value=""
@@ -125,34 +120,14 @@ let levels = mountLevels.flatMap((mountLevel) => {
             <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
             </p>
           </div>
-          <!-- CLOCK WINDER INPUT -->
+          <!-- DIVINE HAMMERS INPUT -->
 
-          <!-- DIAMOND INPUT -->
-          <div class="">
-            <label
-              class="block text-sm font-bold uppercase text-gray-500 [&:not(:empty)]:mb-2.5"
-              for="mount-diamonds-owned"
-              >Diamonds owned
-            </label>
-            <input
-              class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full"
-              type="number"
-              name="mount-diamonds-owned"
-              id="mount-diamonds-owned"
-              min="0"
-              max="999999999999"
-              value=""
-              placeholder=""
-            />
-            <p class="group-[.is-error]:block mt-2 hidden text-xs text-danger">
-            </p>
-          </div>
-          <!-- DIAMOND INPUT -->
+          <br />
 
           <!-- BUTTON -->
           <div class="basis-1/2">
             <button
-              id="mount-calculator-button"
+              id="artifact-calculator-button"
               class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90 basis-full md:basis-1/2 lg:basis-1/3"
             >
               Calculate cost
@@ -160,43 +135,27 @@ let levels = mountLevels.flatMap((mountLevel) => {
           </div>
           <!-- BUTTON -->
 
-          <div id="mount-calculator-result" class="basis-1/2">
+          <div id="artifact-calculator-result" class="basis-1/2">
             <div class="hidden">
-              <!-- CLOCK WINDERS -->
+              <!-- DIVINE HAMMERS -->
               This upgrade costs
-              <span id="mount-calculator-result-clock-winders" class="text-accent"
+              <span id="artifact-calculator-result-divine-hammers" class="text-accent"
                 >0</span
-              > Clock Winders.
-              <!-- CLOCK WINDERS -->
-              <!-- CLOCK WINDERS MISSING -->
+              > Divine Hammers.
+              <!-- DIVINE HAMMERS -->
+              <!-- DIVINE HAMMERS MISSING -->
               <span class="hidden">
                 Missing <span
-                  id="mount-calculator-result-clock-winders-missing"
+                  id="artifact-calculator-result-divine-hammers-missing"
                   class="text-accent">0</span
-                > Clock winders</span
+                > Divine Hammers</span
               >
-              <!-- CLOCK WINDERS MISSING -->
-            </div>
-            <div class="hidden pt-4">
-              <!-- DIAMONDS -->
-              Buy these Clock Winders costs
-              <span id="mount-calculator-result-diamonds" class="text-accent"
-                >0</span
-              > Diamonds.
-              <!-- DIAMONDS -->
-              <!-- DIAMONDS MISSING -->
-              <span class="hidden">
-                Missing <span
-                  id="mount-calculator-result-diamonds-missing"
-                  class="text-accent">0</span
-                > Diamonds.</span
-              >
-              <!-- DIAMONDS MISSING -->
+              <!-- DIVINE HAMMERS MISSING -->
             </div>
           </div>
 
           <!-- ERROR MESSAGE -->
-          <div id="mount-calculator-error" class="basis-1/2 hidden">
+          <div id="artifact-calculator-error" class="basis-1/2 hidden">
             Target level must be higher than current level.
           </div>
           <!-- ERROR MESSAGE -->
