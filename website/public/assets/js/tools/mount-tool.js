@@ -1006,43 +1006,47 @@ const mountTierData = [
   });
 });
 
-const currentLevel = document.getElementById("mount-current-level");
-const targetLevel = document.getElementById("mount-target-level");
+const mountCurrentLevel = document.getElementById("mount-current-level");
+const mountTargetLevel = document.getElementById("mount-target-level");
 const clockWindersOwned = document.getElementById("mount-clock-winders-owned");
 const diamondsOwned = document.getElementById("mount-diamonds-owned");
-const result = document.getElementById("mount-calculator-result");
-const error = document.getElementById("mount-calculator-error");
+const mountCalculatorResult = document.getElementById("mount-calculator-result");
+const mountCalculatorError = document.getElementById("mount-calculator-error");
 
-document
-  .getElementById("mount-calculator-button")
-  .addEventListener("click", function () {
+const mountCalculatorButton = document.getElementById("mount-calculator-button");
 
+if (mountCalculatorButton) {
+  mountCalculatorButton.addEventListener("click", function () {
     // Get the result elements
-    const resultSpans = result.getElementsByTagName("span");
-    const resultDivs = result.getElementsByTagName("div");
+    const resultSpans = mountCalculatorResult.getElementsByTagName("span");
+    const resultDivs = mountCalculatorResult.getElementsByTagName("div");
 
     // Hide previous results
-    error.classList.add("hidden");
-    result.classList.add("hidden");
+    mountCalculatorError.classList.add("hidden");
+    mountCalculatorResult.classList.add("hidden");
     resultDivs[0].classList.add("hidden");
     resultDivs[1].classList.add("hidden");
     resultSpans[1].classList.add("hidden");
-    
+
     // Check if the current level and target level are selected
-    if (!currentLevel || !targetLevel) {
-      console.error("Missing data.", currentLevel, targetLevel);
+    if (!mountCurrentLevel || !mountTargetLevel) {
+      console.error("Missing data.", mountCurrentLevel, mountTargetLevel);
       return;
     }
 
     // Check if the current level is higher than the target level
-    if (parseInt(currentLevel.value) >= parseInt(targetLevel.value)) {
-      error.classList.remove("hidden");
+    if (parseInt(mountCurrentLevel.value) >= parseInt(mountTargetLevel.value)) {
+      mountCalculatorError.classList.remove("hidden");
       return;
     }
-    
+
     // Calculate the total cost
     var totalCost = 0;
-    for (var i = (parseInt(currentLevel.value) + 1); i <= parseInt(targetLevel.value); i++) {
+    for (
+      var i = parseInt(mountCurrentLevel.value) + 1;
+      i <= parseInt(mountTargetLevel.value);
+      i++
+    ) {
       totalCost += mountTierData[i].count;
     }
 
@@ -1050,27 +1054,33 @@ document
     resultSpans[0].textContent = totalCost.toLocaleString();
     let clockWindersNeeded = parseInt(totalCost);
     if (clockWindersOwned.value > 0) {
-        clockWindersNeeded = Math.max(parseInt(totalCost) - parseInt(clockWindersOwned.value), 0);
-        resultSpans[2].textContent = clockWindersNeeded.toLocaleString();
-        resultSpans[1].classList.remove("hidden");
+      clockWindersNeeded = Math.max(
+        parseInt(totalCost) - parseInt(clockWindersOwned.value),
+        0
+      );
+      resultSpans[2].textContent = clockWindersNeeded.toLocaleString();
+      resultSpans[1].classList.remove("hidden");
     }
     resultDivs[0].classList.remove("hidden");
 
     // Display diamond results
     if (clockWindersNeeded > 0) {
-        let diamondsNeeded = parseInt(CLOCK_WINDER_COST * clockWindersNeeded);
-        resultSpans[3].textContent = diamondsNeeded.toLocaleString();
+      let diamondsNeeded = parseInt(CLOCK_WINDER_COST * clockWindersNeeded);
+      resultSpans[3].textContent = diamondsNeeded.toLocaleString();
 
-        if (diamondsOwned.value > 0) {
-            diamondsNeeded = Math.max(diamondsNeeded - parseInt(diamondsOwned.value), 0);
-            resultSpans[5].textContent = diamondsNeeded.toLocaleString();
-            resultSpans[4].classList.remove("hidden");
-        }
+      if (diamondsOwned.value > 0) {
+        diamondsNeeded = Math.max(
+          diamondsNeeded - parseInt(diamondsOwned.value),
+          0
+        );
+        resultSpans[5].textContent = diamondsNeeded.toLocaleString();
+        resultSpans[4].classList.remove("hidden");
+      }
 
-        resultDivs[1].classList.remove("hidden");
+      resultDivs[1].classList.remove("hidden");
     }
 
     // Display the result
-    result.classList.remove("hidden");
+    mountCalculatorResult.classList.remove("hidden");
   });
-
+}

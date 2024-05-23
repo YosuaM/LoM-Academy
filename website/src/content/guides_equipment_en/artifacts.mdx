@@ -9,6 +9,7 @@ subsectionLink: '/en/guides/equipment/'
 ---
 import ItemImageTable from "@Components/en/guides/ItemImageTable.astro";
 import SimpleTable from "@Components/base/SimpleTable.astro";
+import ItemTable from "@Components/base/ItemTable.astro";
 
 
 # Introduction to Artifacts
@@ -25,14 +26,86 @@ Moreover, artifacts provide us with bonuses to HP, ATK, and DEF that increase wi
 <br/>
 
 
-# Artifact Enhancement
+# Artifact Upgrade
 To upgrade the artifact level, we will need Divine Hammers.
-These hammers can be obtained mainly in boost events.
+These hammers can be obtained mainly in rush events.
 We can also obtain them in temporary events, the __[Cross-Server Showdown](https://lom-academy.com/en/guides/game-modes/cross-server-showdown)__ shop, and clan activities.
+
+You can check our __[Artifact Refining Calculator](https://lom-academy.com/en/tools/artifact-refining-calculator)__ to know how many Divine Hammers you need to level up your artifact.
 
 <br/>
 
 ![Divine Hammers](/assets/img/guides/equipment/artifacts/divine_hammers.webp)
+
+<br/>
+
+<div class="grid grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 gap-y-16 py-8">
+    <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-1"
+            title="Artifact Levels [1-10]: Evasion 8%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={1}
+            locale="en-EN"
+        />
+    </div>
+    <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-2"
+            title="Artifact Levels [11-20]: Evasion 12%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={2}
+            locale="en-EN"
+        />
+    </div>
+</div>
+
+<br/>
+
+<div class="grid grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 gap-y-16 pb-8">
+    <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-3"
+            title="Artifact Levels [21-30]: Evasion 18%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={3}
+            locale="en-EN"
+        />
+    </div>
+    <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-4"
+            title="Artifact Levels [31-40]: Evasion 24%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={4}
+            locale="en-EN"
+        />
+    </div>
+</div>
+
+<div class="grid grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 gap-y-8">
+    <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-5"
+            title="Artifact Levels [41-50]: Evasion 30%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={5}
+            locale="en-EN"
+        />
+    </div>
+    <div class="col-span-full md:col-span-6">
+    </div>
+</div>
 
 
 <br/>
