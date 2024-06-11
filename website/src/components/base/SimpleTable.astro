@@ -1,5 +1,6 @@
 ---
 const { id, content } = Astro.props;
+console.log("easto", content)
 ---
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -15,10 +16,10 @@ const { id, content } = Astro.props;
     >
       <tr>
         {
-            content.map((c) => {
-                return (
-                <th scope="col" class="px-6 py-3 text-center">{c.header}</th>
-                );
+            content?.header?.map((cell: String) => {
+              return (
+                <th scope="col" class="px-6 py-3 text-center">{cell}</th>
+              );
             })
         }
       </tr>
@@ -27,20 +28,20 @@ const { id, content } = Astro.props;
     <!-- Body -->
     <tbody>
         {
-            content.map((c) => {
-                return (
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    {
-                        c.rows.map((cell: String) => {
-                            return (
-                            <td class="text-center px-6 py-2">{cell}</td>
-                            );
-                        })
-                    }
-                </tr>
-                );
-            })
-        }
+          content?.rows?.map((row: String[]) => {
+              return (
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  {
+                      row.map((cell: String) => {
+                          return (
+                          <td class="text-center px-6 py-2">{cell}</td>
+                          );
+                      })
+                  }
+              </tr>
+              );
+          })
+      }
     </tbody>
     <!-- Body -->
   </table>
