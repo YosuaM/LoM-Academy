@@ -33,13 +33,25 @@ mobileSubmenuToggle.forEach(function(item, i) {
     item.classList.toggle('active');
 
     if ( item.classList.contains('active') ) {
-      item.classList.add('rotate-180');
-      item.nextElementSibling.classList.remove('max-h-0');
-      item.nextElementSibling.classList.add('max-h-screen');
+      if (item.classList.contains('no-link')) {
+        item.nextElementSibling.classList.add('rotate-180');
+        item.nextElementSibling.nextElementSibling.classList.remove('max-h-0');
+        item.nextElementSibling.nextElementSibling.classList.add('max-h-screen');
+      } else {
+        item.classList.add('rotate-180');
+        item.nextElementSibling.classList.remove('max-h-0');
+        item.nextElementSibling.classList.add('max-h-screen');
+      }
     } else {
-      item.classList.remove('rotate-180');
-      item.nextElementSibling.classList.add('max-h-0');
-      item.nextElementSibling.classList.remove('max-h-screen');
+      if (item.classList.contains('no-link')) {
+        item.nextElementSibling.classList.remove('rotate-180');
+        item.nextElementSibling.nextElementSibling.classList.add('max-h-0');
+        item.nextElementSibling.nextElementSibling.classList.remove('max-h-screen');
+      } else {
+        item.classList.remove('rotate-180');
+        item.nextElementSibling.classList.add('max-h-0');
+        item.nextElementSibling.classList.remove('max-h-screen');
+      }
     }
   };
 });
