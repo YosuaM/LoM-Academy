@@ -1,8 +1,25 @@
 ---
 import Item from "./Item.astro";
 import { skills } from "@Content/game_data_en/Skills.astro";
+import { pals } from "@Content/game_data_en/Pals.astro";
+import type { GameItem } from "@Types/ContentDto.ts";
 
-const { earlyGame, midGame, lateGame, type } = Astro.props;
+const { tabs, prefix, type } = Astro.props;
+const elements: GameItem[] = type === "pals" ? pals : skills;
+
+class Tab {
+  code: string;
+  name: string;
+  items: string[];
+  cooldown?: number;
+
+  constructor(code: string, name: string, items: string[], cooldown?: number) {
+    this.code = code;
+    this.name = name;
+    this.items = items;
+    this.cooldown = cooldown;
+  }
+}
 ---
 
 <!-- Header -->
@@ -13,106 +30,47 @@ const { earlyGame, midGame, lateGame, type } = Astro.props;
     data-tabs-toggle="#default-tab-content"
     role="tablist"
   >
-    <!-- Early Game -->
-    <li class="me-2" role="presentation">
-      <button
-        class="inline-block p-4 border-b-2 rounded-t-lg"
-        id={type + "-early-game-tab"}
-        data-tabs-target={"#" + type + "-early-game"}
-        type="button"
-        role="tab"
-        aria-controls={type + "-early-game"}
-        aria-selected="false">Early Game</button
-      >
-    </li>
-    <!-- Early Game -->
-    <!-- Mid Game -->
-    <li class="me-2" role="presentation">
-      <button
-        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-        id={type + "-mid-game-tab"}
-        data-tabs-target={"#" + type + "-mid-game"}
-        type="button"
-        role="tab"
-        aria-controls={type + "-mid-game"}
-        aria-selected="false">Mid Game</button
-      >
-    </li>
-    <!-- Mid Game -->
-    <!-- Late Game -->
-    <li class="me-2" role="presentation">
-      <button
-        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-        id={type + "-late-game-tab"}
-        data-tabs-target={"#" + type + "-late-game"}
-        type="button"
-        role="tab"
-        aria-controls={type + "-late-game"}
-        aria-selected="false">Late Game</button
-      >
-    </li>
-    <!-- Late Game -->
+    {
+      tabs.map((tab: Tab, index: number) => (
+        <li class="me-2" role="presentation">
+          <button
+            class="inline-block p-4 border-b-2 rounded-t-lg"
+            id={tab.code + "-tab"}
+            data-tabs-target={"#" + prefix + "-" + tab.code}
+            prefix="button"
+            role="tab"
+            aria-controls={prefix + "-" + tab.code}
+            aria-selected={index == 0 ? "true" : "false"}
+          >
+            {tab.name}
+          </button>
+        </li>
+      ))
+    }
   </ul>
 </div>
 <!-- Header -->
 <!-- Content -->
 <div id="default-tab-content">
-  <!-- Early Game -->
-  <div
-    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-early-game"}
-    role="tabpanel"
-    aria-labelledby="early-game-tab"
-  >
-    {
-      earlyGame.map((item, index) => (
-        <Item
-          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
-          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
-          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-early-game-item-" + index}
-        />
-      ))
-    }
-  </div>
-  <!-- Early Game -->
-  <!-- Mid Game -->
-  <div
-    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-mid-game"}
-    role="tabpanel"
-    aria-labelledby="mid-game-tab"
-  >
-    {
-      midGame.map((item, index) => (
-        <Item
-          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
-          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
-          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-mid-game-item-" + index}
-        />
-      ))
-    }
-  </div>
-  <!-- Mid Game -->
-  <!-- Late Game -->
-  <div
-    class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
-    id={type + "-late-game"}
-    role="tabpanel"
-    aria-labelledby="late-game-tab"
-  >
-    {
-      lateGame.map((item, index) => (
-        <Item
-          name={skills.find((s) => s.id == item.id)?.name ?? item.name}
-          tooltip={skills.find((s) => s.id == item.id)?.description ?? item.tooltip}
-          img={skills.find((s) => s.id == item.id)?.img ?? item.img}
-          id={type + "-late-game-item-" + index}
-        />
-      ))
-    }
-  </div>
-  <!-- Late Game -->
+  {
+    tabs.map((tab: Tab) => (
+      <div
+        class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+        id={prefix + "-" + tab.code}
+        role="tabpanel"
+        aria-labelledby={tab.code + "-tab"}
+      >
+        {tab.items.map((item: String, index: number) => (
+          <Item
+            name={elements.find((e) => e.id == item)?.name}
+            tooltip={elements.find((e) => e.id == item)?.description}
+            img={elements.find((e) => e.id == item)?.img}
+            id={prefix + "-" + tab.code + "-item-" + index}
+            cooldown={elements.find((e) => e.id == item)?.cooldown}
+          />
+        ))}
+      </div>
+    ))
+  }
 </div>
 <!-- Content -->
