@@ -22,3 +22,19 @@ export class GameItem {
     this.type = type;
   }
 }
+
+export class GameItemType {
+  id: number;
+  key: string;
+  name: string;
+
+  constructor(
+    id: number,
+    key: string,
+    name: string,
+  ) {
+    this.id = id;
+    this.key = key;
+    this.name = name;
+  }
+}

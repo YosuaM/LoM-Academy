@@ -2,10 +2,11 @@
 import Item from "./Item.astro";
 import { skills } from "@Content/game_data_en/Skills.astro";
 import { pals } from "@Content/game_data_en/Pals.astro";
+import { relics } from "@Content/game_data_en/Relics.astro";
 import type { GameItem } from "@Types/ContentDto.ts";
 
 const { tabs, prefix, type } = Astro.props;
-const elements: GameItem[] = type === "pals" ? pals : skills;
+const elements: GameItem[] = type === "pals" ? pals : (type === "skills" ? skills : relics);
 
 class Tab {
   code: string;

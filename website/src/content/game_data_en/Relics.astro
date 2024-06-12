@@ -1,0 +1,254 @@
+---
+import type { GameItem, GameItemType } from '@Types/ContentDto.ts';
+
+export const relic_types: GameItemType[] = [
+    {
+        id: 0,
+        key: 'mask',
+        name: 'Mask',
+    },
+    {
+        id: 1,
+        key: 'fossil',
+        name: 'Fossil',
+    },
+    {
+        id: 2,
+        key: 'treasure',
+        name: 'Treasure',
+    },
+    {
+        id: 3,
+        key: 'book',
+        name: 'Book',
+    },
+    {
+        id: 4,
+        key: 'statue',
+        name: 'Statue',
+    },
+    {
+        id: 5,
+        key: 'necklace',
+        name: 'Necklace',
+    },
+];
+
+export const relics: GameItem[] = [
+    {
+        id: 'bonded_mask',
+        name: 'Bonded Mask',
+        description: 'Crit Rate +10%.',
+        type: 'mask',
+        img: '/assets/img/game/relics/bonded_mask.webp'
+    },
+    {
+        id: 'arrow_king_mask',
+        name: 'Arrow King Mask',
+        description: 'Combo +10%.',
+        type: 'mask',
+        img: '/assets/img/game/relics/arrow_king_mask.webp'
+    },
+    {
+        id: 'ironclad_mask',
+        name: 'Ironclad Mask',
+        description: 'Counter +10%.',
+        type: 'mask',
+        img: '/assets/img/game/relics/ironclad_mask.webp'
+    },
+    {
+        id: 'priest_mask',
+        name: 'Priest Mask',
+        description: 'Evasion +5%.',
+        type: 'mask',
+        img: '/assets/img/game/relics/priest_mask.webp'
+    },
+    {
+        id: 'demon_mask',
+        name: 'Demon\'s Mask',
+        description: 'Skill Crit Rate +5%.',
+        type: 'mask',
+        img: '/assets/img/game/relics/demon_mask.webp'
+    },
+    
+    {
+        id: 'thundercaller_kite',
+        name: 'Thundercaller Kite',
+        description: 'After using active skills, summon lightning dealing DMG.',
+        type: 'fossil',
+        img: '/assets/img/game/relics/thundercaller_kite.webp'
+    },
+    {
+        id: 'gilded_eggshell',
+        name: 'Gilded Eggshell',
+        description: 'Chicken Pals continuously throw 5 eggs every 10 seconds, dealing DMG.',
+        type: 'fossil',
+        img: '/assets/img/game/relics/gilded_eggshell.webp'
+    },
+    {
+        id: 'whirlwind_feather',
+        name: 'Whirlwind Feather',
+        description: 'Increase Sprite Pal\'s ATK SPD.',
+        type: 'fossil',
+        img: '/assets/img/game/relics/whirlwind_feather.webp'
+    },
+    {
+        id: 'amber_snail',
+        name: 'Amber Snail',
+        description: 'Increase Snail and Hydrosprite Pal\'s DMG.',
+        type: 'fossil',
+        img: '/assets/img/game/relics/amber_snail.webp'
+    },
+    {
+        id: 'dragonweave_circlet',
+        name: 'Dragonweave Circlet',
+        description: 'Basic attacks of Dragon, Turtle or Lizard Pals have a 20% chance to deal DMG equal to 0.5% of their own max HP.',
+        type: 'fossil',
+        img: '/assets/img/game/relics/dragonweave_circlet.webp'
+    },
+
+    {
+        id: 'arrow_bamboo',
+        name: 'Arrow Bamboo',
+        description: 'Increase Panda Pal\'s Crit Rate.',
+        type: 'treasure',
+        img: '/assets/img/game/relics/arrow_bamboo.webp'
+    },
+    {
+        id: 'blue_snowflake',
+        name: 'Blue Snowflake',
+        description: 'Every 12 second, Snow Sprite Pal hurls a massive snowball, dealing DMG.',
+        type: 'treasure',
+        img: '/assets/img/game/relics/blue_snowflake.webp'
+    },
+    {
+        id: 'blessed_dew',
+        name: 'Blessed Dew',
+        description: 'Increase Cactus Pal\'s Combo Rate.',
+        type: 'treasure',
+        img: '/assets/img/game/relics/blessed_dew.webp'
+    },
+    {
+        id: 'magic_box',
+        name: 'Magic Box',
+        description: 'Increase Cat and Deer Pal\'s DMG.',
+        type: 'treasure',
+        img: '/assets/img/game/relics/magic_box.webp'
+    },
+    {
+        id: 'metamorphic_crystal',
+        name: 'Metamorphic Crystal',
+        description: 'Increase the attack speed of Dog, Fox and Octupus Pals.',
+        type: 'treasure',
+        img: '/assets/img/game/relics/metamorphic_crystal.webp'
+    },
+
+    {
+        id: 'flame_book',
+        name: 'Flame Book',
+        description: 'At the start of the battle, increase ATK by 1% per second, up to 10%.',
+        type: 'book',
+        img: '/assets/img/game/relics/flame_book.webp'
+    },
+    {
+        id: 'beasthide_book',
+        name: 'Beasthide Book',
+        description: 'Increase DMG dealt to Bosses by 20%.',
+        type: 'book',
+        img: '/assets/img/game/relics/beasthide_book.webp'
+    },
+    {
+        id: 'immunity_book',
+        name: 'Immunity Book',
+        description: 'In Boss levels, become immune to DMG for 3 seconds when HP drops below 70% for the first time.',
+        type: 'book',
+        img: '/assets/img/game/relics/immunity_book.webp'
+    },
+    {
+        id: 'healing_book',
+        name: 'Healing Book',
+        description: 'In Boss levels, restore 10% of lost HP every 5 second.',
+        type: 'book',
+        img: '/assets/img/game/relics/healing_book.webp'
+    },
+    {
+        id: 'stonewrit_book',
+        name: 'Stonewrit Book',
+        description: 'Increase Basic ATK RES, Pal DMG RES, Counter DMG RES, Combo DMG RES and Skill DMG RES by 5%.',
+        type: 'book',
+        img: '/assets/img/game/relics/stonewrit_book.webp'
+    },
+
+    {
+        id: 'energy_statue',
+        name: 'Energy Statue',
+        description: 'Increase the DMG dealt by Batty Trace, Nature\'s Renewal and Shroom Shield by 30%.',
+        type: 'statue',
+        img: '/assets/img/game/relics/energy_statue.webp'
+    },
+    {
+        id: 'cage_statue',
+        name: 'Cage Statue',
+        description: 'Boost the effects of Durian Bomb, Easy Breezy and Take It Slow by 30%.',
+        type: 'statue',
+        img: '/assets/img/game/relics/cage_statue.webp'
+    },
+    {
+        id: 'crystal_statue',
+        name: 'Crystal Statue',
+        description: 'Boost the effects of Coin Bomb, Slime Bomb and Meteor Fall by 30%.',
+        type: 'statue',
+        img: '/assets/img/game/relics/crystal_statue.webp'
+    },
+    {
+        id: 'time_statue',
+        name: 'Time Statue',
+        description: 'Extend the effect duration of Disarm, Dazzler and Smoke Bomb by 50%.',
+        type: 'statue',
+        img: '/assets/img/game/relics/time_statue.webp'
+    },
+    {
+        id: 'stellar_statue',
+        name: 'Stellar Statue',
+        description: 'Extend the effect duration of Hundred Slashes, Worldly Snare and Star Array by 50%.',
+        type: 'statue',
+        img: '/assets/img/game/relics/stellar_statue.webp'
+    },
+
+    {
+        id: 'shield_necklace',
+        name: 'Shield Necklace',
+        description: 'Increase Grim Reaper\'s DMG by an additional 80%.',
+        type: 'necklace',
+        img: '/assets/img/game/relics/shield_necklace.webp'
+    },
+    {
+        id: 'crimson_sickle_necklace',
+        name: 'Crimson Sickle Necklace',
+        description: 'Upon triggering Wild Gust or Blade Pierce, restore 2.5% of max HP.',
+        type: 'necklace',
+        img: '/assets/img/game/relics/crimson_sickle_necklace.webp'
+    },
+    {
+        id: 'storm_necklace',
+        name: 'Storm Necklace',
+        description: 'Increase the DMG of summoned units by 30% during Heroic Descent and Clone Strike.',
+        type: 'necklace',
+        img: '/assets/img/game/relics/storm_necklace.webp'
+    },
+    {
+        id: 'spirit_necklace',
+        name: 'Spirit Necklace',
+        description: 'Basic attacks deal an extra 15% DMG during Blitz Assault.',
+        type: 'necklace',
+        img: '/assets/img/game/relics/spirit_necklace.webp'
+    },
+    {
+        id: 'abyss_necklace',
+        name: 'Abyss Necklace',
+        description: 'Increase the DMG of Dragonic Resonance, Windborne Arrow and Crimson Moonfall by 30%.',
+        type: 'necklace',
+        img: '/assets/img/game/relics/abyss_necklace.webp'
+    },
+];
+---

@@ -263,56 +263,36 @@ If we don't have the Eggplan Toothpick or Rabbit, we can replace them with the O
 
 Relics are highly situational, and the choice we make regarding them will generally depend on the skills or pals we have.
 
-<br />
+We should replace Arrow King Mask for Bondeed Mask if we have, at least, 80% combo rate without the mask. 
 
-#### Mask
-```
-PvE/PvP [combo without mask < 80%]: Arrow King Mask (Combo +10%)
-PvE/PvP [combo without mask > 80%]: Bondeed Mask (Crit Rate +10%)
-```
+Switch between Beasthide Book, Immunity Book or Healing Book depending on the situation.
 
-<br />
-
-#### Fossil
-```
-PvE: Thundercaller Kite (After using active skills, summon lightning dealing DMG)
-PvP: Dragonweave Circlet (Basic attacks of Dragon, Turtle or Lizard Pals have a 20% chance to deal DMG equal to 0.5% of their own max HP.)
-```
-
-<br />
-
-#### Treasure
-```
-PvE/PvP [using Cactus Pal]: Blessed Dew (Increase Cactus Pal's Combo Rate)
-PvE/PvP [using Deer Pal]: Magic Box (Increase Cat and Deer Pal's DMG)
-PvE/PvP [using Octopus Pal]: Metamorphic Crystal (Increase the attack speed of Dog, Fox and Octupus Pals)
-```
-
-<br />
-
-#### Book
-```
-PvP early-mid: Flame Book (At the start of the battle, increase ATK by 1% per second, up to 10%)
-PvP late: Stonewrit Tome (Increase Basic ATK DMG RES, Pal DMG RES, Counter DMG RES, Cobo DMG RES and Skill DMG RES by 5%.)
-PvE offensive: Beasthide Book (Increase DMG dealt to Bosses by 20%)
-PvE deffensive: Immunity Book (In Boss levels, become immmune to DMG for 3 seconds when HP drops bellow 70% for the first time)
-```
-
-<br />
-
-#### Statue
-```
-PvE/PvP [using Smoke Bomb or Disarm]: Tie Statue (Extend the effect duration of Disarm, Dazzler and Smoke Bomb by 50%)
-PvE/PvP: Cage Statue (Boost the effects of Durian Bomb, Easy Breezy and Take It Slow by 30%)
-```
-
-<br />
-
-#### Necklace
-```
-PvE/PvP: Storm Necklace (Increase the DMG of sumoned units by 30% during Heroic Descent and Close Strike)
-PvE/PvP: Spirit Necklace (Basic attacks deal and extra 15% DMG during Blitz Assault)
-```
+<BuildComponent
+  prefix="plume-monarch-relics"
+  type="relics"
+  tabs={[
+    {
+      code: "early-game-pve",
+      name: "Early/Mid Game PvE",
+      items: ["arrow_king_mask", "thundercaller_kite", "blessed_dew", "beasthide_book", "cage_statue", "crimson_sickle_necklace"]
+    },
+    {
+      code: "late-game-pve",
+      name: "Late Game PvE",
+      items: ["bonded_mask", "thundercaller_kite", "metamorphic_crystal", "immunity_book", "time_statue", "storm_necklace"]
+    },
+    {
+      code: "early-game-pvp",
+      name: "Early/Mid Game PvP",
+      items: ["arrow_king_mask", "thundercaller_kite", "magic_box", "flame_book", "cage_statue", "crimson_sickle_necklace"]
+    },
+    {
+      code: "PvP",
+      name: "Late Game PvP",
+      items: ["bonded_mask", "dragonweave_circlet", "magic_box", "stonewrit_book", "time_statue", "storm_necklace"]
+    },
+  ]}
+/>
 
 <br />
 <br />
