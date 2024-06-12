@@ -104,6 +104,15 @@ You can check our __[Artifact Refining Calculator](https://lom-academy.com/en/to
         />
     </div>
     <div class="col-span-full md:col-span-6">
+        <ItemTable
+            id="artifact-level-table-5"
+            title="Artifact Levels [51-60]: Evasion 35%"
+            type="artifact"
+            headers={["Level", "Cost Divine Hammers", "Total Divine Hammers", "Bonus (HP, ATK, DEF)"]}
+            elements_per_page={10}
+            page={6}
+            locale="en-EN"
+        />
     </div>
 </div>
 
@@ -143,21 +152,18 @@ There are three types of runestones, each with its own set bonus.
 By combining 2 or 4 runestones of the same type, we will receive an additional bonus.
 
 <SimpleTable
-    id="runestones-types-table"
-    content={[
-        {
-            header: 'Name',
-            rows: ["Heart of Resilence", "Mana Mastery", "Furious Gate"]
-        },
-        {
-            header: '2 PC Set',
-            rows: ["Global Counter DMG +5%", "Global Basic ATK +5%", "Global Combo DMG +5%"]
-        },
-        {
-            header: '4 PC Set',
-            rows: ["Global Counter DMG +10%", "Global Basic ATK +10%", "Global Combo DMG +10%"]
-        }
-    ]}
+    id = "runestones-types-table"
+    content = {{
+        header: ['Name', '2 PC Set', '4 PC Set'],
+        rows: [
+            ['Heart of Resilence', 'Global Counter DMG +5%', 'Global Counter DMG +10%'],
+            ['Mana Mastery', 'Global Basic ATK +5%', 'Global Basic ATK +10%'],
+            ['Furious Gate', 'Global Combo DMG +5%', 'Global Combo DMG +10%'],
+            ['Blazing Roar', 'Global Crit DMG +5%', 'Global Crit DMG +10%'],
+            ['Elemental Wrath', 'Global Skill Crit DMG +5%', 'Global Skill Crit DMG +10%'],
+            ['Iron Wall', 'Global Crit RES +5%', 'Global Crit Res +10%']
+        ]
+    }}
 />
 
 <br/>

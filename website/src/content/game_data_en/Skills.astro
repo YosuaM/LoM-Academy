@@ -1,6 +1,7 @@
 ---
+import type { GameItem, GameItemType } from '@Types/ContentDto.ts';
 
-export const skill_types = [
+export const skill_types: GameItemType[] = [
     {
         id: 0,
         key: 'normal',
@@ -43,7 +44,7 @@ export const skill_types = [
     },
 ];
 
-export const skills = [
+export const skills: GameItem[] = [
     {
         id: 'spore_bomb',
         name: 'Spore Bomb',

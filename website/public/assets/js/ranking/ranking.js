@@ -53853,6 +53853,7 @@ const familyPowers = [
  ]
   .sort((a, b) => b.power - a.power)
   .slice(0, 500);
+let familyPowersFiltered = JSON.parse(JSON.stringify(familyPowers))
 /* DATA */
 
 const rowsPerPage = 10;
@@ -53868,7 +53869,7 @@ function updateTable(page) {
   rankingTable.innerHTML = "";
   const start = (page - 1) * rowsPerPage;
   const end = start + rowsPerPage;
-  const dataToShow = familyPowers.slice(start, end);
+  const dataToShow = familyPowersFiltered.slice(start, end);
 
   dataToShow.forEach((item, index) => {
     const row = document.createElement("tr");
@@ -53892,7 +53893,7 @@ function updateTable(page) {
   document.getElementById("page-start").textContent = start + 1;
   document.getElementById("page-end").textContent = Math.min(
     end,
-    familyPowers.length
+    familyPowersFiltered.length
   );
 }
 
@@ -53906,7 +53907,7 @@ function updatePagination() {
   });
   let pages = [];
 
-  const numPages = Math.ceil(familyPowers.length / rowsPerPage);
+  const numPages = Math.ceil(familyPowersFiltered.length / rowsPerPage);
 
   const start = Math.max(1, currentPage - 2);
   const end = Math.min(numPages, currentPage + 2);
@@ -53936,20 +53937,8 @@ function updatePagination() {
     updatePageSelected();
   }
 
-  //const prevBtn = pagination.querySelector(".prev a ");
   const firstBtn = pagination.querySelector(".first a");
-  //const nextBtn = pagination.querySelector(".next a");
   const lastBtn = pagination.querySelector(".last a");
-
-  /*
-  prevBtn.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      updateTable(currentPage);
-      updatePageSelected();
-    }
-  });
-  */
 
   firstBtn.addEventListener("click", () => {
     currentPage = 1;
@@ -53957,23 +53946,13 @@ function updatePagination() {
     updatePagination();
   });
 
-  /*
-  nextBtn.addEventListener("click", () => {
-    if (currentPage < numPages) {
-      currentPage++;
-      updateTable(currentPage);
-      updatePageSelected();
-    }
-  });
-  */
-
   lastBtn.addEventListener("click", () => {
     currentPage = numPages;
     updateTable(currentPage);
     updatePagination();
   });
 
-  totalCountSpan.textContent = familyPowers.length;
+  totalCountSpan.textContent = familyPowersFiltered.length;
 }
 
 function updatePageSelected() {
@@ -53991,3 +53970,41 @@ function updatePageSelected() {
 
 updateTable(currentPage);
 updatePagination();
+
+
+// Region filter
+const regionFilter = document.getElementById("ranking-family-server-selector");
+regionFilter.addEventListener("input", Filter);
+
+// Name filter
+const familyNameFilter = document.getElementById("ranking-family-name-search");
+familyNameFilter.addEventListener("input", Filter);
+
+function Filter() {
+  familyPowersFiltered = familyPowers.filter(family => !!family.server);
+
+  prefixes = regionFilter?.value && regionFilter[regionFilter.value]?.dataset?.prefix;
+
+  if (prefixes && prefixes !== 'overall') {
+    prefixes = prefixes.split(",");
+    familyPowersFiltered = [];
+
+    prefixes.forEach(prefix => {
+      const serverRange = [parseInt(prefix + "001"), parseInt(prefix + "999")];
+      const filtered = familyPowers.filter(family => 
+        parseInt(family.server) > serverRange[0] && parseInt(family.server) < serverRange[1]
+      );
+      familyPowersFiltered = familyPowersFiltered.concat(filtered);
+    });
+
+    familyPowersFiltered.sort((a, b) => b.power - a.power).slice(0, 500);
+  }
+
+  if (familyNameFilter && familyNameFilter.value) {
+    familyPowersFiltered = familyPowersFiltered.filter(family => family.family.toLowerCase().includes(familyNameFilter.value.toLowerCase()));
+  }
+
+  currentPage = 1;
+  updateTable(currentPage);
+  updatePagination();
+}

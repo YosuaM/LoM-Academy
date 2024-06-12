@@ -1,0 +1,236 @@
+---
+import StandarLayout from "@Layouts/StandarLayout.astro";
+
+const regions = [
+  {
+    region: 'EST',
+    code: 'EST Ranking [AMEN + ES + PT]',
+    prefix: [1, 6, 11]
+  },
+  {
+    region: 'EU',
+    code: 'EU Ranking [EUEN + DE + FR]',
+    prefix: [30, 33, 36]
+  },
+  {
+    region: 'AMEN',
+    code: 'AMEN Ranking',
+    prefix: [1]
+  },
+  {
+    region: "Spain",
+    code: "ES Ranking",
+    prefix: [6]
+  },
+  {
+    region: "Portugal",
+    code: "PT Ranking",
+    prefix: [11]
+  },
+  {
+    region: "EUEN",
+    code: "EUEN Ranking",
+    prefix: [30]
+  },
+  {
+    region: "DE",
+    code: "DE Ranking",
+    prefix: [33]
+  },
+  {
+    region: "France",
+    code: "FR Ranking",
+    prefix: [36]
+  },
+  {
+    region: "Russia",
+    code: "RU Ranking",
+    prefix: [42]
+  },
+];
+---
+
+<StandarLayout title="Player Ranking" page={5}>
+  <!-- Banner -->
+  <div class="page-heading py-2 md:py-6">
+    <div class="container">
+      <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">
+        <svg
+          role="img"
+          class="aspect-[6/9] w-3 fill-accent sm:w-4 md:w-5 lg:w-7 xl:w-9"
+        >
+          <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel"></use>
+        </svg>
+        <h1
+          class="relative mb-3 text-3xl font-bold leading-none tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-[84px]"
+        >
+          Player Ranking
+        </h1>
+      </div>
+
+      <ol
+        class="relative flex flex-wrap gap-x-6 text-sm leading-none text-gray-500 lg:gap-x-8 lg:text-lg [&>li>a]:text-gray-900 hover:[&>li>a]:text-accent dark:[&>li>a]:text-white dark:hover:[&>li>a]:text-accent [&>li]:relative"
+      >
+        <li class="font-bold">
+          <a href="/en/">Home</a>
+          <svg
+            role="img"
+            class="fill-gray absolute -right-4 top-1/2 aspect-[3/5] w-1.5 -translate-y-1/2 lg:-right-5"
+          >
+            <use xlink:href="/assets/img/str1/sprite.svg#arrow-right-pixel-alt"
+            ></use>
+          </svg>
+        </li>
+        <li>Player Ranking (Based on Power)</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Banner -->
+
+  <main id="main-content" class="grow lg:pt-0">
+    <div class="pt-8 pb-10 lg:pt-16 lg:pb-32">
+      <div class="container">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <!-- Filters -->
+          <div class="grid grid-cols-2 gap-7.5 mb-4 lg:mb-9">
+
+            <!-- Servers select -->
+            <div>
+              <select
+                class="w-full border-base bg-white/40 px-4 h-10 font-medium text-gray-900 transition-all duration-150 bg-caret bg-[length:10px_6px] bg-[position:right_18px_center] focus:border-accent focus:outline-0 focus:ring-0 focus:text-gray-900 hover:cursor-pointer dark:border-gray-650 dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:text-white dark:bg-caret-white dark:focus:bg-gray-900"
+                name="ranking-player-server-selector"
+                id="ranking-player-server-selector"
+              >
+                <option data-prefix={'overall'} value={0} selected>Overall ranking</option>
+                {
+                  regions.map((region, idx) => (
+                    <option data-prefix={region.prefix} value={++idx}>
+                      {region.code}
+                    </option>
+                  ))
+                }
+              </select>
+            </div>
+            <!-- Servers select -->
+
+            <!-- Player name search -->
+            <div>
+              <input
+                class="group-[.is-success]:bg-input-success-dark group-[.is-error]:border-danger group-[.is-error]:bg-input-invalid group-[.is-error]:text-danger group-[.is-success]:pr-16 group-[.is-invalid]:pr-16 px-4 py-2 border-base bg-white/40 bg-[length:18px_18px,_38px_38px] bg-[position:right_16px_center,_right_6px_center] bg-no-repeat font-medium leading-8 tracking-tight text-gray-900 transition-all duration-150 placeholder:font-normal placeholder:text-gray-500/60 focus:border-accent focus:bg-white focus:text-gray-900 focus:outline-0 focus:ring-0 dark:border-gray-650 dark:group-[.is-success]:bg-input-success dark:bg-gray-900/40 dark:text-white dark:placeholder:text-gray-500/80 dark:focus:border-accent dark:focus:bg-gray-900 w-full"
+                type="text"
+                name="ranking-player-name-search"
+                id="ranking-player-name-search"
+                value=""
+                placeholder="Player name"
+              />
+              <p
+                class="group-[.is-error]:block mt-2 hidden text-xs text-danger"
+              >
+              </p>
+            </div>
+            <!-- Player name search -->
+
+          </div>
+          <!-- Filters -->
+
+          <!-- Ranking Table -->
+          <table
+            id="ranking-table"
+            class="w-full text-sm text-left rtl:text-right"
+          >
+            <!-- Header -->
+            <thead
+              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="py-3 text-center"> Position </th>
+                <th scope="col" class="px-4 py-3 text-center"> Name </th>
+                <th scope="col" class="px-4 py-3 text-center"> Server </th>
+                <th scope="col" class="py-3 text-center"> Power </th>
+              </tr>
+            </thead>
+            <!-- Header -->
+
+            <!-- Body -->
+            <tbody>
+              <!-- Rows will be dynamically added here -->
+            </tbody>
+            <!-- Body -->
+          </table>
+          <!-- Ranking Table -->
+
+          <!-- Pagination -->
+          <nav
+            class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4"
+            aria-label="Table navigation"
+          >
+            <span
+              class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block md:inline md:w-auto mt-4"
+            >
+              Showing <span
+                class="font-semibold text-gray-900 dark:text-white"
+                id="page-start">1</span
+              > -
+              <span
+                class="font-semibold text-gray-900 dark:text-white"
+                id="page-end">10</span
+              > of
+              <span
+                class="font-semibold text-gray-900 dark:text-white"
+                id="total-count">1000</span
+              >
+            </span>
+            <ul
+              class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8"
+              id="pagination"
+            >
+              <li class="first">
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >&lt;&lt;</a
+                >
+              </li>
+              <!--
+              <li class="prev">
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >&lt;</a
+                >
+              </li>
+              -->
+              <!-- Pagination items will be dynamically added here -->
+              <li>
+                <a
+                  id="example"
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white hidden"
+                  >1</a
+                >
+              </li>
+              <!-- Pagination items will be dynamically added here -->
+              <!--
+              <li class="next">
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >&gt;</a
+                >
+              </li>
+              -->
+              <li class="last">
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >&gt;&gt;</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Pagination -->
+        </div>
+      </div>
+    </div>
+  </main>
+</StandarLayout>

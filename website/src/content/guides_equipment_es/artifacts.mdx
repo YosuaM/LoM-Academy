@@ -71,20 +71,17 @@ By combining 2 or 4 runestones of the same type, we will receive an additional b
 
 <SimpleTable
     id="runestones-types-table"
-    content={[
-        {
-            header: 'Name',
-            rows: ["Heart of Resilence", "Mana Mastery", "Furious Gate"]
-        },
-        {
-            header: '2 PC Set',
-            rows: ["Global Counter DMG +5%", "Global Basic ATK +5%", "Global Combo DMG +5%"]
-        },
-        {
-            header: '4 PC Set',
-            rows: ["Global Counter DMG +10%", "Global Basic ATK +10%", "Global Combo DMG +10%"]
-        }
-    ]}
+    content = {{
+        header: ['Name', '2 PC Set', '4 PC Set'],
+        rows: [
+            ['Heart of Resilence', 'Global Counter DMG +5%', 'Global Counter DMG +10%'],
+            ['Mana Mastery', 'Global Basic ATK +5%', 'Global Basic ATK +10%'],
+            ['Furious Gate', 'Global Combo DMG +5%', 'Global Combo DMG +10%'],
+            ['Blazing Roar', 'Global Crit DMG +5%', 'Global Crit DMG +10%'],
+            ['Elemental Wrath', 'Global Skill Crit DMG +5%', 'Global Skill Crit DMG +10%'],
+            ['Iron Wall', 'Global Crit RES +5%', 'Global Crit Res +10%']
+        ]
+    }}
 />
 
 <br/>

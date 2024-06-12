@@ -71,20 +71,14 @@ Once we have selected one, if we wish to change classes for the current week's s
 
 <SimpleTable
     id="cross-server-showdown-classes-table"
-    content={[
-        {
-            header: 'Berserker',
-            rows: ["PvP HP Bonus: 20%", "PvP ATK Bonus: 20%", "PvP DEF Bonus: 20%"]
-        },
-        {
-            header: 'Guerrilla',
-            rows: ["Vision Bonus: 20%", "Default SPD Bonnus: 50%", "ATK Range Bonus: 30%"]
-        },
-        {
-            header: 'Exorcist',
-            rows: ["PvE HP Bonus: 20%", "PvE ATK Bonus: 20%", "PvE DEF Bonus: 20%"]
-        }
-    ]}
+    content={{
+        header: ['Berserker', 'Guerrilla', 'Exorcist'],
+        rows: [
+            ['PvP HP Bonus: 20%', 'Vision Bonus: 20%', 'PvE HP Bonus: 20%'],
+            ['PvP ATK Bonus: 20%', 'Default SPD Bonnus: 50%', 'PvE ATK Bonus: 20%'],
+            ['PvP DEF Bonus: 20%', 'ATK Range Bonus: 30%', 'PvE DEF Bonus: 20%']
+        ]
+    }}
 />
 
 
