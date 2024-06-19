@@ -1,0 +1,99 @@
+---
+import { advanceMounts } from "./Mounts.astro";
+import { artifactMorphs } from "./Artifacts.astro";
+import { backAccessoryMorphs } from "./BackAccessories.astro";
+
+export const redSoulTypeTwo = {
+    name: "Red Soul Selection 2",
+    image: "",
+    icon: "/assets/img/game/items/red_soul_selection_icon.webp",
+    skill: "Select a Soul from Pal Crit DMG, Skill DMG, Pal DMG, Heealing, Boss DMG, HP Regen, Skill Crit DMG, and Boss DMG RES Souls.",
+    effect: "-",
+    howToGet: "",
+};
+
+export const luckySpinnerItems = [
+    [
+        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "White Tiger")
+    ],
+    [
+        redSoulTypeTwo
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Blue Ox")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Blue Queen")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Round Pepe")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Purple Wing")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Magic Carpet")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Koi Paper Kite")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+    ],
+    [
+        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer"),
+        advanceMounts.find((mount) => mount.name === "White Tiger"),
+        advanceMounts.find((mount) => mount.name === "Blue Ox")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Blue Queen"),
+        advanceMounts.find((mount) => mount.name === "Round Pepe"),
+        advanceMounts.find((mount) => mount.name === "Purple Wing")
+    ],
+    [
+        redSoulTypeTwo,
+        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+    ],
+    [
+        advanceMounts.find((mount) => mount.name === "Magic Carpet"),
+        advanceMounts.find((mount) => mount.name === "Koi Paper Kite"),
+        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+    ],
+
+];
+---
