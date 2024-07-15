@@ -1,6 +1,51 @@
 ---
 import StandarLayout from "@Layouts/StandarLayout.astro";
 import ArticleBox from "@Components/en/news/ArticleBox.astro";
+
+const cards = [
+  {
+    date: "July 12th, 2024",
+    title: "Summer Party Event",
+    desc: "New event in Legend of Mushroom available. Speed down a surging stream and explore the secret world of mermaids for an exhilarating adventure in the fantastic underwater world!",
+    img: "/assets/img/news/summer-party-event/card.webp",
+    alt: "Summer Party Event",
+    //link: "/en/news/summer-party-event"
+    link: "https://discord.com/channels/1196745368793264128/1196767045602250752/1260911324318404679"
+  },
+  {
+    date: "June 21th, 2024",
+    title: "B.Duck Collaboration Event",
+    desc: "New event in Legend of Mushroom available. Enjoy the B.Duck Collaboration Event and get exclusive rewards!",
+    img: "/assets/img/news/bduck-collaboration-event/card.webp",
+    alt: "B.Duck Collaboration Event",
+    link: "/en/news/bduck-collaboration-event"
+  },
+  {
+    date: "June 7th, 2024",
+    title: "Survive the Battlegrounds",
+    desc: "New event in Legend of Mushroom available. Shroomwarriors, join us now and embark on an exciting adventure for survival!",
+    img: "/assets/img/news/survive-the-battlegrounds-event/card.webp",
+    alt: "Survive the Battlegrounds Event",
+    //link: "/en/news/survive-the-battlegrounds-event"
+    link: "https://discord.com/channels/1196745368793264128/1196767045602250752/1248215134774755378"
+  },
+  {
+    date: "April 12th, 2024",
+    title: "The Gold Bar Theft Mystery Challenge Event",
+    desc: "New event in Legend of Mushroom available. Find everything you need to know about The Gold Bar Theft Mystery Challenge Event!",
+    img: "/assets/img/news/gold-bar-theft-event/card.webp",
+    alt: "The Gold Bar Theft Event",
+    link: "/en/news/gold-bar-theft-event"
+  },
+  {
+    date: "April 08th, 2024",
+    title: "Reversal Showdown Event",
+    desc: "New event in Legend of Mushroom available. Find everything you need to know about the Reversal Showdown Event!",
+    img: "/assets/img/news/reversal-showdown-event/card.webp",
+    alt: "Reversal Showdown Event",
+    link: "/en/news/reversal-showdown-event"
+  }
+]
 ---
 
 <StandarLayout title="News" page={2} >
@@ -43,38 +88,20 @@ import ArticleBox from "@Components/en/news/ArticleBox.astro";
       <div class="container">
         <!-- CONTAINER -->
         <div class="grid grid-cols-12 gap-y-8 sm:gap-7.5">
-          <!--Reversal Showdown event -->
-          <ArticleBox
-            date="April 12th, 2024"
-            title="The Gold Bar Theft Mystery Challenge Event"
-            desc="New event in Legend of Mushroom available. Find everything you need to know about The Gold Bar Theft Mystery Challenge Event!"
-            img="/assets/img/news/gold-bar-theft-event/card.webp"
-            alt="The Gold Bar Theft Event"
-            link="/en/news/gold-bar-theft-event"
-          />
-          <!--Reversal Showdown event -->
-          <!--Reversal Showdown event -->
-          <ArticleBox
-            date="April 08th, 2024"
-            title="Reversal Showdown Event"
-            desc="New event in Legend of Mushroom available. Find everything you need to know about the Reversal Showdown Event!"
-            img="/assets/img/news/reversal-showdown-event/card.webp"
-            alt="Reversal Showdown Event"
-            link="/en/news/reversal-showdown-event"
-          />
-          <!--Reversal Showdown event -->
-          <!--Oficial launch -->
-<!--
-          <ArticleBox
-            date="April 07th, 2024"
-            title="LoM Academy oficial launch!"
-            desc="We are proud to announce the official launch of the League of Legends Academy! Join us and become a pro mushroom!"
-            img="/assets/img/news/lom-academy-launch/card.webp"
-            alt="LoM Academy oficial launch!"
-            link="/en/news/lom-academy-launch"
-          />
--->
-          <!--Oficial launch -->
+
+          {
+            cards.map((card) => (
+              <ArticleBox
+                date={card.date}
+                title={card.title}
+                desc={card.desc}
+                img={card.img}
+                alt={card.alt}
+                link={card.link}
+              />
+            ))
+          }
+
         </div>
         <!-- CONTAINER -->
 

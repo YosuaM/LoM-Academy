@@ -1,3 +1,52 @@
+---
+const sliders = [
+  {
+    title: 'Summer Party Event',
+    date: 'July 12th, 2024',
+    //url: '/en/news/summer-party-event',
+    url: null,
+    image: 'news/summer-party-event/home-banner.webp',
+    discord: 'https://discord.com/channels/1196745368793264128/1196767045602250752/1260911324318404679',
+    enabled: true
+  },
+  {
+    title: 'B.Duck Collaboration Event',
+    date: 'June 21th, 2024',
+    url: '/en/news/bduck-collaboration-event',
+    image: 'news/bduck-collaboration-event/home-banner.webp',
+    discord: 'https://discord.com/channels/1196745368793264128/1196745369330122774/1252200202715009034',
+    enabled: true
+  },
+  {
+    title: 'Survive the Battlegrounds',
+    date: 'June 7th, 2024',
+    //url: '/en/news/survive-the-battlegrounds-event',
+    url: null,
+    image: 'news/survive-the-battlegrounds-event/home-banner.webp',
+    discord: 'https://discord.com/channels/1196745368793264128/1196767045602250752/1248215134774755378',
+    enabled: true
+  },
+  {
+    title: 'The Gold Bar Theft Event',
+    date: 'April 12th, 2024',
+    url: '/en/news/gold-bar-theft-event',
+    image: 'news/gold-bar-theft-event/home-banner.webp',
+    discord: 'https://discord.com/channels/1196745368793264128/1196767045602250752/1227932070253297665',
+    news: '/en/news/gold-bar-theft-event',
+    enabled: false
+  },
+  {
+    title: 'Reversal Showdown Event',
+    date: 'April 8th, 2024',
+    url: '/en/news/reversal-showdown-event',
+    image: 'news/reversal-showdown-event/home-banner.webp',
+    discord: 'https://discord.com/channels/1196745368793264128/1196767045602250752/1225824762404540426',
+    news: '/en/news/reversal-showdown-event',
+    enabled: false
+  }
+]
+---
+
 <div class="w-full max-w-[1320px] mx-auto min-w-[1500px]:px-[90px]">
   <div class="h-[420px] md:h-[460px] lg:h-[660px] relative z-10">
 
@@ -5,78 +54,10 @@
     <div class="swiper js-vv-hero-swiper h-full w-full">
       <div class="swiper-wrapper vv-hero-swiper-wrapper">
 
-        <!-- Slider 1 -->
-<!--
-        <div class="swiper-slide group">
-          <div class="relative h-full w-full">
-            <div class="container h-full">
-              <div
-                class="grid h-full grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 place-items-center md:place-items-stretch"
-              >
-                <div
-                  class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left"
-                >
-                  <div class="md:-ml-2 xl:-ml-3">
-                    <div
-                      class="-translate-x-6 text-5xl font-bold leading-none tracking-tighter text-white opacity-0 transition-all delay-[400ms] duration-700 group-[.vv-slide-played]:translate-x-0 group-[.swiper-slide-active:not(.vv-slide-played)]:translate-x-0 group-[.vv-slide-played]:opacity-100 group-[.swiper-slide-active:not(.vv-slide-played)]:opacity-100 md:text-6xl lg:text-8xl xl:text-9.5xl"
-                    >
-                      Find us in
-                    </div>
-                    <div
-                      class="-mt-[0.1em] translate-x-8 text-6xl font-bold leading-none tracking-tighter text-accent opacity-0 transition-all delay-[550ms] duration-700 group-[.vv-slide-played]:translate-x-0 group-[.swiper-slide-active:not(.vv-slide-played)]:translate-x-0 group-[.vv-slide-played]:opacity-100 group-[.swiper-slide-active:not(.vv-slide-played)]:opacity-100 md:text-7xl lg:text-9xl xl:-mt-[0.22em] xl:text-10.5xl"
-                    >
-                      YouTube
-                    </div>
-                  </div>
-                  <div class="mt-3 md:mt-1 xl:-mt-2.5 lg:pb-9 xl:pb-12">
-                    <div
-                      class="mb-7 translate-y-4 text-base font-medium leading-8 text-white opacity-0 delay-[650ms] duration-500 group-[.vv-slide-played]:translate-y-0 group-[.swiper-slide-active:not(.vv-slide-played)]:translate-y-0 group-[.vv-slide-played]:opacity-100 group-[.swiper-slide-active:not(.vv-slide-played)]:opacity-100 lg:mb-10 lg:text-lg xl:mb-12 xl:pr-20"
-                    >
-                      Subscribe to our new YouTube channel to be the first 
-                      to know about our latest videos.
-                    </div>
-                    <a
-                      href="#"
-                      class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 md:py-[21px] px-5 lg:px-10 text-white bg-social-youtube hover:bg-social-youtube/90 w-full lg:w-[75%] xl:w-[55%] translate-y-4 opacity-0 transition-all delay-[750ms] duration-500 group-[.vv-slide-played]:translate-y-0 group-[.swiper-slide-active:not(.vv-slide-played)]:translate-y-0 group-[.vv-slide-played]:opacity-100 group-[.swiper-slide-active:not(.vv-slide-played)]:opacity-100"
-                    >
-                      <svg class="h-4 w-4" fill="currentColor">
-                        <use xlink:href="/assets/img/social-icons.svg#youtube"
-                        ></use>
-                      </svg>
-                      Subscribe Now!
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-span-6 col-start-7 hidden md:block">
-                  <div
-                    class="scale-90 opacity-0 transition-all delay-300 duration-700 group-[.swiper-slide-active:not(.vv-slide-played)]:scale-100 group-[.vv-slide-played]:scale-100 group-[.vv-slide-played]:opacity-100 group-[.swiper-slide-active:not(.vv-slide-played)]:opacity-100 lg:absolute lg:bottom-0 xl:ml-6"
-                  >
-                    <img
-                      src="/assets/img/banners/mushroom_teacher.webp"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="absolute inset-0 -z-10 bg-[url('../../../assets/img/landing/homebanner1.webp')] bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 ease-out group-[.swiper-slide-active]:opacity-100 md:hidden"
-            >
-            </div>
-
-            <div
-              class="absolute inset-0 -z-10 hidden bg-[url('../../../assets/img/landing/homebanner1.webp')] bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 ease-out group-[.swiper-slide-active]:opacity-100 md:block"
-            >
-            </div>
-          </div>
-        </div>
--->
-        <!-- Slider 1 -->
-
-        <!-- Gold Bar Theft Event -->
-        <div class="swiper-slide group">
+        <!-- Sliders -->
+         {
+          sliders.filter(s => s.enabled).map((slider) =>
+          <div class="swiper-slide group">
           <div class="relative isolate h-full w-full bg-gray-900">
             <div class="container h-full">
               <div
@@ -87,17 +68,17 @@
                     <div
                       class="mb-1 flex flex-wrap gap-1 text-accent lg:mb-2 font-bold uppercase"
                     >
-                      <div>April 12th, 2024</div>
+                      <div>{slider.date}</div>
                     </div>
 
                     <h2
                       class="mb-4 text-2xl font-bold leading-none tracking-tight sm:text-3xl md:mb-5 md:text-4xl md:leading-none lg:text-5xl lg:mb-7 lg:leading-none text-white xl:text-[62px]"
                     >
                       <a
-                        href="/en/guides/events/gold-bar-theft-event"
+                        href={slider.url}
                         class="hover:opacity-80 transition-opacity duration-300"
                       >
-                        The Gold Bar Theft Event
+                        {slider.title}
                       </a>
                     </h2>
 
@@ -106,7 +87,7 @@
                         <!-- DISCORD BUTTON -->
                         <li class="md:flex-1">
                           <a
-                            href="https://discord.com/channels/1196745368793264128/1196767045602250752/1227932070253297665"
+                            href={slider.discord}
                             target="_blank"
                             class="relative flex h-12 w-12 items-center justify-center text-xs text-white transition-colors md:h-12.5 md:w-12.5 bg-social-discord hover:bg-social-discord/90"
                           >
@@ -120,82 +101,16 @@
                         <!-- DISCORD BUTTON -->
                       </ul>
 
-                      <a
-                        href="/en/news/gold-bar-theft-event"
-                        class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90"
-                      >
-                        Read More...
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="absolute inset-0 -z-10 bg-[url('news/gold-bar-theft-event/home-banner.webp')] bg-cover bg-center bg-no-repeat ease-out transition-transform duration-[8000ms] group-[.swiper-slide-active]:scale-110"
-            >
-            </div>
-
-            <div
-              class="absolute inset-0 -z-10 bg-gradient-to-b from-transparent to-black"
-            >
-            </div>
-          </div>
-        </div>
-        <!-- Gold Bar Theft Event -->
-
-        <!-- Reversal Showdown Event -->
-        <div class="swiper-slide group">
-          <div class="relative isolate h-full w-full bg-gray-900">
-            <div class="container h-full">
-              <div
-                class="grid h-full grid-cols-12 md:gap-x-6 lg:gap-x-[30px] items-end"
-              >
-                <div class="col-span-full md:col-span-6 pb-8 sm:pb-10 md:pb-12">
-                  <div class="text-left">
-                    <div
-                      class="mb-1 flex flex-wrap gap-1 text-accent lg:mb-2 font-bold uppercase"
-                    >
-                      <div>April 8th, 2024</div>
-                    </div>
-
-                    <h2
-                      class="mb-4 text-2xl font-bold leading-none tracking-tight sm:text-3xl md:mb-5 md:text-4xl md:leading-none lg:text-5xl lg:mb-7 lg:leading-none text-white xl:text-[62px]"
-                    >
-                      <a
-                        href="/en/guides/events/reversal-showdown-event"
-                        class="hover:opacity-80 transition-opacity duration-300"
-                      >
-                        Reversal Showdown Event
-                      </a>
-                    </h2>
-
-                    <div class="flex gap-3">
-                      <ul class="flex gap-3">
-                        <!-- DISCORD BUTTON -->
-                        <li class="md:flex-1">
+                      {
+                        slider.url && (
                           <a
-                            href="https://discord.com/channels/1196745368793264128/1196767045602250752/1225824762404540426"
-                            target="_blank"
-                            class="relative flex h-12 w-12 items-center justify-center text-xs text-white transition-colors md:h-12.5 md:w-12.5 bg-social-discord hover:bg-social-discord/90"
+                            href={slider.url}
+                            class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90"
                           >
-                            <svg class="h-4 w-4" fill="currentColor">
-                              <use
-                                xlink:href="/assets/img/social-icons.svg#discord"
-                              ></use>
-                            </svg>
+                            Read More...
                           </a>
-                        </li>
-                        <!-- DISCORD BUTTON -->
-                      </ul>
-
-                      <a
-                        href="/en/news/reversal-showdown-event"
-                        class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-gray-900 bg-accent hover:bg-accent/90"
-                      >
-                        Read More...
-                      </a>
+                        )
+                      }
                     </div>
                   </div>
                 </div>
@@ -203,7 +118,7 @@
             </div>
 
             <div
-              class="absolute inset-0 -z-10 bg-[url('news/reversal-showdown-event/home-banner.webp')] bg-cover bg-center bg-no-repeat ease-out transition-transform duration-[8000ms] group-[.swiper-slide-active]:scale-110"
+              class={"absolute inset-0 -z-10 bg-[url('" + slider.image + "')] bg-cover bg-center bg-no-repeat ease-out transition-transform duration-[8000ms] group-[.swiper-slide-active]:scale-110"}
             >
             </div>
 
@@ -213,7 +128,9 @@
             </div>
           </div>
         </div>
-        <!-- Reversal Showdown Event -->
+          )
+         }
+        <!-- Sliders -->
         
       </div>
     </div>
