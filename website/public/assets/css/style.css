@@ -4365,6 +4365,15 @@ select {
 .bg-\[url\(\'news\/gold-bar-theft-event\/home-banner\.webp\'\)\] {
   background-image: url('/assets/img/news/gold-bar-theft-event/home-banner.webp');
 }
+.bg-\[url\(\'news\/bduck-collaboration-event\/home-banner\.webp\'\)\] {
+  background-image: url('/assets/img/news/bduck-collaboration-event/home-banner.webp');
+}
+.bg-\[url\(\'news\/summer-party-event\/home-banner\.webp\'\)\] {
+  background-image: url('/assets/img/news/summer-party-event/home-banner.webp');
+}
+.bg-\[url\(\'news\/survive-the-battlegrounds-event\/home-banner\.webp\'\)\] {
+  background-image: url('/assets/img/news/survive-the-battlegrounds-event/home-banner.webp');
+}
 .bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/img\/str1\/samples\/modal-header-bg\.jpg\'\)\] {
   background-image: url('/assets/img/str1/samples/modal-header-bg.jpg');
 }

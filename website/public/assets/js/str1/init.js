@@ -158,7 +158,7 @@ const swiperGamesTop = new Swiper('.js-vv-games-swiper', {
 
 
 if ( document.querySelector('.js-vv-countdown-container') ) {
-  const finaleDate = new Date("Apr 19, 2024 18:00:00").getTime();
+  const finaleDate = new Date("July 19, 2024 06:00:00").getTime();
 
   const timer = () =>{
     const now = new Date().getTime();
