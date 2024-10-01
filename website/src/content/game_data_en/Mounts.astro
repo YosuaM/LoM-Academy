@@ -1,9 +1,12 @@
 ---
+import type { PremiumGameItem } from '@Types/ContentDto.ts';
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
+
 export const mountLevels = [
   {
     tier: 1,
     name: "Lily Pad",
-    image: "/assets/img/game/mounts/tier1_185_100.webp",
+    image: "/assets/img/game/mounts/lily_pad.webp",
     count: 0,
     total: 0,
     bonuses: 4,
@@ -74,7 +77,7 @@ export const mountLevels = [
   {
     tier: 2,
     name: "Quack Splash",
-    image: "/assets/img/game/mounts/tier2_185_100.webp",
+    image: "/assets/img/game/mounts/quack_splash.webp",
     count: 35,
     total: 35,
     bonuses: 109,
@@ -145,7 +148,7 @@ export const mountLevels = [
   {
     tier: 3,
     name: "Surfboard",
-    image: "/assets/img/game/mounts/tier3_185_100.webp",
+    image: "/assets/img/game/mounts/surfboard.webp",
     count: 90,
     total: 125,
     bonuses: 518,
@@ -216,7 +219,7 @@ export const mountLevels = [
   {
     tier: 4,
     name: "Flyboard",
-    image: "/assets/img/game/mounts/tier4_185_100.webp",
+    image: "/assets/img/game/mounts/flyboard.webp",
     count: 330,
     total: 455,
     bonuses: 1941,
@@ -287,7 +290,7 @@ export const mountLevels = [
   {
     tier: 5,
     name: "Skyglider",
-    image: "/assets/img/game/mounts/tier5_185_100.webp",
+    image: "/assets/img/game/mounts/skyglider.webp",
     count: 1330,
     total: 1785,
     bonuses: 6220,
@@ -358,7 +361,7 @@ export const mountLevels = [
   {
     tier: 6,
     name: "Amethyst Gourd",
-    image: "/assets/img/game/mounts/tier6_185_100.webp",
+    image: "/assets/img/game/mounts/amethyst_gourd.webp",
     count: 5415,
     total: 7200,
     bonuses: 18180,
@@ -429,7 +432,7 @@ export const mountLevels = [
   {
     tier: 7,
     name: "Magic Broom",
-    image: "/assets/img/game/mounts/tier7_185_100.webp",
+    image: "/assets/img/game/mounts/magic_broom.webp",
     count: 30620,
     total: 37820,
     bonuses: 49950,
@@ -500,7 +503,7 @@ export const mountLevels = [
   {
     tier: 8,
     name: "Magic Broom",
-    image: "/assets/img/game/mounts/tier8_185_100.webp",
+    image: "/assets/img/game/mounts/magic_broom.webp",
     count: 208435,
     total: 246255,
     bonuses: 87130,
@@ -571,7 +574,7 @@ export const mountLevels = [
   {
     tier: 9,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier9_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 454690,
     bonuses: 124310,
@@ -642,7 +645,7 @@ export const mountLevels = [
   {
     tier: 10,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier10_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 663125,
     bonuses: 161490,
@@ -713,7 +716,7 @@ export const mountLevels = [
   {
     tier: 11,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier11_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 871560,
     bonuses: 198670,
@@ -784,7 +787,7 @@ export const mountLevels = [
   {
     tier: 12,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier12_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 1079995,
     bonuses: 235850,
@@ -855,7 +858,7 @@ export const mountLevels = [
   {
     tier: 13,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier13_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 1288430,
     bonuses: 273030,
@@ -926,7 +929,7 @@ export const mountLevels = [
   {
     tier: 14,
     name: "Azure Feather",
-    image: "/assets/img/game/mounts/tier14_185_100.webp",
+    image: "/assets/img/game/mounts/azure_feather.webp",
     count: 208435,
     total: 1496865,
     bonuses: 310210,
@@ -994,159 +997,580 @@ export const mountLevels = [
       },
     ],
   },
-];
 
-export const advanceMounts = [
   {
-    name: "Pyrebreaker",
-    image: "/assets/img/game/mounts/advance/pyrebreaker_img.webp",
-    icon: "/assets/img/game/mounts/advance/pyrebreaker_icon.webp",
-    skill:
-      "Increase base Critic rate by 1% adn Crit DMG by 5% per second (up to 20%, 100%).",
-    effect: "Ignore Evasion +10%",
-    howToGet: "Rush Shop: Sky Rider Pass x10",
+    tier: 15,
+    name: "Soaring Wings",
+    image: "/assets/img/game/mounts/soaring_wings.webp",
+    count: 0,
+    total: 0,
+    bonuses: 0,
+    evasion: 0,
+    stars: [
+      {
+        star: "10-1",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "1-2",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "2-3",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "3-4",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "4-5",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "5-6",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "6-7",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "7-8",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "8-9",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "9-10",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+    ],
   },
   {
+    tier: 16,
+    name: "Soaring Wings",
+    image: "/assets/img/game/mounts/soaring_wings.webp",
+    count: 0,
+    total: 0,
+    bonuses: 0,
+    evasion: 0,
+    stars: [
+      {
+        star: "10-1",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "1-2",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "2-3",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "3-4",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "4-5",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "5-6",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "6-7",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "7-8",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "8-9",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "9-10",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+    ],
+  },
+  {
+    tier: 17,
+    name: "Soaring Wings",
+    image: "/assets/img/game/mounts/soaring_wings.webp",
+    count: 0,
+    total: 0,
+    bonuses: 0,
+    evasion: 0,
+    stars: [
+      {
+        star: "10-1",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "1-2",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "2-3",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "3-4",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "4-5",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "5-6",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "6-7",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "7-8",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "8-9",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "9-10",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+    ],
+  },
+  {
+    tier: 18,
+    name: "Soaring Wings",
+    image: "/assets/img/game/mounts/soaring_wings.webp",
+    count: 0,
+    total: 0,
+    bonuses: 0,
+    evasion: 0,
+    stars: [
+      {
+        star: "10-1",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "1-2",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "2-3",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "3-4",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "4-5",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "5-6",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "6-7",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "7-8",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "8-9",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "9-10",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+    ],
+  },
+  {
+    tier: 19,
+    name: "Soaring Wings",
+    image: "/assets/img/game/mounts/soaring_wings.webp",
+    count: 0,
+    total: 0,
+    bonuses: 0,
+    evasion: 0,
+    stars: [
+      {
+        star: "10-1",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "1-2",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "2-3",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "3-4",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "4-5",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "5-6",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "6-7",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "7-8",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "8-9",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+      {
+        star: "9-10",
+        count: 0,
+        total: 0,
+        bonuses: 0,
+      },
+    ],
+  },
+];
+
+export const advanceMounts: PremiumGameItem[] = [
+  {
+    id: "pyrebreaker",
+    name: "Pyrebreaker",
+    image: "/assets/img/game/mounts/advance/pyrebreaker.webp",
+    skill: "Increase base Critic rate by 1% adn Crit DMG by 5% per second (up to 20%, 100%).",
+    effect: "Ignore Evasion +10%",
+    howToGet: "Rush Shop: Sky Rider Pass x10",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "hot_wheels",
     name: "Hot Wheels",
-    image: "/assets/img/game/mounts/advance/hot_wheels_img.webp",
-    icon: "/assets/img/game/mounts/advance/hot_wheels_icon.webp",
+    image: "/assets/img/game/mounts/advance/hot_wheels.webp",
     skill: "Boost Pal Attack Speed by 2% per second (up to 40%).",
     effect: "Ignore Stun +6%",
     howToGet: "Rush Shop: Sky Rider Pass x10",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "cloud_drifter",
     name: "Cloud Drifter",
-    image: "/assets/img/game/mounts/advance/cloud_drifter_img.webp",
-    icon: "/assets/img/game/mounts/advance/cloud_drifter_icon.webp",
-    skill:
-      "Increase Skill Crit Rate by 10%. After a skill critical, boost ATK by 20% for 5 seconds.",
+    image: "/assets/img/game/mounts/advance/cloud_drifter.webp",
+    skill: "Increase Skill Crit Rate by 10%. After a skill critical, boost ATK by 20% for 5 seconds.",
     effect: "Global Attack +10%",
     howToGet: "Rush Shop: Sky Rider Pass x20",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "white_tiger",
     name: "White Tiger",
-    image: "/assets/img/game/mounts/advance/white_tiger_img.webp",
-    icon: "/assets/img/game/mounts/advance/white_tiger_icon.webp",
-    skill:
-      "Targets with HP percentage below the caster take 15% increased DMG, while those with HP percentage above the caster have their ATK reduced by 10%.",
+    image: "/assets/img/game/mounts/advance/white_tiger.webp",
+    skill: "Targets with HP percentage below the caster take 15% increased DMG, while those with HP percentage above the caster have their ATK reduced by 10%.",
     effect: "Global Basic ATK DMG +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "blue_ox",
     name: "Blue Ox",
-    image: "/assets/img/game/mounts/advance/blue_ox_img.webp",
-    icon: "/assets/img/game/mounts/advance/blue_ox_icon.webp",
-    skill:
-      "Increase DMG RES by 10% and shorten the duration of control effects by 30%.",
+    image: "/assets/img/game/mounts/advance/blue_ox.webp",
+    skill: "Increase DMG RES by 10% and shorten the duration of control effects by 30%.",
     effect: "Pal DMG +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "blue_queen",
     name: "Blue Queen",
-    image: "/assets/img/game/mounts/advance/blue_queen_img.webp",
-    icon: "/assets/img/game/mounts/advance/blue_queen_icon.webp",
-    skill:
-      "Distribute 10% of DMG dealt to up to 5 surrounding enemiesw when dealing DMG.",
+    image: "/assets/img/game/mounts/advance/blue_queen.webp",
+    skill: "Distribute 10% of DMG dealt to up to 5 surrounding enemiesw when dealing DMG.",
     effect: "Crit DMMG Bonus +40%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
-    name: "Round Pepe",
-    image: "/assets/img/game/mounts/advance/round_pepe_img.webp",
-    icon: "/assets/img/game/mounts/advance/round_pepe_icon.webp",
-    skill:
-      "Every 10 second, defeat 1 enemies, boosting ATK by 15% for 5 seconds. If the target is a Boss or player, stun for an additional 1 seconds.",
+    id: "round_frog",
+    name: "Round Frog",
+    image: "/assets/img/game/mounts/advance/round_frog.webp",
+    skill: "Every 10 second, defeat 1 enemies, boosting ATK by 15% for 5 seconds. If the target is a Boss or player, stun for an additional 1 seconds.",
     effect: "Crit RES +40%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "purple_wing",
     name: "Purple Wing",
-    image: "/assets/img/game/mounts/advance/purple_wing_img.webp",
-    icon: "/assets/img/game/mounts/advance/purple_wing_icon.webp",
-    skill:
-      "After the battle begins, immediately deals 5000% AoE DMG, and launches targets wihin the range for 0.5 seconds. Releases every 11 seconds.",
+    image: "/assets/img/game/mounts/advance/purple_wing.webp",
+    skill: "After the battle begins, immediately deals 5000% AoE DMG, and launches targets wihin the range for 0.5 seconds. Releases every 11 seconds.",
     effect: "Global HP +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "magic_carpet",
     name: "Magic Carpet",
-    image: "/assets/img/game/mounts/advance/magic_carpet_img.webp",
-    icon: "/assets/img/game/mounts/advance/magic_carpet_icon.webp",
-    skill:
-      "After casting skills 6 times, restore full energy to 1 random skills.",
+    image: "/assets/img/game/mounts/advance/magic_carpet.webp",
+    skill: "After casting skills 6 times, restore full energy to 1 random skills.",
     effect: "Gloal ATK +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "koi_paper_kite",
     name: "Koi Paper Kite",
-    image: "/assets/img/game/mounts/advance/koi_paper_kite_img.webp",
-    icon: "/assets/img/game/mounts/advance/koi_paper_kite_icon.webp",
+    image: "/assets/img/game/mounts/advance/koi_paper_kite.webp",
     skill: "Every 3 combos triggers an additional 500% AoE DMG.",
     effect: "Global ATK +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "mini_motorcycle",
     name: "Mini Motorcycle",
-    image: "/assets/img/game/mounts/advance/mini_motorcycle_img.webp",
-    icon: "/assets/img/game/mounts/advance/mini_motorcycle_icon.webp",
-    skill:
-      "With every 1 counter, increase global counter DMG by 10% for 3 seconds, up to a maximum of 30%. The duration refreshes with each new counter trigger.",
+    image: "/assets/img/game/mounts/advance/mini_motorcycle.webp",
+    skill: "With every 1 counter, increase global counter DMG by 10% for 3 seconds, up to a maximum of 30%. The duration refreshes with each new counter trigger.",
     effect: "Global HP +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "blazing_motorcycle",
     name: "Blazing Motorcycle",
-    image: "/assets/img/game/mounts/advance/blazing_motorcycle_img.webp",
-    icon: "/assets/img/game/mounts/advance/blazing_motorcycle_icon.webp",
-    skill:
-      "For every 10% lost HP, release a flame jet, dealing at lest 500% of current basic attack DMG (scales with lost HP).",
+    image: "/assets/img/game/mounts/advance/blazing_motorcycle.webp",
+    skill: "For every 10% lost HP, release a flame jet, dealing at lest 500% of current basic attack DMG (scales with lost HP).",
     effect: "Global DEF +10%",
     howToGet: "Childhood Memories Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "horizon_racer",
     name: "Horizon Racer",
-    image: "/assets/img/game/mounts/advance/horizon_razer_img.webp",
-    icon: "/assets/img/game/mounts/advance/horizon_razer_icon.webp",
-    skill:
-      "Every 10 second, summon a car, dealing 800% current basic attack AoE DMG and knocking back targets.",
+    image: "/assets/img/game/mounts/advance/horizon_racer.webp",
+    skill: "Every 10 second, summon a car, dealing 800% current basic attack AoE DMG and knocking back targets.",
     effect: "Global HP +10%",
     howToGet: "Hunting Season Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "trembling_pepe",
     name: "Trembling Pepe",
-    image: "/assets/img/game/mounts/advance/trembling_pepe_img.webp",
-    icon: "/assets/img/game/mounts/advance/trembling_pepe_icon.webp",
-    skill:
-      "These two buffs will alternate to take effects every 8s: Gain a shield with 8% of Max HP, lasting 8s; gain 8% ATK and reduce time of being controlled by 30% for 8s.",
+    image: "/assets/img/game/mounts/advance/trembling_pepe.webp",
+    skill: "These two buffs will alternate to take effects every 8s: Gain a shield with 8% of Max HP, lasting 8s; gain 8% ATK and reduce time of being controlled by 30% for 8s.",
     effect: "Global DEF +10%",
     howToGet: "Pepe Universe Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
+    id: "adapto_slime",
     name: "Adapto Slime",
-    image: "/assets/img/game/mounts/advance/adapto_slime_img.webp",
-    icon: "/assets/img/game/mounts/advance/adapto_slime_icon.webp",
-    skill:
-      "Increases ATK by 15% for 10 seconds when HP drops below 80%; gains a shield equal tto 10% of max HP for 10 seconds when HP drops below 60%; reduces DMG taken by 15% for 10 secods when HP drops below 30%.",
+    image: "/assets/img/game/mounts/advance/adapto_slime.webp",
+    skill: "Increases ATK by 15% for 10 seconds when HP drops below 80%; gains a shield equal tto 10% of max HP for 10 seconds when HP drops below 60%; reduces DMG taken by 15% for 10 secods when HP drops below 30%.",
     effect: "Global HP +10%",
     howToGet: "Rush Shop: Sky Rider Pass x30",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
-    name: "Neon Shadows",
-    image: "/assets/img/game/mounts/advance/neon_shadows_img.webp",
-    icon: "/assets/img/game/mounts/advance/neon_shadows_icon.webp",
-    skill:
-      "Gain 3 stacks of Guard every 11s, each stack increasing DEF by 100% but losing 1 stack every 1s. Deal 2000% Skill DMG, 800% current Combo DMG and 800% current Counter DMG at the end of Guard (triggers at the start of the battle).",
+    id: "holy_dragon",
+    name: "Holy Dragon",
+    image: "/assets/img/game/mounts/advance/holy_dragon.webp",
+    skill: "Gain 3 stacks of Guard every 11s, each stack increasing DEF by 100% but losing 1 stack every 1s. Deal 2000% Skill DMG, 800% current Combo DMG and 800% current Counter DMG at the end of Guard (triggers at the start of the battle).",
     effect: "Global DEF +10%",
     howToGet: "Children's Land Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
   {
-    name: "Wine Feast",
-    image: "/assets/img/game/mounts/advance/wine_feast_img.webp",
-    icon: "/assets/img/game/mounts/advance/wine_feast_icon.webp",
-    skill:
-      "For every 20% Max HP missing, deal 800% Basic ATK AoE DMG within a range, gain 10% ATK and take 10% less DMG for 5s (triggers at the start of the battle).",
+    id: "rum_barrel",
+    name: "Rum Barrel",
+    image: "/assets/img/game/mounts/advance/rum_barrel.webp",
+    skill: "For every 20% Max HP missing, deal 800% Basic ATK AoE DMG within a range, gain 10% ATK and take 10% less DMG for 5s (triggers at the start of the battle).",
     effect: "Global DEF +10%",
     howToGet: "Marine Treasure Shop: Precious Treasure Map x20",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "diving_duck",
+    name: "Diving Duck",
+    image: "/assets/img/game/mounts/advance/diving_duck.webp",
+    skill: "B.Duck creates splashes around every 11s, dealing 2000% Skill DMG, 800% Combo DMG and 800% Counter DMG to all enemieis in the area and reducing their ATK by 10% until the battle ends; the effects don't stack. The skill deals 50% more DMG when cast again. When the skill hits the same target again, reduces their ATK by 3% more, stacking up to 2 times. (Cast 1 time immediately after battle starts.)",
+    effect: "Global DEF +10% (+2%)",
+    howToGet: "B.Duck Collaboration Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "vibrant_watermelon_ship",
+    name: "Vibrant Watermelon Ship",
+    image: "/assets/img/game/mounts/advance/vibrant_watermelon_ship.webp",
+    skill: "Increases ATK by 10% and DEF by 30% every 11s for 5s. After this, a Watermelon Ship is summoned to unleash a wave taht launches enemies for 0.5s dealing 2000% Skill DMG, 800% current Combo DMG, and 800% current CounterD DMG as AoE DMG. (Triggers at the start of the battle.)",
+    effect: "Global DEF +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "storm_rider",
+    name: "Storm Rider",
+    image: "/assets/img/game/mounts/advance/storm_rider.webp",
+    skill: "Increase DMG REST by 5% and shorten the durtation of control effect by 15%.\nThe first time HP drops below 80%, Increase DMG RES by 8% and shorten the duration of control effects by 25% for 8 seconds.\nThe first time HP drops below 60%, Increase DMG RES by 8% and shorten the duration of control effects by 25% for 12 seconds.\nThe first time HP drops below 40%, increase DMG RES by 8% and shorten the duration of control effects by 25% until the battle ends.\nEach effect is counted independently and stackable.",
+    effect: "Global DEF +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "hearts_desire",
+    name: "Heart's Desire",
+    image: "/assets/img/game/mounts/advance/hearts_desire.webp",
+    skill: "Every second for the first 20 seconds has 60% chance to boost ATK by 1% and DMG RES by 1% until the battle ends\nAfter 20 seconds, deals 8000% AoE Skll DMG and launches the target airbone for 0.5 second.",
+    effect: "Skill Crit DMG +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "skyward_blaze",
+    name: "Skyward Blaze",
+    image: "/assets/img/game/mounts/advance/skyward_blaze.webp",
+    skill: "Deals 600% current Basic ATK AoE DMG to an area every 10s and burns the targets, who will receive 40% current Basic ATK DMG per second until the battle ends, stacking up to 3 times. Gains an additional 4% ATK and DEF and 4% DMG RES until the battle ends, stacking up to 3 times. (Cast 1 time iimmediately after battle starts.)",
+    effect: "Global HP +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "panda_attack",
+    name: "Panda Attack",
+    image: "/assets/img/game/mounts/advance/panda_attack.webp",
+    skill: "Every 10s, gains Control Immunity for 3-5s and boosts ATK by 5%-12% and DMG RES by 5%-12% for 10s. (Triggers at the start of the battle.)",
+    effect: "Global DEF +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
+  },
+  {
+    id: "cheetah_zero",
+    name: "Cheetah Zero",
+    image: "/assets/img/game/mounts/advance/cheetah_zero.webp",
+    skill: "-",
+    effect: "Global HP +10% (+2%)",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT
   },
 ];
 ---
