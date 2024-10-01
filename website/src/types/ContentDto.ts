@@ -38,3 +38,37 @@ export class GameItemType {
     this.name = name;
   }
 }
+
+export class PremiumGameItem {
+  id: string;
+  name: string;
+  skill: string;
+  effect: string;
+  image: string;
+  howToGet?: string;
+  type?: ENUM_PREMIUM_GAME_ITEM_TYPE;
+
+  constructor(
+    id: string,
+    name: string,
+    skill: string,
+    effect: string,
+    image: string,
+    howToGet?: string,
+    type?: ENUM_PREMIUM_GAME_ITEM_TYPE
+  ) {
+    this.id = id;
+    this.name = name;
+    this.skill = skill;
+    this.effect = effect;
+    this.image = image;
+    this.howToGet = howToGet;
+    this.type = type;
+  }
+}
+
+export enum ENUM_PREMIUM_GAME_ITEM_TYPE {
+  ARTIFACT,
+  MOUNT,
+  BACK_ACCESSORY,
+}

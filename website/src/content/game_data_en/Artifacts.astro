@@ -1,66 +1,115 @@
 ---
-export const artifactMorphs = [
+import type { PremiumGameItem } from '@Types/ContentDto.ts';
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
+
+export const artifactMorphs: PremiumGameItem[] = [
   {
+    id: 'chaotic_warlords_hammer',
     name: "Chaotic Warlord's Hammer",
-    image: "/assets/img/game/artifacts/morph/chaotic_warlords_hammer_img.webp",
-    icon: "/assets/img/game/artifacts/morph/chaotic_warlords_hammer_icon.webp",
+    image: "/assets/img/game/artifacts/morph/chaotic_warlords_hammer.webp",
     skill: "Basic attacks and combos deal an additional 30% AoE DMG.",
     effect: "Global Basic ATK DMG +10%",
     howToGet: "Lucky Spinner",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'candy_gatling',
     name: "Candy Gatling",
-    image: "/assets/img/game/artifacts/morph/candy_gatling_img.webp",
-    icon: "/assets/img/game/artifacts/morph/candy_gatling_icon.webp",
-    skill:
-      "Basic attacks, combos, and costers unleash an additional 1 to 5 bullets. Each bullett deals 10% of current basic attack DMMG (do not trigger Windborne Arrow Vulnerability).",
+    image: "/assets/img/game/artifacts/morph/candy_gatling.webp",
+    skill: "Basic attacks, combos, and costers unleash an additional 1 to 5 bullets. Each bullett deals 10% of current basic attack DMG (do not trigger Windborne Arrow Vulnerability).",
     effect: "Global ATK +10%",
     howToGet: "Childhood Memories Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'spring_chord',
     name: "Spring Chord",
-    image: "/assets/img/game/artifacts/morph/spring_chord_img.webp",
-    icon: "/assets/img/game/artifacts/morph/spring_chord_icon.webp",
-    skill:
-      "Every 11 second(s), deal 1000% of current basic attack AoE DMG and confuse targets: each of their own attacks (basic atacks, combos, costerstrikes and skills) will deal an extra 20% of their current basic attack DMG to themselvs. The confusion last 5 second(s). (Cast 1 tim immediately after battle starts.)",
+    image: "/assets/img/game/artifacts/morph/spring_chord.webp",
+    skill: "Every 11 second(s), deal 1000% of current basic attack AoE DMG and confuse targets: each of their own attacks (basic atacks, combos, costerstrikes and skills) will deal an extra 20% of their current basic attack DMG to themselvs. The confusion last 5 second(s). (Cast 1 tim immediately after battle starts.)",
     effect: "Global ATK +10%",
     howToGet: "Hunting Season Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'eye_of_raven',
     name: "Eye of Raven",
-    image: "/assets/img/game/artifacts/morph/eye_of_raven_img.webp",
-    icon: "/assets/img/game/artifacts/morph/eye_of_raven_icon.webp",
-    skill:
-      "Cast an equipped active skill at random eevery 20s. (Cast for the first time 2s aftr battle starts.)",
+    image: "/assets/img/game/artifacts/morph/eye_of_raven.webp",
+    skill: "Cast an equipped active skill at random eevery 20s. (Cast for the first time 2s aftr battle starts.)",
     effect: "Global HP +10%",
     howToGet: "The Gold Bar Theft",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'tear_attack',
     name: "Tear Attack",
-    image: "/assets/img/game/artifacts/morph/tear_attack_img.webp",
-    icon: "/assets/img/game/artifacts/morph/tear_attack_icon.webp",
-    skill:
-      "Summon a Pepe with 20% of the character's Max HP every 12s. Upon its death or 4s after it's summoned, it will explode, dealing 1000% Basic ATK DMG (triggers at the start of the battle).",
+    image: "/assets/img/game/artifacts/morph/tear_attack.webp",
+    skill: "Summon a Pepe with 20% of the character's Max HP every 12s. Upon its death or 4s after it's summoned, it will explode, dealing 1000% Basic ATK DMG (triggers at the start of the battle).",
     effect: "Global ATK +10%",
     howToGet: "Pepe Universe Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'skyward_blade',
     name: "Skyward Blade",
-    image: "/assets/img/game/artifacts/morph/skyward_blade_img.webp",
-    icon: "/assets/img/game/artifacts/morph/skyward_blade_icon.webp",
-    skill:
-      "For every 10 (basic attack, combo, coster, skill) unleash, release a sword aura, dealing 150% of current basic attack DMG.",
+    image: "/assets/img/game/artifacts/morph/skyward_blade.webp",
+    skill: "For every 10 (basic attack, combo, coster, skill) unleash, release a sword aura, dealing 150% of current basic attack DMG.",
     effect: "Global ATK +10%",
     howToGet: "Special Love Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
   {
+    id: 'skyfire_wrath',
     name: "Skyfire Wrath",
-    image: "/assets/img/game/artifacts/morph/skyfire_wrath_img.webp",
-    icon: "/assets/img/game/artifacts/morph/skyfire_wrath_icon.webp",
-    skill:
-      "Every Crit has a chance to deal extra AoE Bleed DMG equal to 50% of your Basic ATK (ignores DMG Immunity), reducing the target's Crit RES by 1% and stacking up to 20 times.",
+    image: "/assets/img/game/artifacts/morph/skyfire_wrath.webp",
+    skill: "Every Crit has a chance to deal extra AoE Bleed DMG equal to 50% of your Basic ATK (ignores DMG Immunity), reducing the target's Crit RES by 1% and stacking up to 20 times.",
     effect: "Global ATK +10%",
     howToGet: "Peril Royale Event",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
+  },
+  {
+    id: 'sirens_whisper',
+    name: "Siren's Whisper",
+    image: "/assets/img/game/artifacts/morph/sirens_whisper.webp",
+    skill: "Summons an Abyssal Beast with Control Immuunity and 16% of the character's Max HP every 14s after battle starts, lasting up to 5s. Its attacks deal 40%. (Triggers at the start of the battle.)",
+    effect: "Global ATK +10%",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
+  },
+  {
+    id: 'eternal_flame',
+    name: "Eternal Flame",
+    image: "/assets/img/game/artifacts/morph/eternal_flame.webp",
+    skill: "After battle starts, summon an invicible Torch Bearer (immune to all damage) that exists for 2s. After it disappears, gain 5% Final Crit DMG, 5% Final Skill Crit DMG and 5% Pal Final Crit DMG until the battle ends.\n8s into the battle, summon a second invincible Torch Bearer (immune to all damage) that exists for 2s. After it disappears, gain 5% ATK SPD and 5% Pal ATK SPD until the battle ends.\n15 into the battle, summons a third invicible Torch Bearer (immnute to all damage) that exists for 2s. After it dissapears, gain 5% ATK and 10% DEF until the battle ends.\n20s into the battle, summon the last invicible Torch Bearer (immnune to all damage) that exists for 2s. After it disappears, double the bonuses provided by the first Torch Bearers until the battle ends.",
+    effect: "Global ATK +10%",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
+  },
+  {
+    id: 'double_edged_string',
+    name: "Double-Edged String",
+    image: "/assets/img/game/artifacts/morph/double_edged_string.webp",
+    skill: "After battle starts, enhances the next basic attack every 1 second: basic attacks deal 100% more Basic ATK AoE DMG. If any of the following soundwave requirements is achieved for the first time in battle, grants enhanced basic attacks its corresponding bonus effect.\nBass: After 25 combos, enhanced basic attacks deal an additional 150% current Combo AoE DMG.\nMediant: After 25 counterstrikes, enhanced basic attacks deal an additional 150% current Coutner AoE DMG.\nTreble: After 10 skills, enhanced basic attacks deal an additional 400% AoE Skill DMG.",
+    effect: "Global ATK +10%",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
+  },
+  {
+    id: 'extreme_caution',
+    name: "Extreme Caution",
+    image: "/assets/img/game/artifacts/morph/extreme_caution.webp",
+    skill: "Each basic attack has a 50% chance to deal extra DMG equal to 0.5% of the target's Max HP and a 10% chance to wound all targets within the range, reducing their Regen and Healing Amount by 50% foro 2 seconds.",
+    effect: "Global Combo DMG +5%",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
+  },
+  {
+    id: 'beastroar_bow',
+    name: "Beastroar Bow",
+    image: "/assets/img/game/artifacts/morph/beastroar_bow.webp",
+    skill: "Gains 20% Crit Rate. Each Crit increases Final Crit DMG by 1% until the battle ends, stacking up to 20 times. Upon reaching maximum stacks, each Crit has a 10% chance to deal an extra 750% of AoE Skill DMG, 150% of current Basic ATK AoE DMG (can be Crit), 150% of current Combo AoE DMG (can be Crit), and 150% of current Counter AoE DMG (can be Crit).",
+    effect: "Global ATK +10%",
+    howToGet: "-",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT
   },
 ];
 
@@ -422,45 +471,45 @@ export const artifactLevels = [
 
   {
     level: 51,
-    bonus: 0,
+    bonus: 80940,
     ignore_evasion: 35,
-    cost: 0,
-    total: 0
+    cost: 1020,
+    total: 318374
   },
   {
     level: 52,
     bonus: 83990,
     ignore_evasion: 35,
-    cost: 0,
-    total: 0
+    cost: 2045,
+    total: 320419
   },
   {
     level: 53,
     bonus: 87030,
     ignore_evasion: 35,
     cost: 6144,
-    total: 0
+    total: 326563
   },
   {
     level: 54,
     bonus: 90080,
     ignore_evasion: 35,
     cost: 10243,
-    total: 0
+    total: 336806
   },
   {
     level: 55,
     bonus: 93130,
     ignore_evasion: 35,
     cost: 16391,
-    total: 0
+    total: 353197
   },
   {
     level: 56,
     bonus: 96180,
     ignore_evasion: 35,
     cost: 20491,
-    total: 0
+    total: 373688
   },
 
   {
@@ -468,28 +517,114 @@ export const artifactLevels = [
     bonus: 99220,
     ignore_evasion: 35,
     cost: 24590,
-    total: 0
+    total: 398278
   },
   {
     level: 58,
     bonus: 102300,
     ignore_evasion: 35,
     cost: 30738,
-    total: 0
+    total: 429016
   },
   {
     level: 59,
     bonus: 105300,
     ignore_evasion: 35,
     cost: 38936,
-    total: 0
+    total: 467952
   },
   {
     level: 60,
     bonus: 108400,
-    ignore_evasion: 35,
+    ignore_evasion: 40,
     cost: 54308,
-    total: 0
+    total: 522260
+  },
+
+  {
+    level: 61,
+    bonus: 111900,
+    ignore_evasion: 40,
+    cost: 1271,
+    total: 523531
+  },
+  {
+    level: 62,
+    bonus: 115500,
+    ignore_evasion: 40,
+    cost: 2548,
+    total: 526079
+  },
+  {
+    level: 63,
+    bonus: 119000,
+    ignore_evasion: 40,
+    cost: 7653,
+    total: 533732
+  },
+  {
+    level: 64,
+    bonus: 122500,
+    ignore_evasion: 40,
+    cost: 12759,
+    total: 546491
+  },
+  {
+    level: 65,
+    bonus: 126100,
+    ignore_evasion: 40,
+    cost: 20417,
+    total: 566908
+  },
+  {
+    level: 66,
+    bonus: 129600,
+    ignore_evasion: 40,
+    cost: 25522,
+    total: 592430
+  },
+  {
+    level: 67,
+    bonus: 133200,
+    ignore_evasion: 40,
+    cost: 30627,
+    total: 623057
+  },
+  {
+    level: 68,
+    bonus: 136700,
+    ignore_evasion: 40,
+    cost: 38286,
+    total: 661343
+  },
+  {
+    level: 69,
+    bonus: 48496,
+    ignore_evasion: 40,
+    cost: 48496,
+    total: 709839
+  },
+  {
+    level: 70,
+    bonus: 143800,
+    ignore_evasion: 40,
+    cost: 67642,
+    total: 777481
+  },
+
+  {
+    level: 71,
+    bonus: 147900,
+    ignore_evasion: 43,
+    cost: 1523,
+    total: 778004
+  },
+  {
+    level: 72,
+    bonus: 151900,
+    ignore_evasion: 43,
+    cost: 3051,
+    total: 781055
   }
 ];
 ---
