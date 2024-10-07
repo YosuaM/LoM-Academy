@@ -1,11 +1,24 @@
 ---
 import { advanceMounts } from "@Content/game_data_en/Mounts.astro";
 import { artifactMorphs } from "@Content/game_data_en/Artifacts.astro";
+import { backAccessoryMorphs } from "@Content/game_data_en/BackAccessories.astro";
 import type { PremiumGameItem } from '@Types/ContentDto.ts';
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
 
 const { type, content, title } = Astro.props;
 
-const items : PremiumGameItem[] = type === "mount" ? advanceMounts : (type === 'artifact' ? artifactMorphs : (content ?? []));
+const items: PremiumGameItem[] = (() => {
+  switch (type) {
+    case ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT:
+      return advanceMounts;
+    case ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT:
+      return artifactMorphs;
+    case ENUM_PREMIUM_GAME_ITEM_TYPE.BACK_ACCESSORY:
+      return backAccessoryMorphs;
+    default:
+      return content ?? [];
+  }
+})();
 ---
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">

@@ -1,5 +1,4 @@
 ---
-import SimpleTable from "@Components/base/SimpleTable.astro";
 import ItemImageTable from "@Components/en/guides/ItemImageTable.astro";
 import StandarLayout from "@Layouts/StandarLayout.astro";
 import { luckySpinnerItems } from "@Content/game_data_en/LuckySpinner.astro";
@@ -45,19 +44,46 @@ import { luckySpinnerItems } from "@Content/game_data_en/LuckySpinner.astro";
 
   <!-- CONTENT -->
   <main id="main-content" class="grow lg:pt-0">
-    <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
+    <div class="pt-8 pb-12 lg:pt-16 lg:pb-36">
       <div class="container">
-        <div class="flex flex-col gap-y-10 lg:gap-y-20">
-
-          <!-- Event items -->
-          {
-            luckySpinnerItems.map((event, idx: number) => (
-              <ItemImageTable title={`Lucky Spinner Week ${idx + 1}`}content={event} />
-            ))
-          }
-          <!-- Event items -->
-
+        
+        <!-- INFO -->
+        <div>
+          <h3
+            class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-2 md:mb-3 lg:mb-4 xl:mb-5"
+          >
+            Information about Lucky Spinner
+          </h3>
+          <div class="mb-6 md:mb-10 lg:mb-12 xl:mb-14">
+            Every week, from Friday through Sunday, the Lucky Spinner will be available. 
+            Each week, the final prize on the spinner will change, following the order on the calendar.
+            <br />
+            It's important to note that spinner coins carry over from week to week, so we can save them up to ensure we have enough for the final prize.
+          </div>
         </div>
+        <!-- INFO -->
+    
+        <!-- WEEKLY CALENDAR -->
+         <div>
+           <h3
+             class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-2 md:mb-3 lg:mb-4 xl:mb-5"
+           >
+             Weekly Calendar
+           </h3>
+           <div class="flex flex-col gap-y-5 lg:gap-y-10">
+   
+             <!-- Event items -->
+             {
+               luckySpinnerItems.map((event, idx: number) => (
+                 <ItemImageTable title={`Lucky Spinner Week ${idx + 1}`} content={event} />
+               ))
+             }
+             <!-- Event items -->
+   
+           </div>
+         </div>
+        <!-- WEEKLY CALENDAR -->
+
       </div>
     </div>
   </main>
