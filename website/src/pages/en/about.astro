@@ -2,7 +2,7 @@
 import StandarLayout from "@Layouts/StandarLayout.astro";
 ---
 
-<StandarLayout title="About" page={7} >
+<StandarLayout title="About" page={7}>
   <div class="page-heading py-2 md:py-4">
     <div class="container">
       <div class="mb-2 flex items-baseline gap-x-3 lg:gap-x-4.5">
@@ -42,8 +42,90 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
       <div class="container">
         <div class="grid grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 gap-y-16">
           <div
-            class="col-span-full md:col-span-8 md:pr-[38px] lg:pr-[50px] xl:pr-[70px]"
+            class="col-span-full md:col-span-6 md:pr-[38px] lg:pr-[50px] xl:pr-[70px]"
           >
+            <!-- Team -->
+            <div class="mb-12 md:mb-16 lg:mb-20 xl:mb-24">
+              <h3
+                class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-8 md:mb-12 lg:mb-14 xl:mb-16"
+              >
+                LoM-Academy Team
+              </h3>
+              <dl
+                class="mb-8 flex flex-col gap-y-3.5 font-medium md:mb-10 lg:mb-12"
+              >
+                <div class="flex flex-wrap justify-between">
+                  <dt class="text-gray-500 opacity-60">Dev</dt>
+                  <dd
+                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
+                  >
+                    <a
+                      href="https://discord.com/users/142403029356904449"
+                      target="_blank"
+                      class="text-accent hover:text-gray-900 dark:hover:text-white"
+                      >xShaiLx</a
+                    >
+                  </dd>
+                </div>
+                <div class="flex flex-wrap justify-between">
+                  <dt class="text-gray-500 opacity-60">Content creator</dt>
+                  <dd
+                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
+                  >
+                    <a
+                      href="https://discord.com/users/1098657431631953981"
+                      class="text-accent hover:text-gray-900 dark:hover:text-white"
+                      >Soulcry</a
+                    >
+                  </dd>
+                </div>
+                <div class="flex flex-wrap justify-between">
+                  <dt class="text-gray-500 opacity-60">Artist</dt>
+                  <dd
+                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
+                  >
+                    <a
+                      href="https://discord.com/users/995691745624989768"
+                      class="text-accent hover:text-gray-900 dark:hover:text-white"
+                      >Howlite</a
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <!-- Team -->
+
+            <!-- About us -->
+            <div>
+              <h3
+                class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-8 md:mb-12 lg:mb-14 xl:mb-16"
+              >
+                About us
+              </h3>
+              <div class="mb-6 lg:mb-10">
+                Hi! I'm
+                <a
+                  href="https://discord.com/users/142403029356904449"
+                  class="text-accent hover:text-gray-900 dark:hover:text-white"
+                  target="_blank">xShaiLx</a
+                >
+                a player of LoM and the developer of this platform.
+                <br />
+                <br />
+                Our goal with this project is to ensure that all players have acc1ess
+                to the maximum amount of content possible to enjoy the game to the
+                fullest.
+                <br />
+                <br />
+                To make this possible, the LoM Academy team relies on collaborators
+                who are community members and contribute in different areas to making
+                this possible.
+              </div>
+            </div>
+            <!-- About us -->
+          </div>
+
+          <div class="col-span-full md:col-span-6">
             <!-- FAQ -->
             <div class="mb-12 md:mb-16 lg:mb-20 xl:mb-24">
               <h3
@@ -70,9 +152,10 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     class="accordion__item-content hidden group-[.active]:block animate-fade"
                   >
                     <div class="pt-6 lg:pt-8 xl:pt-10">
-                      Of course. Having community members who want to help with the project 
-                      by writing new guides and news, developing new tools, 
-                      or translating into other languages would be fantastic.
+                      Of course. Having community members who want to help with
+                      the project by writing new guides and news, developing new
+                      tools, or translating into other languages would be
+                      fantastic.
                     </div>
                   </div>
                 </div>
@@ -83,7 +166,8 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     class="accordion__item-trigger relative flex flex-wrap items-center gap-3 lg:gap-4 text-gray-900 dark:text-white lg:text-2xl font-bold cursor-pointer"
                   >
                     <span class="pr-8 md:pr-0"
-                      >Can I check what features are coming and propose new ones?</span
+                      >Can I check what features are coming and propose new
+                      ones?</span
                     >
                     <span
                       class="absolute right-0 top-0 w-5 aspect-square border-2 border-gray-650 group-[.active]:border-accent md:relative before:w-2 before:h-0.5 before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-gray-650 after:w-0.5 after:h-2 after:visible after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:bg-gray-650 group-[.active]:after:invisible group-[.active]:before:bg-gray-900 dark:group-[.active]:before:bg-white"
@@ -93,10 +177,12 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     class="accordion__item-content hidden group-[.active]:block animate-fade"
                   >
                     <div class="pt-6 lg:pt-8 xl:pt-10">
-                      You can check the development status of the platform and upcoming 
-                      updates on our Trello board, which you'll find under the FAQ section. 
-                      We'd love it if you could send us any suggestions you come up with to 
-                      improve the platform. Don't hesitate to contact us via Discord to share whatever you'd like.
+                      You can check the development status of the platform and
+                      upcoming updates on our Trello board, which you'll find
+                      under the FAQ section. We'd love it if you could send us
+                      any suggestions you come up with to improve the platform.
+                      Don't hesitate to contact us via Discord to share whatever
+                      you'd like.
                     </div>
                   </div>
                 </div>
@@ -117,10 +203,11 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     class="accordion__item-content hidden group-[.active]:block animate-fade"
                   >
                     <div class="pt-6 lg:pt-8 xl:pt-10">
-                      We would like to be able to add new languages ​​to the platform, 
-                      but for now, we can only support English and Spanish since we 
-                      don't have any team member who can handle other languages. 
-                      Hopefully, in the future, a community member can help us with that.
+                      We would like to be able to add new languages ​​to the
+                      platform, but for now, we can only support English and
+                      Spanish since we don't have any team member who can handle
+                      other languages. Hopefully, in the future, a community
+                      member can help us with that.
                     </div>
                   </div>
                 </div>
@@ -141,9 +228,10 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     class="accordion__item-content hidden group-[.active]:block animate-fade"
                   >
                     <div class="pt-6 lg:pt-8 xl:pt-10">
-                      For now, if you help us by sharing the platform with your friends, 
-                      it would be a great help to support the project. Also you can use 
-                      the referal codes we provide at the about me section.
+                      For now, if you help us by sharing the platform with your
+                      friends, it would be a great help to support the project.
+                      Also you can use the referal codes we provide at the about
+                      me section.
                     </div>
                   </div>
                 </div>
@@ -208,7 +296,8 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
                     >
                       <a
                         class="text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors"
-                        href="https://trello.com/b/E0l6uSpc/lom-academy" target="_blank">Project Dashboard</a
+                        href="https://trello.com/b/E0l6uSpc/lom-academy"
+                        target="_blank">Project Dashboard</a
                       >
                     </h4>
                     <div class="font-bold text-gray-500">Trello</div>
@@ -245,79 +334,6 @@ import StandarLayout from "@Layouts/StandarLayout.astro";
               </div>
             </div>
             <!-- Links -->
-          </div>
-
-          <div class="col-span-full md:col-span-4">
-            <!-- About us -->
-            <div class="mb-12 md:mb-16 lg:mb-20 xl:mb-24">
-              <h3
-                class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-8 md:mb-12 lg:mb-14 xl:mb-16"
-              >
-                About us
-              </h3>
-              <div class="mb-6 lg:mb-10">
-                Hi! I'm 
-                <a href="https://discord.com/users/142403029356904449" class="text-accent hover:text-gray-900 dark:hover:text-white" target="_blank">xShaiLx</a> 
-                a player of LoM and the developer of this platform.
-                <br>
-                <br>
-                Our goal with this project is to ensure that all players have acc1ess 
-                to the maximum amount of content possible to enjoy the game to the fullest.
-                <br>
-                <br>
-                To make this possible, the LoM Academy team relies on collaborators who are 
-                community members and contribute in different areas to making this possible.
-              </div>
-            </div>
-            <!-- About us -->
-
-            <!-- Team -->
-            <div>
-              <h3
-                class="text-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold mb-8 md:mb-12 lg:mb-14 xl:mb-16"
-              >
-                LoM-Academy Team
-              </h3>
-              <dl
-                class="mb-8 flex flex-col gap-y-3.5 font-medium md:mb-10 lg:mb-12"
-              >
-                <div class="flex flex-wrap justify-between">
-                  <dt class="text-gray-500 opacity-60">Dev</dt>
-                  <dd
-                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
-                  >
-                  <a
-                  href="https://discord.com/users/142403029356904449"
-                  target="_blank"
-                  class="text-accent hover:text-gray-900 dark:hover:text-white"
-                  >xShaiLx</a>
-                  </dd>
-                </div>
-                <div class="flex flex-wrap justify-between">
-                  <dt class="text-gray-500 opacity-60">Content creator</dt>
-                  <dd
-                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
-                  >
-                  <a
-                  href="https://discord.com/users/1098657431631953981"
-                  class="text-accent hover:text-gray-900 dark:hover:text-white"
-                  >Soulcry</a>
-                  </dd>
-                </div>
-                <div class="flex flex-wrap justify-between">
-                  <dt class="text-gray-500 opacity-60">Artist</dt>
-                  <dd
-                    class="[&_a]:text-accent [&_a]:hover:text-gray-900 [&_a]:dark:hover:text-white"
-                  >
-                  <a
-                  href="https://discord.com/users/995691745624989768"
-                  class="text-accent hover:text-gray-900 dark:hover:text-white"
-                  >Howlite</a>
-                  </dd>
-                </div>
-              </dl>
-            </div>
-            <!-- Team -->
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ subsectionLink: '/en/guides/progression/'
 import MountTiersTable from "@Components/en/guides/MountTiersTable.astro";
 import MountTierDetailTable from "@Components/en/guides/MountTierDetailTable.astro";
 import ItemImageTable from "@Components/en/guides/ItemImageTable.astro";
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
 
 
 # Introduction to Mounts
@@ -52,4 +53,4 @@ The mount ability will only activate if we have the mount in use.
 
 <br/>
 
-<ItemImageTable type='mount'/>
+<ItemImageTable type={ENUM_PREMIUM_GAME_ITEM_TYPE.MOUNT}/>

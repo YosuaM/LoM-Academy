@@ -1,0 +1,255 @@
+---
+import type { StandarGameItem } from '@Types/ContentDto.ts';
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
+
+export const standarItems: StandarGameItem[] = [
+  {
+    id: 'gold',
+    name: "Gold",
+    description: "Main currency for upgrading the Magic Lamp.",
+    image: "/assets/img/game/items/gold.webp",
+  },
+  {
+    id: 'speedup_coupon',
+    name: "Speedup Coupon",
+    description: "Speedup Coupon that allows time-travel to reduce upgrade time by 5 minuutes.",
+    image: "/assets/img/game/items/speedup_coupon.webp",
+  },
+  {
+    id: 'magic_lamp',
+    name: "Magic Lamp",
+    description: "The Magic Lamp that grants various gear to enhance your power.",
+    image: "/assets/img/game/items/magic_lamp.webp",
+  },
+  {
+    id: 'fruit_offerings',
+    name: "Fruit Offerings",
+    description: "Obtained through harvesting crops. Can be used for prayer at the Prayer Statue.",
+    image: "/assets/img/game/items/fruit_offerings.webp",
+  },
+  {
+    id: 'ore',
+    name: "Ore",
+    description: "Ore used for tech research.",
+    image: "/assets/img/game/items/ore.webp",
+  },
+  {
+    id: 'relic_shard',
+    name: "Relic Shard",
+    description: "Used to acquire or enhance relics.",
+    image: "/assets/img/game/items/relic_shard.webp",
+  },
+  {
+    id: 'divine_hammer',
+    name: "Divine Hammer",
+    description: "Used to refine artifacts.",
+    image: "/assets/img/game/items/divine_hammer.webp",
+  },
+  {
+    id: 'clock_winder',
+    name: "Clock Winder",
+    description: "Used to enhance mount's star level.",
+    image: "/assets/img/game/items/clock_winder.webp",
+  },
+  {
+    id: 'remodeling_guide',
+    name: "Remodeling Guide",
+    description: "Used to increase a mount's remodeling level, granting 2000 Remodel Points.",
+    image: "/assets/img/game/items/remodeling_guide.webp",
+  },
+  {
+    id: 'soul_essence',
+    name: "Soul Essence",
+    description: "Essence containing generations of martial spirit, can be used to enhance Soul level.",
+    image: "/assets/img/game/items/soul_essence.webp",
+  },
+  {
+    id: 'soul_crystal',
+    name: "Soul Crystal",
+    description: "Crystal symbolizing courage and strengh. Embed it in the Praying Circle to summon powerful Souls.",
+    image: "/assets/img/game/items/soul_crystal.webp",
+  },
+  {
+    id: 'awakening_scroll',
+    name: "Awakening Scroll",
+    description: "Used to enhance class awakening level.",
+    image: "/assets/img/game/items/awakening_scroll.webp",
+  },
+  {
+    id: 'empowerment_gear',
+    name: "Empowerment Gear",
+    description: "Used to improve the mount's empowerment level.",
+    image: "/assets/img/game/items/empowerment_gear.webp",
+  },
+  {
+    id: 'uku_fruit',
+    name: "Uku Fruit",
+    description: "Used to level up Avians. +1 Avian EXP.",
+    image: "/assets/img/game/items/uku_fruit.webp",
+  },
+  {
+    id: 'mimirs_spring',
+    name: "Mimir's Spring",
+    description: "Used to advance Avians.",
+    image: "/assets/img/game/items/mimirs_spring.webp",
+  },
+  {
+    id: 'gem_of_love',
+    name: "Gem of Love",
+    description: "Used to level up your ring.",
+    image: "/assets/img/game/items/gem_of_love.webp",
+  },
+  {
+    id: 'feather_coin',
+    name: "Feather Coin",
+    description: "Used to enhance your back accessory's Feathehr level.",
+    image: "/assets/img/game/items/feather_coin.webp",
+  },
+  {
+    id: 'divine_feather_coin',
+    name: "Divine Feather Coin",
+    description: "Used to enhance your back accessory's Talent level.",
+    image: "/assets/img/game/items/divine_feather_coin.webp",
+  },
+  {
+    id: 'enhance_ore',
+    name: "Enhance Ore",
+    description: "Material used to enhance Runestones, granting 500 EXP.",
+    image: "/assets/img/game/items/enhance_ore.webp",
+  },
+
+  {
+    id: 'pickaxe',
+    name: "Pickaxe",
+    description: "Used for mining.",
+    image: "/assets/img/game/items/pickaxe.webp",
+  },
+  {
+    id: 'drill',
+    name: "Drill",
+    description: "Used to accelerate tunneling.",
+    image: "/assets/img/game/items/drill.webp",
+  },
+  {
+    id: 'bomb',
+    name: "Bomb",
+    description: "Used for rapidly blasting through the mine.",
+    image: "/assets/img/game/items/bomb.webp",
+  },
+
+  {
+    id: 'magic_lamp_key',
+    name: "Magic Lamp Key",
+    description: "Magic Lamp Dungeon key, automatically replenished up to the limit daily.",
+    image: "/assets/img/game/items/magic_lamp_key.webp",
+  },
+  {
+    id: 'diamond_key',
+    name: "Diamond Key",
+    description: "Diamond Dungeon key, automatically replenished up to the limit daily.",
+    image: "/assets/img/game/items/diamond_key.webp",
+  },
+  {
+    id: 'guardian_key',
+    name: "Guardian Key",
+    description: "Relic Team Dungeon key, automatically replenished up to the limit daily.",
+    image: "/assets/img/game/items/guardian_key.webp",
+  },
+  {
+    id: 'chrono_key',
+    name: "Chrono Key",
+    description: "Mount Dungeon Key, automatically replenished up to the limit daily.",
+    image: "/assets/img/game/items/chrono_key.webp",
+  },
+
+  {
+    id: 'skill_coupon',
+    name: "Skill Coupon",
+    description: "Used to draw skills.",
+    image: "/assets/img/game/items/skill_coupon.webp",
+  },
+  {
+    id: 'pal_coupon',
+    name: "Pals Coupon",
+    description: "Used to draw pals.",
+    image: "/assets/img/game/items/pal_coupon.webp",
+  },
+
+  {
+    id: 'random_red_skill',
+    name: "Random Red Skill",
+    description: "Randomly grants a skill from Disarm, Dazzler, Smoke Bomb, Grim Reaper, Heroic Descent, and Wild Gust.",
+    image: "/assets/img/game/items/divine_hammer.webp",
+  },
+  {
+    id: 'random_orange_skill',
+    name: "Random Orange Skill",
+    description: "Randomly grants a skill from Durian Bomb, Easy Breezy, Take It Slow, Coin Bomb, Slime Bomb, and Meteor Fall.",
+    image: "/assets/img/game/items/divine_hammer.webp",
+  },
+  {
+    id: 'random_red_pal',
+    name: "Random Red Pal",
+    description: "Randomly grants a pal from Cat Prince, Warlod Hydrosprite, Snow General, Cowboy Cactus, Chicken Hood, Fiery Tail, Kongfu Master, and Tipsy Snail.",
+    image: "/assets/img/game/items/random_red_pal.webp",
+  },
+  {
+    id: 'random_orange_pal',
+    name: "Random Orange Pal",
+    description: "Randomly grants a pal from Coffe Cat, Triumphant Hydrosprite, Snow Goblin, Floral Cactus, Kongfu Chicken, Piercer Beast, Warrior Panda, and Ice Cream Snail..",
+    image: "/assets/img/game/items/random_red_pal.webp",
+  },
+  {
+    id: 'random_purple_soul',
+    name: "Random Purple Soul",
+    description: "Randomly grants a purple soul from Basic ATK DMG, Combo DMG, Conter DMG, Crit DMG Bonus, Crit RES Bonus, ATK Bonus, DEF Bonus, HP Bonus.",
+    image: "/assets/img/game/items/random_purple_soul.webp",
+  },
+  {
+    id: 'random_orange_soul',
+    name: "Random Orange Soul",
+    description: "Randomly grants a orange soul from Basic ATK DMG, Combo DMG, Conter DMG, Crit DMG Bonus, Crit RES Bonus, ATK Bonus, DEF Bonus, HP Bonus.",
+    image: "/assets/img/game/items/random_orange_soul.webp",
+  },
+  {
+    id: 'random_dungeon_key',
+    name: "Random Dungeon Key",
+    description: "Randomly grants a Dungeon key from Magic Lamp, Diamond, Guardian and Chrono Keys.",
+    image: "/assets/img/game/items/random_dungeon_key.webp",
+  },
+
+  {
+    id: 'basic_seed',
+    name: "Basic Seed",
+    description: "Daily gift of random seeds.",
+    image: "/assets/img/game/items/basic_seed.webp",
+  },
+  {
+    id: 'advanced_seed',
+    name: "Advanced Seed",
+    description: "Advanced Seed, with a higher chance of yielding advanced crops.",
+    image: "/assets/img/game/items/advanced_seed.webp",
+  },
+  {
+    id: 'premium_seed',
+    name: "Premium Seed",
+    description: "Rare seed, guaranteed to yield advanced crops.",
+    image: "/assets/img/game/items/premium_seed.webp",
+  },
+  {
+    id: 'common_fertilizer',
+    name: "Common Fertilizer",
+    description: "Reduce the crop growth time by 30 minutes.",
+    image: "/assets/img/game/items/common_fertilizer.webp",
+  },
+  {
+    id: 'high_yield_fertilizer',
+    name: "High-Yield Fertilizer",
+    description: "Reduce the crop growth time by 1 hour.",
+    image: "/assets/img/game/items/high_yield_fertilizer.webp",
+  },
+
+  
+];
+
+---

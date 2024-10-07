@@ -10,6 +10,7 @@ subsectionLink: '/en/guides/equipment/'
 import ItemImageTable from "@Components/en/guides/ItemImageTable.astro";
 import SimpleTable from "@Components/base/SimpleTable.astro";
 import ItemTable from "@Components/base/ItemTable.astro";
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
 
 
 # Introduction to Artifacts
@@ -193,4 +194,4 @@ The artifact ability will only activate if we have the Morph in use.
 
 <br/>
 
-<ItemImageTable type='artifact'/>
+<ItemImageTable type={ENUM_PREMIUM_GAME_ITEM_TYPE.ARTIFACT}/>

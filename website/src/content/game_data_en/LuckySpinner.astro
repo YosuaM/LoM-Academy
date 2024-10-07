@@ -1,25 +1,37 @@
 ---
+import type { PremiumGameItem } from '@Types/ContentDto.ts';
+import { ENUM_PREMIUM_GAME_ITEM_TYPE } from '@Types/ContentDto.ts';
 import { advanceMounts } from "./Mounts.astro";
 import { artifactMorphs } from "./Artifacts.astro";
 import { backAccessoryMorphs } from "./BackAccessories.astro";
 
-export const redSoulTypeTwo = {
+export const redSoulTypeTwo: PremiumGameItem = {
+    id: "red_soul_selection_2",
     name: "Red Soul Selection 2",
-    image: "",
-    icon: "/assets/img/game/items/red_soul_selection_icon.webp",
+    image: "/assets/img/game/items/red_soul_selection.webp",
     skill: "Select a Soul from Pal Crit DMG, Skill DMG, Pal DMG, Heealing, Boss DMG, HP Regen, Skill Crit DMG, and Boss DMG RES Souls.",
     effect: "-",
     howToGet: "",
+    type: ENUM_PREMIUM_GAME_ITEM_TYPE.SOUL
 };
 
-export const luckySpinnerItems = [
+export const defaultItem: PremiumGameItem = {
+    id: "not_found",
+    name: "Item Not Found",
+    image: "-",
+    skill: "-",
+    effect: "-",
+    howToGet: "-",
+}
+
+export const luckySpinnerItems: PremiumGameItem[][] = [
     // Week 1
     [
-        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer")
+        artifactMorphs.find((artifact) => artifact.id === "chaotic_warlords_hammer") ?? defaultItem,
     ],
     // Week 2
     [
-        advanceMounts.find((mount) => mount.name === "White Tiger")
+        advanceMounts.find((mount) => mount.id === "white_tiger") ?? defaultItem,
     ],
     // Week 3
     [
@@ -27,160 +39,160 @@ export const luckySpinnerItems = [
     ],
     // Week 4
     [
-        advanceMounts.find((mount) => mount.name === "Blue Ox")
+        advanceMounts.find((mount) => mount.id === "blue_ox") ?? defaultItem,
     ],
     // Week 5
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "moonlit_wisp") ?? defaultItem,
     ],
     // Week 6
     [
-        advanceMounts.find((mount) => mount.name === "Blue Queen")
+        advanceMounts.find((mount) => mount.id === "blue_queen") ?? defaultItem,
     ],
     // Week 7
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "emerald_embrace") ?? defaultItem,
     ],
     // Week 8
     [
-        advanceMounts.find((mount) => mount.name === "Round Pepe")
+        advanceMounts.find((mount) => mount.id === "round_frog") ?? defaultItem,
     ],
     // Week 9
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "blade_pursuit") ?? defaultItem,
     ],
     // Week 10
     [
-        advanceMounts.find((mount) => mount.name === "Purple Wing")
+        advanceMounts.find((mount) => mount.id === "purple_wing") ?? defaultItem,
     ],
     // Week 11
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "moonlit_wisp") ?? defaultItem,
     ],
     // Week 12
     [
-        advanceMounts.find((mount) => mount.name === "Magic Carpet")
+        advanceMounts.find((mount) => mount.id === "magic_carpet") ?? defaultItem,
     ],
     // Week 13
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "emerald_embrace") ?? defaultItem,
     ],
     // Week 14
     [
-        advanceMounts.find((mount) => mount.name === "Koi Paper Kite")
+        advanceMounts.find((mount) => mount.id === "koi_paper_kite") ?? defaultItem,
     ],
     // Week 15
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "blade_pursuit") ?? defaultItem,
     ],
     // Week 16
     [
-        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+        advanceMounts.find((mount) => mount.id === "mini_motorcycle") ?? defaultItem,
     ],
     // Week 17
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "moonlit_wisp") ?? defaultItem,
     ],
     // Week 18
     [
-        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer"),
-        advanceMounts.find((mount) => mount.name === "White Tiger"),
-        advanceMounts.find((mount) => mount.name === "Blue Ox")
+        artifactMorphs.find((artifact) => artifact.id === "chaotic_warlords_hammer") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "white_tiger") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "blue_ox") ?? defaultItem,
     ],
     // Week 19
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "emerald_embrace") ?? defaultItem,
     ],
     // Week 20
     [
-        advanceMounts.find((mount) => mount.name === "Blue Queen"),
-        advanceMounts.find((mount) => mount.name === "Round Pepe"),
-        advanceMounts.find((mount) => mount.name === "Purple Wing")
+        advanceMounts.find((mount) => mount.id === "blue_queen") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "round_frog") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "purple_wing") ?? defaultItem,
     ],
     // Week 21
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "blade_pursuit") ?? defaultItem,
     ],
     // Week 22
     [
-        advanceMounts.find((mount) => mount.name === "Magic Carpet"),
-        advanceMounts.find((mount) => mount.name === "Koi Paper Kite"),
-        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+        advanceMounts.find((mount) => mount.id === "magic_carpet") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "koi_paper_kite") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "mini_motorcycle") ?? defaultItem,
     ],
     // Week 23
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "moonlit_wisp") ?? defaultItem,
     ],
     // Week 24
     [
-        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer"),
-        advanceMounts.find((mount) => mount.name === "White Tiger"),
-        advanceMounts.find((mount) => mount.name === "Blue Ox")
+        artifactMorphs.find((artifact) => artifact.id === "chaotic_warlords_hammer") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "white_tiger") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "blue_ox") ?? defaultItem,
     ],
     // Week 25
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "emerald_embrace") ?? defaultItem,
     ],
     // Week 26
     [
-        advanceMounts.find((mount) => mount.name === "Blue Queen"),
-        advanceMounts.find((mount) => mount.name === "Round Pepe"),
-        advanceMounts.find((mount) => mount.name === "Purple Wing")
+        advanceMounts.find((mount) => mount.id === "blue_queen") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "round_frog") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "purple_wing") ?? defaultItem,
     ],
     // Week 27
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "blade_pursuit") ?? defaultItem,
     ],
     // Week 28
     [
-        advanceMounts.find((mount) => mount.name === "Magic Carpet"),
-        advanceMounts.find((mount) => mount.name === "Koi Paper Kite"),
-        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+        advanceMounts.find((mount) => mount.id === "magic_carpet") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "koi_paper_kite") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "mini_motorcycle") ?? defaultItem,
     ],
     // Week 29
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Moonlit Wisp")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "moonlit_wisp") ?? defaultItem,
     ],
     // Week 30
     [
-        artifactMorphs.find((artifact) => artifact.name === "Chaotic Warlord's Hammer"),
-        advanceMounts.find((mount) => mount.name === "White Tiger"),
-        advanceMounts.find((mount) => mount.name === "Blue Ox")
+        artifactMorphs.find((artifact) => artifact.id === "chaotic_warlords_hammer") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "white_tiger") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "blue_ox") ?? defaultItem,
     ],
     // Week 31
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Emerald Embrace")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "emerald_embrace") ?? defaultItem,
     ],
     // Week 32
     [
-        advanceMounts.find((mount) => mount.name === "Blue Queen"),
-        advanceMounts.find((mount) => mount.name === "Round Pepe"),
-        advanceMounts.find((mount) => mount.name === "Purple Wing")
+        advanceMounts.find((mount) => mount.id === "blue_queen") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "round_frog") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "purple_wing") ?? defaultItem,
     ],
     // Week 33
     [
         redSoulTypeTwo,
-        backAccessoryMorphs.find((backAccessory) => backAccessory.name === "Blade Pursuit")
+        backAccessoryMorphs.find((backAccessory) => backAccessory.id === "blade_pursuit") ?? defaultItem,
     ],
     // Week 34
     [
-        advanceMounts.find((mount) => mount.name === "Magic Carpet"),
-        advanceMounts.find((mount) => mount.name === "Koi Paper Kite"),
-        advanceMounts.find((mount) => mount.name === "Mini Motorcycle")
+        advanceMounts.find((mount) => mount.id === "magic_carpet") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "koi_paper_kite") ?? defaultItem,
+        advanceMounts.find((mount) => mount.id === "mini_motorcycle") ?? defaultItem,
     ],
 ];
 ---
