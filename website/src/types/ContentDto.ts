@@ -92,3 +92,19 @@ export class StandarGameItem {
     this.image = image;
   }
 }
+
+export class MountParking {
+  mount: PremiumGameItem;
+  coins: number;
+  rewards: StandarGameItem[];
+
+  constructor (
+    mount: PremiumGameItem,
+    coins: number,
+    rewards: StandarGameItem[]
+  ) {
+    this.mount = mount;
+    this.coins = coins;
+    this.rewards = rewards;
+  }
+}
