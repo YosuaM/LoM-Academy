@@ -5,10 +5,12 @@ import tailwind from "@astrojs/tailwind";
 import netlify from "@astrojs/netlify";
 import addClasses from "rehype-add-classes";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), tailwind()],
+  integrations: [mdx(), sitemap(), tailwind(), react()],
   output: "server",
   adapter: netlify(),
   markdown: {
@@ -24,9 +26,8 @@ export default defineConfig({
       ol: "list-decimal",
       blockquote: "border-l-4 border-gray-300",
       pre: "bg-gray-100 p-4 rounded-lg",
-      img: "rounded-lg",
-
+      img: "rounded-lg"
     }]],
-    integrations: [mdx(), sitemap(), tailwind()],
+    integrations: [mdx(), sitemap(), tailwind()]
   }
 });
