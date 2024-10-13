@@ -1,6 +1,7 @@
 ---
 import { mountParkingRewards } from "@Content/game_data_en/Mounts.astro";
 import type { MountParking } from '@Types/ContentDto.ts';
+import TooltipItem from "@Components/base/react_components/TooltipItem.tsx";
 
 const { id, content } = Astro.props;
 ---
@@ -29,26 +30,30 @@ const { id, content } = Astro.props;
           return (
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <td class="text-center px-6 py-2">
-                <img
+                <TooltipItem
+                  client:load
                   class="w-30 mx-auto"
-                  src={row.mount.image}
-                  alt={row.mount.name}
-                  title={row.mount.name}
+                  id={row.mount.id}
+                  img={row.mount.image}
+                  name={row.mount.name}
+                  tooltip={row.mount.skill}
                 />
               </td>
               <td class="text-center px-6 py-2">
                 {row.coins}
               </td>
               <td class="text-left px-6 py-2">
-                <div class="flex justify-left gap-x-2">
+                <div class="flex flex-wrap gap-x-2 gap-y-2 justify-left">
                   {
                     row.rewards.map((reward) => {
                       return (
-                        <img
-                          class="w-10 h-10"
-                          src={reward.image}
-                          alt={reward.name}
-                          title={reward.name}
+                        <TooltipItem
+                          client:load
+                          class="w-30 mx-auto"
+                          id={reward.id}
+                          img={reward.image}
+                          name={reward.name}
+                          tooltip={reward.description}
                         />
                       );
                     })

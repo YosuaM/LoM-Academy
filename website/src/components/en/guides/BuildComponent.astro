@@ -1,5 +1,5 @@
 ---
-import Item from "./Item.astro";
+import TooltipItem from "../../base/react_components/TooltipItem.tsx";
 import { skills } from "@Content/game_data_en/Skills.astro";
 import { pals } from "@Content/game_data_en/Pals.astro";
 import { relics } from "@Content/game_data_en/Relics.astro";
@@ -56,18 +56,19 @@ class Tab {
   {
     tabs.map((tab: Tab) => (
       <div
-        class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 inline-block max-content"
+        class="pt-2 px-2 rounded-lg bg-gray-50 dark:bg-gray-800 max-content flex items-center justify-left"
         id={prefix + "-" + tab.code}
         role="tabpanel"
         aria-labelledby={tab.code + "-tab"}
       >
         {tab.items.map((item: String, index: number) => (
-          <Item
-            name={elements.find((e) => e.id == item)?.name}
-            tooltip={elements.find((e) => e.id == item)?.description}
-            img={elements.find((e) => e.id == item)?.img}
+          <TooltipItem
+            client:load
             id={prefix + "-" + tab.code + "-item-" + index}
+            img={elements.find((e) => e.id == item)?.img}
+            name={elements.find((e) => e.id == item)?.name}
             cooldown={elements.find((e) => e.id == item)?.cooldown}
+            tooltip={elements.find((e) => e.id == item)?.description}
           />
         ))}
       </div>

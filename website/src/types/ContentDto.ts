@@ -79,17 +79,20 @@ export class StandarGameItem {
   name: string;
   description: string;
   image: string;
+  ico?: string;
 
   constructor(
     id: string,
     name: string,
     description: string,
     image: string,
+    ico?: string
   ) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.image = image;
+    this.ico = ico;
   }
 }
 
