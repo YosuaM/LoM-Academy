@@ -1,9 +1,8 @@
 ---
 import StandarLayout from "@Layouts/StandarLayout.astro";
-import SoulEssencesCalculator from '@Components/base/react_components/SoulEssencesCalculator.tsx';
-import SimpleTable from "@Components/base/SimpleTable.astro";
+import FarmTimerAmountCalculator from '@Components/base/react_components/FarmTimerAmountCalculator';
 
-const page_title: string = "Soul Prayer Simulator";
+const page_title: string = "Farm Calculator";
 ---
 
 <StandarLayout title={page_title} page={6}>
@@ -51,7 +50,7 @@ const page_title: string = "Soul Prayer Simulator";
     <div class="pt-10 pb-16 lg:pt-20 lg:pb-44">
       <div class="container">
         <!-- Renderizar el componente React -->
-        <SoulEssencesCalculator client:load />
+        <FarmTimerAmountCalculator client:load />
         <br/>
 
         <div>
@@ -61,27 +60,11 @@ const page_title: string = "Soul Prayer Simulator";
             </h2>
           </div>
           <div>
-            Summon a Soul cost 1 Soul Crystal or 800 Diamonds. 
-            Introduce the values in the fields below to simulate the probabilities of get each tipe of Soul and the amount of Soul Essences.
+            This tool helps you calculate the growth time and fruit yield for your crops based on the levels of your farm buildings, such as the Greenhouse, Lawnmower, and Scarecrow. 
+            It also considers the effects of the Bountiful Harvest Boost Card, if activated, which increases your crop yield by 50%. 
+            Simply select the levels of your farm buildings and enable or disable the boost card to see how they impact the growth time and total harvest of each crop. 
+            The calculator provides a detailed breakdown of how much fruit you can harvest and how much time each crop will take to grow, ensuring efficient farm management.
           </div>
-          <br/>
-          <div>
-            When drawing Souls, each draw adds a Blessing Point. Drawing a purple-quality or higher Soul resets the points. 
-            Once maxed, the next draw guarantees a purple-quality or higher Soul as a reward.
-          </div>
-          <br/>
-          <SimpleTable
-            id = "soul-prayer-probabilites-simulator-table"
-            content = {{
-                header: ['Type', '% Summon', '% Summon Blessed'],
-                rows: [
-                    ['Well (blue) soul', '80%', '-'],
-                    ['Rare (purple) soul', '16%', '80%'],
-                    ['Epic (orange) soul', '3.6%', '18%'],
-                    ['Legendary (red) soul', '0.4%', '2%'],
-                ]
-            }}
-          />
         </div>
       </div>
     </div>
