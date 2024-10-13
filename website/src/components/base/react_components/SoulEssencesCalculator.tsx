@@ -14,7 +14,7 @@ const SoulEssencesCalculator: React.FC = () => {
     rare: 0,
     epic: 0,
     legendary: 0,
-    essence: 0,
+    soul_essence: 0,
   });
 
   // Limit value between 0 and 999,999
@@ -67,7 +67,7 @@ const SoulEssencesCalculator: React.FC = () => {
       }
     }
 
-    const essence = (well * 25) + (rare * 100) + (epic * 300);
+    const soul_essence = (well * 25) + (rare * 100) + (epic * 300);
 
     setResult({
       spins,
@@ -75,7 +75,7 @@ const SoulEssencesCalculator: React.FC = () => {
       rare,
       epic,
       legendary,
-      essence,
+      soul_essence,
     });
 
     setBlessingPoints(currentBlessingPoints);
@@ -151,7 +151,7 @@ const SoulEssencesCalculator: React.FC = () => {
                 name={standarItems.find(i => i.id === 'random_blue_soul')?.name || standarItems[0].name}
                 tooltip={standarItems.find(i => i.id === 'random_blue_soul')?.description || standarItems[0].description}
               />
-              <span className="ml-2">Well: <span className="text-accent">{result.essence.toLocaleString()}</span></span>
+              <span className="ml-2">Well: <span className="text-accent">{result.well.toLocaleString()}</span></span>
             </div>
             <br />
             <div className="inline-flex items-center">
@@ -161,7 +161,7 @@ const SoulEssencesCalculator: React.FC = () => {
                 name={standarItems.find(i => i.id === 'random_purple_soul')?.name || standarItems[0].name}
                 tooltip={standarItems.find(i => i.id === 'random_purple_soul')?.description || standarItems[0].description}
               />
-              <span className="ml-2">Rare: <span className="text-accent">{result.essence.toLocaleString()}</span></span>
+              <span className="ml-2">Rare: <span className="text-accent">{result.rare.toLocaleString()}</span></span>
             </div>
             <br />
             <div className="inline-flex items-center">
@@ -171,7 +171,7 @@ const SoulEssencesCalculator: React.FC = () => {
                 name={standarItems.find(i => i.id === 'random_orange_soul')?.name || standarItems[0].name}
                 tooltip={standarItems.find(i => i.id === 'random_orange_soul')?.description || standarItems[0].description}
               />
-              <span className="ml-2">Epic: <span className="text-accent">{result.essence.toLocaleString()}</span></span>
+              <span className="ml-2">Epic: <span className="text-accent">{result.epic.toLocaleString()}</span></span>
             </div>
             <br />
             <div className="inline-flex items-center">
@@ -181,7 +181,7 @@ const SoulEssencesCalculator: React.FC = () => {
                 name={standarItems.find(i => i.id === 'random_red_soul')?.name || standarItems[0].name}
                 tooltip={standarItems.find(i => i.id === 'random_red_soul')?.description || standarItems[0].description}
               />
-              <span className="ml-2">Legendary: <span className="text-accent">{result.essence.toLocaleString()}</span></span>
+              <span className="ml-2">Legendary: <span className="text-accent">{result.legendary.toLocaleString()}</span></span>
             </div>
             <br />
             <div className="inline-flex items-center">
@@ -191,7 +191,7 @@ const SoulEssencesCalculator: React.FC = () => {
                 name={standarItems.find(i => i.id === 'soul_essence')?.name || standarItems[0].name}
                 tooltip={standarItems.find(i => i.id === 'soul_essence')?.description || standarItems[0].description}
               />
-              <span className="ml-2">Soul Essence: <span className="text-accent">{result.essence.toLocaleString()}</span></span>
+              <span className="ml-2">Soul Essence: <span className="text-accent">{result.soul_essence.toLocaleString()}</span></span>
             </div>
           </div>
         </div>
