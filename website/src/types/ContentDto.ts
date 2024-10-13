@@ -111,3 +111,75 @@ export class MountParking {
     this.rewards = rewards;
   }
 }
+
+export class FarmBuilding {
+  id: string;
+  name: string;
+  image: string;
+  levels: FarmBuildingLevel[];
+
+  constructor(
+    id: string,
+    name: string,
+    image: string,
+    levels: FarmBuildingLevel[]
+  ) {
+    this.id = id;
+    this.name = name;
+    this.image = image;
+    this.levels = levels;
+  }
+}
+
+export class FarmBuildingLevel {
+  level: number;
+  cost: number;
+  duration: number;
+  dailySeeds?: number;
+  harvestQuantityBonus?: number;
+  growthSpeedBonus?: number;
+  globalAtk?: number;
+  globalDef?: number;
+  
+  constructor (
+    level: number,
+    cost: number,
+    duration: number,
+    dailySeeds?: number,
+    harvestQuantityBonus?: number,
+    growthSpeedBonus?: number,
+    globalAtk?: number,
+    globalDef?: number
+  ) {
+    this.level = level;
+    this.cost = cost;
+    this.duration = duration;
+    this.dailySeeds = dailySeeds;
+    this.harvestQuantityBonus = harvestQuantityBonus;
+    this.growthSpeedBonus = growthSpeedBonus;
+    this.globalAtk = globalAtk;
+    this.globalDef = globalDef;
+  }
+}
+
+export class Crops {
+  id: string;
+  name: string;
+  image: string;
+  duration: number;
+  amount: number;
+
+  constructor(
+    id: string,
+    name: string,
+    image: string,
+    duration: number,
+    amount: number
+  ) {
+    this.id = id;
+    this.name = name;
+    this.image = image;
+    this.duration = duration;
+    this.amount = amount;
+  }
+}
