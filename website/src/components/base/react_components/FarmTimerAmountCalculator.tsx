@@ -261,16 +261,20 @@ const FarmTimerAmountCalculator: React.FC = () => {
                 Time to grow up:{" "}
                 <span className="text-accent">{formatTime(data.time)}</span>.
                 Harvest:{" "}
-                <span className="text-accent">{data.amount.baseAmount}</span>
                 {/* Display boost value if > 0 */}
-                { data.amount.boostedAmount > 0 && (
+                { data.amount.boostedAmount > 0 ? (
                   <>
-                    {" "}
-                    (+{data.amount.boostedAmount}) ={" "}
+                    <span>
+                      {data.amount.baseAmount}
+                      {" "}
+                      (+{data.amount.boostedAmount}) ={" "}
+                    </span>
                     <span className="text-accent">
                       {data.amount.totalAmount}
                     </span>
                   </>
+                ) : (
+                  <span className="text-accent">{data.amount.baseAmount}</span>
                 )}
                 {" "}
                 fruit offerings.
